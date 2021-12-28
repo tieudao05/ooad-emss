@@ -8,7 +8,7 @@ use App\Core\View;
         <div class="sidebar-header">
             <div class="d-flex justify-content-center">
                 <div class="logo">
-                    <a href="index.html"><img src="<?= View::assets('images/logo/logo_.png') ?>" alt="Logo" srcset="" /></a>
+                    <a href="index.html"><img src="<?= View::assets('images/logo/logo_.png') ?>" alt="Logo" srcset="" style="transform: scale(1.6, 1.6)" /></a>
                 </div>
                 <div class="toggler">
                     <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>

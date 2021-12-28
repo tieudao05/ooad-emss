@@ -16,7 +16,9 @@ use App\Core\Redirect;
     <link rel="stylesheet" href="<?= View::assets('vendors/bootstrap-icons/bootstrap-icons.css') ?>">
     <link rel="stylesheet" href="<?= View::assets('css/app.css') ?>">
     <link rel="stylesheet" href="<?= View::assets('css/pages/auth.css') ?>">
-    <link rel="shortcut icon" href="<?= View::assets('images/favicon.ico') ?>" type="image/x-icon')" />
+    <link rel="shortcut icon" href="<?= View::assets('images/logo/logo_.png') ?>" type="image/x-icon')" />
+    <link rel="stylesheet" href="<?= View::assets('vendors/toastify/toastify.css') ?>">
+
 </head>
 
 <body>
@@ -30,10 +32,9 @@ use App\Core\Redirect;
                     </div>
                     <h3 class="auth-title">ĐĂNG NHẬP </h3>
                     <p class="auth-subtitle mb-5">Nhập thông tin của bạn để đăng nhập</p>
-                    <div id="login-error" class="alert alert-danger d-none">Lỗi nè</div>
-                    <form name="login-form" action="<?= View::getAction('AuthController', 'loginPost') ?>" method="POST">
+                    <form name="login-form" method="post">
                         <div class="form-group position-relative has-icon-left mb-4">
-                            <input id="email" type="text" name="email" class="form-control form-control-xl" placeholder="Tên đăng nhập">
+                            <input id="user_name" type="text" name="user_name" class="form-control form-control-xl" placeholder="Tên đăng nhập">
                             <div class="form-control-icon">
                                 <i class="bi bi-person"></i>
                             </div>
@@ -44,11 +45,11 @@ use App\Core\Redirect;
                                 <i class="bi bi-shield-lock"></i>
                             </div>
                         </div>
-                        <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Đăng nhập</button>
+                        <button class="btn btn-login btn-primary btn-block btn-lg shadow-lg mt-5">Đăng nhập</button>
                     </form>
                     <div class="text-center mt-5 text-lg fs-4">
                         <p class="text-gray-600">Bạn chưa có tài khoản?
-                            <a href="<-?= View::url('auth/register') ?>" class="font-bold">Đăng ký</a>.
+                            <a href="<?= View::url('auth/register') ?>" class="font-bold">Đăng ký</a>.
                         </p>
                     </div>
                 </div>
@@ -60,16 +61,17 @@ use App\Core\Redirect;
     </div>
     <script src="<?= View::assets('vendors/jquery/jquery.min.js') ?>"></script>
     <script src="<?= View::assets('vendors/jquery/jquery.validate.js') ?>"></script>
+    <script src="<?= View::assets('vendors/toastify/toastify.js') ?>"></script>
+
     <script>
         // Cách viết ngắn của $( document ).ready()
         // Đợi page load xong
         $(document).ready(function() {
-            alert("OK");
             // Select form có name = login-form (giống như select bằng js thuần)
             $("form[name='login-form']").validate({
                 // Định nghĩa rule validate
                 rules: {
-                    email: {
+                    user_name: {
                         required: true,
                     },
                     password: {
@@ -79,49 +81,44 @@ use App\Core\Redirect;
                 },
                 messages: {
                     // Báo lỗi chung cho required và email
-                    email: "Vui lòng nhập tên đăng nhập",
+                    user_name: "Vui lòng nhập tên đăng nhập",
                     // Message báo lỗi cụ thể cho từng trường hợp
                     password: {
                         required: "Vui lòng nhập mật khẩu",
                         minlength: "Mật khẩu của bạn không được ngắn hơn 8 ký tự"
                     },
                 },
-                // JQuery sẽ chặn submit đến khi nào dữ liệu đã được validate
                 submitHandler: function(form) {
-                    dangNhapAjax()
+                    checkLogin();
                 }
             });
 
-            function dangNhapAjax() {
-                $('#login-error').text("")
-                $('#login-error').addClass("d-none")
-                // lay gia tri input
-                const email = $("#email").val()
-                alert(email);
-                const password = $("#password").val()
-
-                // dung ajax de submit 1 2 3
-                $.ajax({
-                    url: "http://localhost/emss/auth/loginPost",
-                    type: "post",
-                    data: {
-                        user_name: email,
-                        password: password,
-                    },
-                    success: function(result) {
-                        console.log(result);
-                        console.log(result['summary']);
-                        if (!result['thanhcong']) {
-                            $('#login-error').text(result['summary'])
-                            $('#login-error').removeClass("d-none")
+            function checkLogin() {
+                $("form[name='login-form']").submit(function(e) {
+                    e.preventDefault();
+                    var ajax = $.post('http://localhost/ooad-emss/emss/auth/loginPost', {
+                        user_name: $('#user_name').val(),
+                        password: $('#password').val()
+                    })
+                    ajax.done(function(data) {
+                        if (!data['thanhcong']) {
+                            Toastify({
+                            text: data['summary'],
+                            duration: 1000,
+                            close: true,
+                            gravity: "top",
+                            position: "center",
+                            backgroundColor: "#FF6A6A",
+                        }).showToast();
                         } else {
-                            <?= Redirect::to('home/index.php') ?>
+                            window.location.href="http://localhost/ooad-emss/emss/";  
                         }
-                    }
-                });
-
+                    });
+                    ajax.fail(function(data) {
+                        alert("Thất bại");
+                    })
+                })
             }
-
         });
     </script>
 </body>

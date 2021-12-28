@@ -28,7 +28,7 @@ class AuthController extends Controller
         Auth::checkNotAuthentication();
         $user_name = Request::post('user_name');
         $password = Request::post('password');
-        $user_name = 'admin';
+       // $user_name = 'admin';
         $result = [
             'thanhcong' => true,
         ];
