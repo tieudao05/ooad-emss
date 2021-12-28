@@ -77,7 +77,7 @@ use App\Core\Redirect;
                     password: {
                         required: true,
                         minlength: 8
-                    }
+                    } 
                 },
                 messages: {
                     // Báo lỗi chung cho required và email
