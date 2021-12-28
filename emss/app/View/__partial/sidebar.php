@@ -1,0 +1,86 @@
+<?php
+
+use App\Core\View;
+
+?>
+<div id="sidebar" class="active">
+    <div class="sidebar-wrapper active">
+        <div class="sidebar-header">
+            <div class="d-flex justify-content-center">
+                <div class="logo">
+                    <a href="index.html"><img src="<?= View::assets('images/logo/logo_.png') ?>" alt="Logo" srcset="" /></a>
+                </div>
+                <div class="toggler">
+                    <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="sidebar-menu">
+            <ul class="menu">
+                <li class="sidebar-item <?= View::$activeItem == 'dashboard' ? 'active' : '' ?>">
+                    <a href="<?= View::getBaseUrl() ?>" class="sidebar-link">
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Trang Chủ</span>
+                    </a>
+                </li>
+                <li id="1" class=" sidebar-item  <?= View::$activeItem == 'user' ? 'active' : '' ?>">
+                    <a href="<?= View::url('nguoidung/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí người dùng</span>
+                    </a>
+                </li>
+                <li id="2" class=" sidebar-item  <?= View::$activeItem == 'patient' ? 'active' : '' ?>">
+                    <a href="<?= View::url('benhnhan/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí bệnh nhân</span>
+                    </a>
+                </li>
+                <li id="3" class=" sidebar-item  <?= View::$activeItem == 'object' ? 'active' : '' ?>">
+                    <a href="<?= View::url('doituongcachly/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí DTCL</span>
+                    </a>
+                </li>
+                <li id="4" class=" sidebar-item  <?= View::$activeItem == 'trace' ? 'active' : '' ?>">
+                    <a href="<?= View::url('truyvet/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí truy vết</span>
+                    </a>
+                </li>
+                <li id="5" class=" sidebar-item  <?= View::$activeItem == 'test' ? 'active' : '' ?>">
+                    <a href="<?= View::url('xetnghiem/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí xét nghiệm</span>
+                    </a>
+                </li>
+                <li id="6" class=" sidebar-item  <?= View::$activeItem == 'role' ? 'active' : '' ?>">
+                    <a href="<?= View::url('phanquyen/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí phân quyền</span>
+                    </a>
+                </li>
+                <li id="7" class=" sidebar-item  <?= View::$activeItem == 'statis' ? 'active' : '' ?>">
+                    <a href="<?= View::url('thongke/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Thống kê</span>
+                    </a>
+                </li>
+                <li id="8" class=" sidebar-item  <?= View::$activeItem == 'person' ? 'active' : '' ?>">
+                    <a href="<?= View::url('thongtincanhan/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Thông tin cá nhân</span>
+                    </a>
+                </li>
+                <li id="9" class=" sidebar-item  <?= View::$activeItem == 'location' ? 'active' : '' ?>">
+                    <a href="<?= View::url('diadiem/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí địa điểm</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="sidebar-toggler btn x">
+            <i data-feather="x"></i>
+        </button>
+    </div>
+</div>
