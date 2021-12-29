@@ -31,50 +31,50 @@ use App\Core\View;
                 </li>
                 <li id="2" class=" sidebar-item  <?= View::$activeItem == 'patient' ? 'active' : '' ?>">
                     <a href="<?= View::url('benhnhan/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-people-fill"></i>
                         <span>Quản lí bệnh nhân</span>
                     </a>
                 </li>
                 <li id="3" class=" sidebar-item  <?= View::$activeItem == 'object' ? 'active' : '' ?>">
                     <a href="<?= View::url('doituongcachly/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-person-square"></i>
                         <span>Quản lí DTCL</span>
                     </a>
                 </li>
                 <li id="4" class=" sidebar-item  <?= View::$activeItem == 'trace' ? 'active' : '' ?>">
                     <a href="<?= View::url('truyvet/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-share"></i>
                         <span>Quản lí truy vết</span>
                     </a>
                 </li>
                 <li id="5" class=" sidebar-item  <?= View::$activeItem == 'test' ? 'active' : '' ?>">
                     <a href="<?= View::url('xetnghiem/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-eyedropper"></i>
                         <span>Quản lí xét nghiệm</span>
                     </a>
                 </li>
-                <li id="6" class=" sidebar-item  <?= View::$activeItem == 'role' ? 'active' : '' ?>">
+                <li id="6" class=" sidebar-item  <?= View::$activeItem == 'location' ? 'active' : '' ?>">
+                    <a href="<?= View::url('diadiem/index') ?>" class="sidebar-link">
+                        <i class="bi bi-map"></i>
+                        <span>Quản lí địa điểm</span>
+                    </a>
+                </li>
+                <li id="7" class=" sidebar-item  <?= View::$activeItem == 'role' ? 'active' : '' ?>">
                     <a href="<?= View::url('phanquyen/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-person-check"></i>
                         <span>Quản lí phân quyền</span>
                     </a>
                 </li>
-                <li id="7" class=" sidebar-item  <?= View::$activeItem == 'statis' ? 'active' : '' ?>">
+                <li id="8" class=" sidebar-item  <?= View::$activeItem == 'statis' ? 'active' : '' ?>">
                     <a href="<?= View::url('thongke/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-graph-up"></i>
                         <span>Thống kê</span>
                     </a>
                 </li>
-                <li id="8" class=" sidebar-item  <?= View::$activeItem == 'person' ? 'active' : '' ?>">
+                <li id="9" class=" sidebar-item  <?= View::$activeItem == 'person' ? 'active' : '' ?>">
                     <a href="<?= View::url('thongtincanhan/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
+                        <i class="bi bi-person-circle"></i>
                         <span>Thông tin cá nhân</span>
-                    </a>
-                </li>
-                <li id="9" class=" sidebar-item  <?= View::$activeItem == 'location' ? 'active' : '' ?>">
-                    <a href="<?= View::url('diadiem/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
-                        <span>Quản lí địa điểm</span>
                     </a>
                 </li>
             </ul>
