@@ -23,6 +23,12 @@ use App\Core\View;
                         <span>Trang Chủ</span>
                     </a>
                 </li>
+                <li class="sidebar-item">
+                    <a href="<?= View::url('auth/login') ?>" class="sidebar-link">
+                        <i class="bi bi-grid-fill"></i>
+                        <span>Đăng nhập</span>
+                    </a>
+                </li>
                 <li id="1" class=" sidebar-item  <?= View::$activeItem == 'user' ? 'active' : '' ?>">
                     <a href="<?= View::url('nguoidung/index') ?>" class="sidebar-link">
                         <i class="bi bi-people"></i>
