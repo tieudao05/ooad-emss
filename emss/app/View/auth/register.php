@@ -106,7 +106,7 @@ use App\Core\View;
                             </div>
                         </div>
                     </div>
-                    <div class="form-group row" style="padding-right: 1.5em; padding-left:0em";>
+                    <div class="form-group row" style="padding-right: 1.5em; padding-left:0em" ;>
                         <label for="firstname" class="col-2 col-form-label">Địa chỉ:</label>
                         <div class="col-10 row form-group">
                             <div class="col-4">
