@@ -37,6 +37,13 @@ body {
     align-items: center;
 }
 
+.auth-logo {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #auth #auth-left .auth-logo img {
     height: 6rem;
 }
@@ -56,4 +63,8 @@ body {
     width: 80%;
     border-radius: 2em;
     box-shadow: inset;
+}
+
+.content {
+    width: 80% !important;
 }
