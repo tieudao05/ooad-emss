@@ -5,6 +5,9 @@ namespace App\Controller;
 use App\Core\Auth;
 use App\Core\Controller;
 
+use App\Core\Request;
+use App\Model\DiaDiemModel;
+
 class DiaDiemController extends Controller
 {
     public function __construct()
@@ -23,8 +26,15 @@ class DiaDiemController extends Controller
     public function add()
     {
     }
-    public function getList()
-    {
+    public function getAddress(){
+        Auth::checkAuthentication();
+        //Auth::ktraquyen("CN02");
+        $search = Request::get('search');
+        $search2 = Request::get('search2');
+        $page = Request::get('page');
+        $rowsPerPage = Request::get('rowsPerPage');
+        $data = DiaDiemModel::getAllPagination($search, $search2, $page, $rowsPerPage);
+        $this->View->renderJSON($data);
     }
     public function update()
     {
@@ -33,4 +43,3 @@ class DiaDiemController extends Controller
     {
     }
 }
-
