@@ -22,858 +22,10 @@ View::$activeItem = 'statis';
     <link rel="stylesheet" href="<?= View::assets('css/app.css') ?>" />
     <link rel="shortcut icon" href="<?= View::assets('images/logo/logo_.png') ?>" type="image/x-icon" />
     <link rel="stylesheet" href="<?= View::assets('css/quan.css') ?>" />
-    <script type="text/javascript" async="" src="https://static.criteo.net/js/ld/publishertag.prebid.js"></script>
-    <script type="text/javascript" async="" src="http://media1.admicro.vn/core/adm_tracking.js?id=1"></script>
-    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-kdnwl63c.min.js"></script>
-    <script type="text/javascript" async="" src="https://media1.admicro.vn/core/admcorearf.js"></script>
-    <script
-        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_1"
-        async=""></script>
-    <script
-        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_0"
-        async=""></script>
-    <script async="" type="text/javascript" src="http://apis.google.com/js/client:platform.js" gapi_processed="true">
-    </script>
-    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script type="text/javascript" async="" src="//media1.admicro.vn/core/analytics.js"></script>
-    <script src="https://connect.facebook.net/signals/config/913371738775010?v=2.9.48&amp;r=stable" async=""></script>
-    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
-    <script async=""
-        src="//cdndc.netcoresmartech.com/webactivity/ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0.js"></script>
-    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-jmg1jsy2.min.js"></script>
-    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-jmgdp1wg.min.js"></script>
-    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-jphs5rwl.min.js"></script>
-    <script async=""
-        src="//cdndc.netcoresmartech.com/webactivity/ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0.js"></script>
-    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NTVLBNG"></script>
-    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KFJP3N"></script>
-    <script async=""
-        src="https://osjs.netcoresmartech.com/v1/js-versioning?clientkey=ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0&amp;siteid=acd84f5d04fd32a8de0af9ef5855e0a9&amp;rc=s"
-        id="smartech_v4"></script>
-    <script type="text/javascript">
-    var _ADM_Channel = '%2Fthoi-su%2Fdetail%2F';
-    </script> <!-- smartech -->
-    <script src="//cdnt.netcoresmartech.com/smartechclient.js"></script>
-    <script>
-    smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0');
-    smartech('register', 'acd84f5d04fd32a8de0af9ef5855e0a9');
-    smartech('identify', '');
-    </script>
-    <link rel="stylesheet" type="text/css" href="https://statictuoitre.mediacdn.vn/web_css/font.2017.11.28.1.min.css">
-
-    <script async="" type="text/javascript" src="//media1.admicro.vn/core/adm_tracking.js"></script>
-    <!-- Google Analytics -->
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-KFJP3N');
-    </script>
-    <script>
-    var googletag = googletag || {};
-    googletag.cmd = googletag.cmd || [];
-    </script>
-    <!--AdAsia-->
-    <!--End AdAsia-->
-    <link rel="stylesheet" type="text/css" href="https://quangcao.tuoitre.vn/static/js/cms_ads.css">
-    <script async="" type="text/javascript" src="//quangcao.tuoitre.vn/static/js/cms_ads.js"></script>
-    <script>
-    var arfAsync = arfAsync || [];
-    </script>
-    <script async="" src="https://static.amcdn.vn/tka/cdn.js" type="text/javascript"></script>
-    <script id="arf-core-js" onerror="window.arferrorload=true;" src="//media1.admicro.vn/cms/Arf.min.js" async="">
-    </script>
-    <script>
-    var is_iPadScreen = navigator.userAgent.match(/iPad/i);
-    var widthScreen;
-    (runinit = window.runinit || []).push(function() {
-        widthScreen = $(window).width();
-    });
-    </script>
-    <script>
-    (function() {
-        function d(b, c, e) {
-            var a = document.createElement("script");
-            a.type = "text/javascript";
-            a.async = !0;
-            a.src = b;
-            2 <= arguments.length && (a.onload = c, a.onreadystatechange = function() {
-                4 != a.readyState && "complete" != a.readyState || c()
-            });
-            a.onerror = function() {
-                if ("undefined" != typeof e) try {
-                    e()
-                } catch (g) {}
-            };
-            document.getElementsByTagName("head")[0].appendChild(a)
-        }
-
-        function f() {
-            if ("undefined" == typeof window.ADMStorageFileCDN) setTimeout(function() {
-                f()
-            }, 500);
-            else if ("undefined" != typeof window.ADMStorageFileCDN.corejs &&
-                "undefined" != typeof window.ADMStorageFileCDN.chkCorejs && 0 == window.ADMStorageFileCDN.chkCorejs)
-                if (window.ADMStorageFileCDN.chkCorejs = !0, "string" == typeof window.ADMStorageFileCDN.corejs) d(
-                    window.ADMStorageFileCDN.corejs);
-                else if ("undefined" != typeof window.ADMStorageFileCDN.corejs)
-                for (var b = 0, c = window.ADMStorageFileCDN.corejs.length; b < c; b++) d(window.ADMStorageFileCDN
-                    .corejs[b])
-        }
-        f()
-    })();
-    </script>
-    <script>
-    (function(w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({
-            'gtm.start': new Date().getTime(),
-            event: 'gtm.js'
-        });
-        var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != 'dataLayer' ? '&l=' + l : '';
-        j.async = true;
-        j.src =
-            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-        f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NTVLBNG');
-    </script>
-    <link rel="canonical"
-        href="https://tuoitre.vn/cap-nhat-so-lieu-tiem-vac-xin-va-ca-mac-covid-19-tai-viet-nam-20210510170100892.htm">
-    <script type="text/javascript" async="" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
-    <meta http-equiv="origin-trial"
-        content="AxujKG9INjsZ8/gUq8+dTruNvk7RjZQ1oFhhgQbcTJKDnZfbzSTE81wvC2Hzaf3TW4avA76LTZEMdiedF1vIbA4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
-    <meta http-equiv="origin-trial"
-        content="Azuce85ORtSnWe1MZDTv68qpaW3iHyfL9YbLRy0cwcCZwVnePnOmkUJlG8HGikmOwhZU22dElCcfrfX2HhrBPAkAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
-    <meta http-equiv="origin-trial"
-        content="A16nvcdeoOAqrJcmjLRpl1I6f3McDD8EfofAYTt/P/H4/AWwB99nxiPp6kA0fXoiZav908Z8etuL16laFPUdfQsAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
-    <meta http-equiv="origin-trial"
-        content="AxBHdr0J44vFBQtZUqX9sjiqf5yWZ/OcHRcRMN3H9TH+t90V/j3ENW6C8+igBZFXMJ7G3Pr8Dd13632aLng42wgAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2NTI3NzQ0MDAsImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9">
-    <meta http-equiv="origin-trial"
-        content="A88BWHFjcawUfKU3lIejLoryXoyjooBXLgWmGh+hNcqMK44cugvsI5YZbNarYvi3roc1fYbHA1AVbhAtuHZflgEAAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjUyNzc0NDAwLCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ==">
-    <meta http-equiv="origin-trial"
-        content="A8FHS1NmdCwGqD9DwOicnHHY+y27kdWfxKa0YHSGDfv0CSpDKRHTQdQmZVPDUdaFWUsxdgVxlwAd6o+dhJykPA0AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9">
-    <meta http-equiv="origin-trial"
-        content="A8zdXi6dr1hwXEUjQrYiyYQGlU3557y5QWDnN0Lwgj9ePt66XMEvNkVWOEOWPd7TP9sBQ25X0Q15Lr1Nn4oGFQkAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9">
-    <meta http-equiv="origin-trial"
-        content="A4/Htern2udN9w3yJK9QgWQxQFruxOXsXL7cW60DyCl0EZFGCSme/J33Q/WzF7bBkVvhEWDlcBiUyZaim5CpFQwAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjQzMTU1MTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9">
-    <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021120601.js" async=""></script>
-    <script type="text/javascript" async=""
-        src="https://static.mediacdn.vn/tuoitre/web_js/kcb.plugin.min.04092021v2.js"></script>
-    <script src="https://media1.admicro.vn/ads_codes/ads_code_1.ads"></script>
-    <script type="text/javascript" src="http://static.contineljs.com/core/lgnews.js"></script>
-    <style type="text/css">
-    .fancybox-margin {
-        margin-right: 17px;
-    }
-    </style>
-    <style type="text/css"
-        data-fbcssmodules="css:fb.css.base css:fb.css.dialog css:fb.css.iframewidget css:fb.css.customer_chat_plugin_iframe">
-    .fb_hidden {
-        position: absolute;
-        top: -10000px;
-        z-index: 10001
-    }
-
-    .fb_reposition {
-        overflow: hidden;
-        position: relative
-    }
-
-    .fb_invisible {
-        display: none
-    }
-
-    .fb_reset {
-        background: none;
-        border: 0;
-        border-spacing: 0;
-        color: #000;
-        cursor: auto;
-        direction: ltr;
-        font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
-        font-size: 11px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: normal;
-        letter-spacing: normal;
-        line-height: 1;
-        margin: 0;
-        overflow: visible;
-        padding: 0;
-        text-align: left;
-        text-decoration: none;
-        text-indent: 0;
-        text-shadow: none;
-        text-transform: none;
-        visibility: visible;
-        white-space: normal;
-        word-spacing: normal
-    }
-
-    .fb_reset>div {
-        overflow: hidden
-    }
-
-    @keyframes fb_transform {
-        from {
-            opacity: 0;
-            transform: scale(.95)
-        }
-
-        to {
-            opacity: 1;
-            transform: scale(1)
-        }
-    }
-
-    .fb_animate {
-        animation: fb_transform .3s forwards
-    }
-
-    .fb_dialog {
-        background: rgba(82, 82, 82, .7);
-        position: absolute;
-        top: -10000px;
-        z-index: 10001
-    }
-
-    .fb_dialog_advanced {
-        border-radius: 8px;
-        padding: 10px
-    }
-
-    .fb_dialog_content {
-        background: #fff;
-        color: #373737
-    }
-
-    .fb_dialog_close_icon {
-        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;
-        cursor: pointer;
-        display: block;
-        height: 15px;
-        position: absolute;
-        right: 18px;
-        top: 17px;
-        width: 15px
-    }
-
-    .fb_dialog_mobile .fb_dialog_close_icon {
-        left: 5px;
-        right: auto;
-        top: 5px
-    }
-
-    .fb_dialog_padding {
-        background-color: transparent;
-        position: absolute;
-        width: 1px;
-        z-index: -1
-    }
-
-    .fb_dialog_close_icon:hover {
-        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent
-    }
-
-    .fb_dialog_close_icon:active {
-        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent
-    }
-
-    .fb_dialog_iframe {
-        line-height: 0
-    }
-
-    .fb_dialog_content .dialog_title {
-        background: #6d84b4;
-        border: 1px solid #365899;
-        color: #fff;
-        font-size: 14px;
-        font-weight: bold;
-        margin: 0
-    }
-
-    .fb_dialog_content .dialog_title>span {
-        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;
-        float: left;
-        padding: 5px 0 7px 26px
-    }
-
-    body.fb_hidden {
-        height: 100%;
-        left: 0;
-        margin: 0;
-        overflow: visible;
-        position: absolute;
-        top: -10000px;
-        transform: none;
-        width: 100%
-    }
-
-    .fb_dialog.fb_dialog_mobile.loading {
-        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;
-        min-height: 100%;
-        min-width: 100%;
-        overflow: hidden;
-        position: absolute;
-        top: 0;
-        z-index: 10001
-    }
-
-    .fb_dialog.fb_dialog_mobile.loading.centered {
-        background: none;
-        height: auto;
-        min-height: initial;
-        min-width: initial;
-        width: auto
-    }
-
-    .fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner {
-        width: 100%
-    }
-
-    .fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content {
-        background: none
-    }
-
-    .loading.centered #fb_dialog_loader_close {
-        clear: both;
-        color: #fff;
-        display: block;
-        font-size: 18px;
-        padding-top: 20px
-    }
-
-    #fb-root #fb_dialog_ipad_overlay {
-        background: rgba(0, 0, 0, .4);
-        bottom: 0;
-        left: 0;
-        min-height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 100%;
-        z-index: 10000
-    }
-
-    #fb-root #fb_dialog_ipad_overlay.hidden {
-        display: none
-    }
-
-    .fb_dialog.fb_dialog_mobile.loading iframe {
-        visibility: hidden
-    }
-
-    .fb_dialog_mobile .fb_dialog_iframe {
-        position: sticky;
-        top: 0
-    }
-
-    .fb_dialog_content .dialog_header {
-        background: linear-gradient(from(#738aba), to(#2c4987));
-        border-bottom: 1px solid;
-        border-color: #043b87;
-        box-shadow: white 0 1px 1px -1px inset;
-        color: #fff;
-        font: bold 14px Helvetica, sans-serif;
-        text-overflow: ellipsis;
-        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0;
-        vertical-align: middle;
-        white-space: nowrap
-    }
-
-    .fb_dialog_content .dialog_header table {
-        height: 43px;
-        width: 100%
-    }
-
-    .fb_dialog_content .dialog_header td.header_left {
-        font-size: 12px;
-        padding-left: 5px;
-        vertical-align: middle;
-        width: 60px
-    }
-
-    .fb_dialog_content .dialog_header td.header_right {
-        font-size: 12px;
-        padding-right: 5px;
-        vertical-align: middle;
-        width: 60px
-    }
-
-    .fb_dialog_content .touchable_button {
-        background: linear-gradient(from(#4267B2), to(#2a4887));
-        background-clip: padding-box;
-        border: 1px solid #29487d;
-        border-radius: 3px;
-        display: inline-block;
-        line-height: 18px;
-        margin-top: 3px;
-        max-width: 85px;
-        padding: 4px 12px;
-        position: relative
-    }
-
-    .fb_dialog_content .dialog_header .touchable_button input {
-        background: none;
-        border: none;
-        color: #fff;
-        font: bold 12px Helvetica, sans-serif;
-        margin: 2px -12px;
-        padding: 2px 6px 3px 6px;
-        text-shadow: rgba(0, 30, 84, .296875) 0 -1px 0
-    }
-
-    .fb_dialog_content .dialog_header .header_center {
-        color: #fff;
-        font-size: 16px;
-        font-weight: bold;
-        line-height: 18px;
-        text-align: center;
-        vertical-align: middle
-    }
-
-    .fb_dialog_content .dialog_content {
-        background: url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;
-        border: 1px solid #4a4a4a;
-        border-bottom: 0;
-        border-top: 0;
-        height: 150px
-    }
-
-    .fb_dialog_content .dialog_footer {
-        background: #f5f6f7;
-        border: 1px solid #4a4a4a;
-        border-top-color: #ccc;
-        height: 40px
-    }
-
-    #fb_dialog_loader_close {
-        float: left
-    }
-
-    .fb_dialog.fb_dialog_mobile .fb_dialog_close_icon {
-        visibility: hidden
-    }
-
-    #fb_dialog_loader_spinner {
-        animation: rotateSpinner 1.2s linear infinite;
-        background-color: transparent;
-        background-image: url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);
-        background-position: 50% 50%;
-        background-repeat: no-repeat;
-        height: 24px;
-        width: 24px
-    }
-
-    @keyframes rotateSpinner {
-        0% {
-            transform: rotate(0deg)
-        }
-
-        100% {
-            transform: rotate(360deg)
-        }
-    }
-
-    .fb_iframe_widget {
-        display: inline-block;
-        position: relative
-    }
-
-    .fb_iframe_widget span {
-        display: inline-block;
-        position: relative;
-        text-align: justify
-    }
-
-    .fb_iframe_widget iframe {
-        position: absolute
-    }
-
-    .fb_iframe_widget_fluid_desktop,
-    .fb_iframe_widget_fluid_desktop span,
-    .fb_iframe_widget_fluid_desktop iframe {
-        max-width: 100%
-    }
-
-    .fb_iframe_widget_fluid_desktop iframe {
-        min-width: 220px;
-        position: relative
-    }
-
-    .fb_iframe_widget_lift {
-        z-index: 1
-    }
-
-    .fb_iframe_widget_fluid {
-        display: inline
-    }
-
-    .fb_iframe_widget_fluid span {
-        width: 100%
-    }
-
-    .fb_mpn_mobile_landing_page_slide_out {
-        animation-duration: 200ms;
-        animation-name: fb_mpn_landing_page_slide_out;
-        transition-timing-function: ease-in
-    }
-
-    .fb_mpn_mobile_landing_page_slide_out_from_left {
-        animation-duration: 200ms;
-        animation-name: fb_mpn_landing_page_slide_out_from_left;
-        transition-timing-function: ease-in
-    }
-
-    .fb_mpn_mobile_landing_page_slide_up {
-        animation-duration: 500ms;
-        animation-name: fb_mpn_landing_page_slide_up;
-        transition-timing-function: ease-in
-    }
-
-    .fb_mpn_mobile_bounce_in {
-        animation-duration: 300ms;
-        animation-name: fb_mpn_bounce_in;
-        transition-timing-function: ease-in
-    }
-
-    .fb_mpn_mobile_bounce_out {
-        animation-duration: 300ms;
-        animation-name: fb_mpn_bounce_out;
-        transition-timing-function: ease-in
-    }
-
-    .fb_mpn_mobile_bounce_out_v2 {
-        animation-duration: 300ms;
-        animation-name: fb_mpn_fade_out;
-        transition-timing-function: ease-in
-    }
-
-    .fb_customer_chat_bounce_in_v2 {
-        animation-duration: 300ms;
-        animation-name: fb_bounce_in_v2;
-        transition-timing-function: ease-in
-    }
-
-    .fb_customer_chat_bounce_in_from_left {
-        animation-duration: 300ms;
-        animation-name: fb_bounce_in_from_left;
-        transition-timing-function: ease-in
-    }
-
-    .fb_customer_chat_bounce_out_v2 {
-        animation-duration: 300ms;
-        animation-name: fb_bounce_out_v2;
-        transition-timing-function: ease-in
-    }
-
-    .fb_customer_chat_bounce_out_from_left {
-        animation-duration: 300ms;
-        animation-name: fb_bounce_out_from_left;
-        transition-timing-function: ease-in
-    }
-
-    .fb_invisible_flow {
-        display: inherit;
-        height: 0;
-        overflow-x: hidden;
-        width: 0
-    }
-
-    @keyframes fb_mpn_landing_page_slide_out {
-        0% {
-            margin: 0 12px;
-            width: 100% - 24px
-        }
-
-        60% {
-            border-radius: 18px
-        }
-
-        100% {
-            border-radius: 50%;
-            margin: 0 24px;
-            width: 60px
-        }
-    }
-
-    @keyframes fb_mpn_landing_page_slide_out_from_left {
-        0% {
-            left: 12px;
-            width: 100% - 24px
-        }
-
-        60% {
-            border-radius: 18px
-        }
-
-        100% {
-            border-radius: 50%;
-            left: 12px;
-            width: 60px
-        }
-    }
-
-    @keyframes fb_mpn_landing_page_slide_up {
-        0% {
-            bottom: 0;
-            opacity: 0
-        }
-
-        100% {
-            bottom: 24px;
-            opacity: 1
-        }
-    }
-
-    @keyframes fb_mpn_bounce_in {
-        0% {
-            opacity: .5;
-            top: 100%
-        }
-
-        100% {
-            opacity: 1;
-            top: 0
-        }
-    }
-
-    @keyframes fb_mpn_fade_out {
-        0% {
-            bottom: 30px;
-            opacity: 1
-        }
-
-        100% {
-            bottom: 0;
-            opacity: 0
-        }
-    }
-
-    @keyframes fb_mpn_bounce_out {
-        0% {
-            opacity: 1;
-            top: 0
-        }
-
-        100% {
-            opacity: .5;
-            top: 100%
-        }
-    }
-
-    @keyframes fb_bounce_in_v2 {
-        0% {
-            opacity: 0;
-            transform: scale(0, 0);
-            transform-origin: bottom right
-        }
-
-        50% {
-            transform: scale(1.03, 1.03);
-            transform-origin: bottom right
-        }
-
-        100% {
-            opacity: 1;
-            transform: scale(1, 1);
-            transform-origin: bottom right
-        }
-    }
-
-    @keyframes fb_bounce_in_from_left {
-        0% {
-            opacity: 0;
-            transform: scale(0, 0);
-            transform-origin: bottom left
-        }
-
-        50% {
-            transform: scale(1.03, 1.03);
-            transform-origin: bottom left
-        }
-
-        100% {
-            opacity: 1;
-            transform: scale(1, 1);
-            transform-origin: bottom left
-        }
-    }
-
-    @keyframes fb_bounce_out_v2 {
-        0% {
-            opacity: 1;
-            transform: scale(1, 1);
-            transform-origin: bottom right
-        }
-
-        100% {
-            opacity: 0;
-            transform: scale(0, 0);
-            transform-origin: bottom right
-        }
-    }
-
-    @keyframes fb_bounce_out_from_left {
-        0% {
-            opacity: 1;
-            transform: scale(1, 1);
-            transform-origin: bottom left
-        }
-
-        100% {
-            opacity: 0;
-            transform: scale(0, 0);
-            transform-origin: bottom left
-        }
-    }
-
-    @keyframes slideInFromBottom {
-        0% {
-            opacity: .1;
-            transform: translateY(100%)
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0)
-        }
-    }
-
-    @keyframes slideInFromBottomDelay {
-        0% {
-            opacity: 0;
-            transform: translateY(100%)
-        }
-
-        97% {
-            opacity: 0;
-            transform: translateY(100%)
-        }
-
-        100% {
-            opacity: 1;
-            transform: translateY(0)
-        }
-    }
-    </style>
-    <script type="text/javascript" async="" src="//media1.admicro.vn/core/visen.js"></script>
-    <link rel="manifest" href="//wdc.netcoresmartech.com/manifest.json">
-    <script type="text/javascript" async="" src="//bidgear-syndication.com/hd-adx?hid=51"></script>
-    <style id="style-zone-jphs5rwl" type="text/css">
-    #zone-jphs5rwl {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        overflow: hidden;
-    }
-    </style>
-    <style id="style-zone-jphs5rwl-1640792221891" type="text/css">
-    [id*="zone-jphs5rwl-"] {
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        z-index: -1;
-        overflow: hidden;
-    }
-    </style>
-    <style id="style-zone-jmgdp1wg" type="text/css">
-    #zone-jmgdp1wg {
-        display: flex !important;
-        justify-content: center;
-        width: 100%;
-    }
-    </style>
-    <style id="style-zone-jmgdp1wg-1640792221907" type="text/css">
-    [id*="zone-jmgdp1wg-"] {
-        display: flex !important;
-        justify-content: center;
-        width: 100%;
-    }
-    </style>
-    <style id="style-zone-jmg1jsy2" type="text/css">
-    #zone-jmg1jsy2 {
-        position: fixed;
-        bottom: 0px;
-        right: 0px;
-        z-index: 1000;
-    }
-
-    @media (max-width: 575.98px) {
-        #zone-jmg1jsy2 {
-            display: none;
-        }
-    }
-    </style>
-    <style id="style-zone-jmg1jsy2-1640792221922" type="text/css">
-    [id*="zone-jmg1jsy2-"] {
-        position: fixed;
-        bottom: 0px;
-        right: 0px;
-        z-index: 1000;
-
-        @media (max-width: 575.98px) {
-            display: none;
-        }
-    }
-    </style>
-    <script type="text/javascript" async="" src="//media1.admicro.vn/core/admcoreext.js"></script>
-    <script type="text/javascript" async="" src="//media1.admicro.vn/core/ssppage.js"></script>
-    <script type="text/javascript" async=""
-        src="https://adi.admicro.vn/adt/cpc/tvcads/tracking/genjs_ht26032019.js?v=0.11986575159260004"></script>
-    <style id="style-share-jmgdp2rf" type="text/css">
-    #share-jmgdp2rf {
-        margin-bottom: 10px;
-    }
-    </style>
-    <style id="style-share-jmgdp2rf-1640792222016" type="text/css">
-    [id*="share-jmgdp2rf-"] {
-        margin-bottom: 10px;
-    }
-    </style>
-    <style id="style-share-jmg1juym" type="text/css">
-    #share-jmg1juym {
-        position: fixed;
-        bottom: 0px;
-        right: 0px;
-        z-index: 1000;
-    }
-    </style>
-    <style id="style-share-jmg1juym-1640792222070" type="text/css">
-    [id*="share-jmg1juym-"] {
-        position: fixed;
-        bottom: 0px;
-        right: 0px;
-        z-index: 1000;
-    }
-    </style>
-    <script type="text/javascript" async=""
-        src="https://adi.admicro.vn/adt/cpc/tvcads/files/js/core/adm-tracking.js?v=0.0025750516812153013"></script>
-    <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-    <script src="//bidgear-syndication.com/hb/prebid3.27.1.20201022.js"></script>
-    <script type="text/javascript" async=""
-        src="//lg1.logging.admicro.vn/tracking_info.gif?&amp;ce=1&amp;lc=35&amp;cr=1635846424&amp;ui=3658464241741103149">
-    </script>
+    <link rel="stylesheet" href="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/styles.css">
 </head>
 
-<body class="" style="" data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed="">
+<body>
     <div id="app">
         <!-- SIDEBAR -->
         <?php View::partial('sidebar')  ?>
@@ -882,113 +34,6 @@ View::$activeItem = 'statis';
             <?php View::partial('header')  ?>
             <?php View::partial('changepass')  ?>
             <div id="main-content">
-                <!-- Google Tag Manager (noscript) --> <noscript> <iframe
-                        src="https://www.googletagmanager.com/ns.html?id=GTM-KFJP3N" height="0" width="0"
-                        style="display: none; visibility: hidden"></iframe> </noscript>
-                <!-- End Google Tag Manager (noscript) -->
-                <script>
-                var ttoDetailInfor = {
-                    allowComment: true,
-                    title: 'C\u1eadp nh\u1eadt s\u1ed1 li\u1ec7u ti\u00eam v\u1eafc xin v\u00e0 ca m\u1eafc COVID-19 t\u1ea1i Vi\u1ec7t Nam',
-                    sapo: 'TTO - S\u1ed1 ng\u01b0\u1eddi \u0111\u01b0\u1ee3c ti\u00eam v\u1eafc xin v\u00e0 s\u1ed1 ca m\u1eafc COVID-19 t\u1ea1i Vi\u1ec7t Nam t\u1eeb 29-4 \u0111\u1ebfn nay.',
-                    publishDate: '1620641640',
-                }
-                </script>
-                <script type="text/javascript">
-                (function(d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//connect.facebook.net/vi_VN/all.js#xfbml=1&appId=787960244659509";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'facebook-jssdk'));
-                </script>
-                <script>
-                var is_iPadScreen = navigator.userAgent.match(/iPad/i);
-                is_iPadScreen = null;
-
-                var arfAsync = arfAsync || [];
-                </script>
-                <link href="https://statictuoitre.mediacdn.vn/web_css/font.2017.11.28.1.min.css" rel="stylesheet">
-                <link href="https://static.mediacdn.vn/tuoitre/web_css/tuoitre.magazine.25022020v1.min.css"
-                    rel="stylesheet">
-                <link
-                    href="https://static.mediacdn.vn/tuoitre/web_css/tuoitre.magazine-zip-responsive.06032018v1.min.css"
-                    rel="stylesheet">
-                <script src="https://static.mediacdn.vn/tuoitre/web_js/tuoitre.magazine.04092021v1.min.js"></script>
-                <script src="https://adminplayer.sohatv.vn/resource/init-script/playerInitScript.js"></script>
-                <script>
-                var vcCore = function() {
-                    return {
-                        isAbsoluteUrl: function(e) {
-                            return !vcCore.isEmpty(e) && (0 == e.indexOf("http://") || 0 == e.indexOf(
-                                "https://"))
-                        },
-                        isSmartPhone: function() {
-                            return null != navigator.userAgent.match(
-                                /(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone|webOS)/i)
-                        },
-                        isEmpty: function(e) {
-                            return void 0 == e || "" == e || vcCore.isEmptyObject(e)
-                        },
-                        isEmptyObject: function(e) {
-                            for (var n in e) return !1;
-                            return !0
-                        },
-                        isIE: function() {
-                            return $("html").hasClass("ie")
-                        },
-                        isIE7: function() {
-                            return $("html").hasClass("ie7")
-                        },
-                        isIE8: function() {
-                            return $("html").hasClass("ie8")
-                        },
-                        isIE9: function() {
-                            return $("html").hasClass("ie9")
-                        },
-                        addToCache: function(e, n) {
-                            return n || (n = e, e = "js" + Math.floor(1e6 * Math.random())), vcCore[e] = n, e
-                        },
-                        getFromCache: function(e) {
-                            return vcCore[e]
-                        },
-                        exec: function(e) {
-                            "function" == typeof e && e()
-                        },
-                        getUrlParameter: function(e, n) {
-                            return decodeURIComponent((new RegExp("[?|&]" + e + "=([^&;]+?)(&|#|;|$)").exec(
-                                n) || [, ""])[1].replace(/\+/g, "%20")) || null
-                        },
-                        getCookie: function(e) {
-                            var n = document.cookie,
-                                t = n.indexOf(" " + e + "=");
-                            if (-1 == t && (t = n.indexOf(e + "=")), -1 == t) n = null;
-                            else {
-                                t = n.indexOf("=", t) + 1;
-                                var r = n.indexOf(";", t); - 1 == r && (r = n.length), n = unescape(n.substring(
-                                    t, r))
-                            }
-                            return n
-                        },
-                        setCookie: function(e, n, t) {
-                            var r = escape(n) + (null == t ? "" : "; expires=" + t.toUTCString());
-                            document.cookie = e + "=" + r
-                        },
-                        createObject: function() {
-                            return {}
-                        }
-                    }
-                }(jQuery);
-                </script>
-                <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
-                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                <link rel="stylesheet" href="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/styles.css">
-                <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/axios.min.js"></script>
-                <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/chart.min.js"></script>
-                <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/alpine.min.js" defer="">
-                </script>
                 <div class="k14-sp-wrapper is-zip">
                     <div class="min-h-screen font-sans antialiased bg-white" x-data="listData()" x-init="getList()">
                         <div class="px-4 py-10 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -2311,388 +1356,396 @@ View::$activeItem = 'statis';
                             </div>
                         </div>
                     </div>
-
-                    <script type="text/javascript">
-                    function slugify(string) {
-                        const a = 'àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;'
-                        const b = 'aaaaaaaaacccddeeeeeeegghiiiiilmnnnnooooooprrsssssttuuuuuuuuuwxyyzzz------'
-                        const p = new RegExp(a.split('').join('|'), 'g')
-                        return string.toString().toLowerCase()
-                            .replace(/á|à|ả|ạ|ã|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/gi, 'a')
-                            .replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/gi, 'e')
-                            .replace(/i|í|ì|ỉ|ĩ|ị/gi, 'i')
-                            .replace(/ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ/gi, 'o')
-                            .replace(/ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự/gi, 'u')
-                            .replace(/ý|ỳ|ỷ|ỹ|ỵ/gi, 'y')
-                            .replace(/đ/gi, 'd')
-                            .replace(/\s+/g, '-')
-                            .replace(p, c => b.charAt(a.indexOf(c)))
-                            .replace(/&/g, '-and-')
-                            .replace(/[^\w\-]+/g, '')
-                            .replace(/\-\-+/g, '-')
-                            .replace(/^-+/, '')
-                            .replace(/-+$/, '')
-                    }
-
-                    function offset(el) {
-                        var rect = el.getBoundingClientRect(),
-                            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
-                            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-                        return {
-                            top: rect.top + scrollTop,
-                            left: rect.left + scrollLeft
-                        }
-                    }
-
-                    function listData() {
-                        return {
-                            selectedProvince: null,
-                            selectedData: 2,
-                            today: 0,
-                            yesterday: 0,
-                            death: 0,
-                            totalDeath: 0,
-                            total: 0,
-                            totalVaccine: 0,
-                            cure: 0,
-                            cureToday: 0,
-                            list: [],
-                            listWithKey: [],
-                            size: 0,
-                            spread: 0,
-                            scale: {
-                                0: '1-50',
-                                1: '50+',
-                                2: '100+',
-                                3: '200+',
-                                4: '500+',
-                                5: '1000+',
-                                6: '1500+',
-                                7: '2000+',
-                                8: '3000+',
-                            },
-                            updateMapVaccine(data) {
-                                if (!data) {
-                                    data = this.data;
-                                }
-                                for (i = 0; i < data.length; i++) {
-                                    var id = slugify(data[i][1]);
-                                    var elem = document.getElementById(id);
-                                    var total = data[i][4];
-                                    this.scale = [
-                                        '0-20k',
-                                        '20k+',
-                                        '50k+',
-                                        '100k+',
-                                        '150k+',
-                                        '200k+',
-                                        '250k+',
-                                        '300k+',
-                                        '350k+',
-                                    ];
-
-                                    elem.removeAttribute('class')
-                                    elem.classList.add('text-gray-200')
-
-                                    if (total > 0 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-100')
-                                    }
-                                    if (total > 20 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-200')
-                                    }
-                                    if (total > 50 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-300')
-                                    }
-                                    if (total > 100 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-400')
-                                    }
-                                    if (total > 150 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-500')
-                                    }
-                                    if (total > 200 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-600')
-                                    }
-                                    if (total > 250 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-700')
-                                    }
-                                    if (total > 300 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-800')
-                                    }
-                                    if (total > 350 * 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-green-900')
-                                    }
-                                }
-                            },
-                            updateMap(data) {
-                                for (i = 0; i < data.length; i++) {
-                                    var id = slugify(data[i][1]);
-                                    var elem = document.getElementById(id);
-                                    var total = data[i][2];
-                                    this.scale = [
-                                        '1-50',
-                                        '50+',
-                                        '100+',
-                                        '200+',
-                                        '500+',
-                                        '1000+',
-                                        '1500+',
-                                        '2000+',
-                                        '3000+',
-                                    ];
-
-                                    elem.removeAttribute('class')
-                                    elem.classList.add('text-gray-200')
-
-                                    if (total > 0) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-100')
-                                    }
-                                    if (total > 50) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-200')
-                                    }
-                                    if (total > 100) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-300')
-                                    }
-                                    if (total > 200) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-400')
-                                    }
-                                    if (total > 500) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-500')
-                                    }
-                                    if (total > 1000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-600')
-                                    }
-                                    if (total > 1500) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-700')
-                                    }
-                                    if (total > 2000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-800')
-                                    }
-                                    if (total > 3000) {
-                                        elem.removeAttribute('class')
-                                        elem.classList.add('text-red-900')
-                                    }
-                                }
-                            },
-                            formatNumber(number) {
-                                return new Intl.NumberFormat('vi-VN').format(number)
-                            },
-                            getHover(id) {
-                                if (this.listWithKey[id]) {
-                                    this.selectedProvince = id;
-                                    var div = document.getElementById(id);
-                                    var divOffset = offset(div);
-                                    var tooltip = document.getElementById('tooltip');
-                                    tooltip.style.top = divOffset.top + 50 + 'px';
-                                    tooltip.style.left = divOffset.left + 50 + 'px';
-                                }
-                            },
-                            getList() {
-                                fetch('https://tuoitre.io/covid-mix')
-                                    .then(response => response.json())
-                                    .then(data => {
-                                        this.total = data[0][2];
-                                        this.death = data[0][4];
-                                        this.totalDeath = data[0][5];
-                                        this.cure = data[0][3];
-                                        this.cureToday = data[0][6];
-                                        this.totalVaccine = data[1];
-                                        data.shift();
-                                        data.shift();
-                                        this.list = data.sort((a, b) => {
-                                            if (a[3] == b[3]) {
-                                                if (a[6] == b[6]) {
-                                                    if (a[2] == b[2]) {
-                                                        if (a[1].split(" ").pop().localeCompare(b[1].split(
-                                                                " ").pop(), 'vi') == 0) {
-                                                            return a[1].split(" ").shift().localeCompare(b[
-                                                                1].split(" ").shift(), 'vi');
-                                                        }
-                                                        return a[1].split(" ").pop().localeCompare(b[1]
-                                                            .split(" ").pop(), 'vi', )
-                                                    } else {
-                                                        return a[2] < b[2] ? 1 : -1;
-                                                    }
-                                                } else {
-                                                    return a[6] < b[6] ? 1 : -1;
-                                                }
-                                            } else {
-                                                return a[3] < b[3] ? 1 : -1;
-                                            }
-
-                                            if (a[1].split(" ").pop().localeCompare(b[1].split(" ").pop(),
-                                                    'vi') == 0) {
-                                                return a[1].split(" ").shift().localeCompare(b[1].split(" ")
-                                                    .shift(), 'vi');
-                                            }
-                                            return a[1].split(" ").pop().localeCompare(b[1].split(" ")
-                                                .pop(), 'vi', )
-
-                                        });
-                                        this.size = Object.keys(data[0]).length - 1;
-                                        this.updateMapVaccine(data);
-                                        // this.spread = Object.keys(data).length;
-                                        var sum = 0;
-                                        for (i = 0; i < data.length; i++) {
-                                            if (data[i][3] > 0) {
-                                                this.today += data[i][3];
-                                            }
-                                            if (data[i][6] > 0) {
-                                                this.yesterday += data[i][6];
-                                            }
-                                            if (data[i][2] > 0) {
-                                                this.spread += 1;
-                                            } else {
-                                                sum++;
-                                            };
-                                            this.listWithKey[slugify(data[i][1])] = data[i];
-                                        }
-                                    })
-                            }
-                        }
-                    }
-
-                    (function() {
-                        document.getElementById('list-container').style.height = document.getElementById(
-                            'vietnam-map').offsetHeight + 'px';
-                        window.addEventListener("resize", function() {
-                            document.getElementById('list-container').style.height = document
-                                .getElementById('vietnam-map').offsetHeight + 'px';
-                        });
-                        const data = {
-                            labels: [],
-                            datasets: [{
-                                label: 'Ca nhiễm',
-                                backgroundColor: 'rgba(238, 51, 34, 0.5)',
-                                borderColor: 'rgba(238, 51, 34, 1)',
-                                data: [],
-                                pointRadius: 0,
-                            }]
-                        };
-                        const config = {
-                            type: 'line',
-                            data,
-                            options: {
-                                responsive: true,
-                                fill: true,
-
-                                // fill: true,
-                                scales: {
-                                    y: {
-                                        ticks: {
-                                            color: 'rgba(238, 51, 34, 1)',
-                                        }
-                                    },
-                                }
-                            }
-                        }
-
-                        var byTotalChart = new Chart(
-                            document.getElementById('chart-by-total'),
-                            config
-                        );
-
-                        const dataByDay = {
-                            labels: [],
-                            datasets: [{
-                                    label: 'Ca nhiễm',
-                                    backgroundColor: 'rgba(238, 51, 34, 0.5)',
-                                    borderColor: 'rgba(238, 51, 34, 1)',
-                                    data: [],
-                                    yAxisID: 'y',
-                                },
-                                {
-                                    label: 'Vắc xin',
-                                    backgroundColor: 'rgba(5,150,105, 1)',
-                                    borderColor: 'rgba(5,150,105, 1)',
-                                    data: [],
-                                    type: 'line',
-                                    yAxisID: 'y2',
-                                    pointRadius: 0,
-                                },
-                            ]
-                        };
-                        const configByDay = {
-                            type: 'bar',
-                            data: dataByDay,
-                            options: {
-                                responsive: true,
-                                scales: {
-                                    y: {
-                                        type: 'linear',
-                                        position: 'left',
-                                        ticks: {
-                                            color: 'rgba(238, 51, 34, 1)',
-                                        }
-                                    },
-                                    y2: {
-                                        type: 'linear',
-                                        position: 'right',
-                                        ticks: {
-                                            color: 'rgba(5,150,105, 1)'
-                                        },
-                                        grid: {
-                                            drawOnChartArea: false // only want the grid lines for one axis to show up
-                                        }
-                                    }
-                                }
-                            }
-                        }
-
-                        var byDayChart = new Chart(
-                            document.getElementById('chart-by-day'),
-                            configByDay
-                        );
-
-                        fetch('https://tuoitre.io/covid/bieu-do')
-                            .then(response => response.json())
-                            .then(data => {
-                                var labels = [];
-                                var byDay = [];
-                                var byTotal = [];
-                                var byDayVaccine = [];
-
-                                for (i = 0; i < data.length; i++) {
-                                    labels.push(data[i][0]);
-                                    byDay.push(data[i][1]);
-                                    byTotal.push(data[i][2]);
-                                    byDayVaccine.push(data[i][3]);
-                                }
-
-                                byDayChart.data.labels = labels;
-                                byDayChart.data.datasets[0].data = byDay;
-                                byDayChart.data.datasets[1].data = byDayVaccine;
-                                byDayChart.update();
-
-                                byTotalChart.data.labels = labels;
-                                byTotalChart.data.datasets[0].data = byTotal;
-                                byTotalChart.update();
-                            })
-                    })();
-                    </script>
                 </div>
             </div>
             <!-- FOOTER -->
             <?php View::partial('footer')  ?>
         </div>
     </div>
-    </div>
+    <script type="text/javascript">
+    function slugify(string) {
+        const a = 'àáäâãåăæąçćčđďèéěėëêęğǵḧìíïîįłḿǹńňñòóöôœøṕŕřßşśšșťțùúüûǘůűūųẃẍÿýźžż·/_,:;'
+        const b = 'aaaaaaaaacccddeeeeeeegghiiiiilmnnnnooooooprrsssssttuuuuuuuuuwxyyzzz------'
+        const p = new RegExp(a.split('').join('|'), 'g')
+        return string.toString().toLowerCase()
+            .replace(/á|à|ả|ạ|ã|ă|ắ|ằ|ẳ|ẵ|ặ|â|ấ|ầ|ẩ|ẫ|ậ/gi, 'a')
+            .replace(/é|è|ẻ|ẽ|ẹ|ê|ế|ề|ể|ễ|ệ/gi, 'e')
+            .replace(/i|í|ì|ỉ|ĩ|ị/gi, 'i')
+            .replace(/ó|ò|ỏ|õ|ọ|ô|ố|ồ|ổ|ỗ|ộ|ơ|ớ|ờ|ở|ỡ|ợ/gi, 'o')
+            .replace(/ú|ù|ủ|ũ|ụ|ư|ứ|ừ|ử|ữ|ự/gi, 'u')
+            .replace(/ý|ỳ|ỷ|ỹ|ỵ/gi, 'y')
+            .replace(/đ/gi, 'd')
+            .replace(/\s+/g, '-')
+            .replace(p, c => b.charAt(a.indexOf(c)))
+            .replace(/&/g, '-and-')
+            .replace(/[^\w\-]+/g, '')
+            .replace(/\-\-+/g, '-')
+            .replace(/^-+/, '')
+            .replace(/-+$/, '')
+    }
+
+    function offset(el) {
+        var rect = el.getBoundingClientRect(),
+            scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+            scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        return {
+            top: rect.top + scrollTop,
+            left: rect.left + scrollLeft
+        }
+    }
+
+    function listData() {
+        return {
+            selectedProvince: null,
+            selectedData: 2,
+            today: 0,
+            yesterday: 0,
+            death: 0,
+            totalDeath: 0,
+            total: 0,
+            totalVaccine: 0,
+            cure: 0,
+            cureToday: 0,
+            list: [],
+            listWithKey: [],
+            size: 0,
+            spread: 0,
+            scale: {
+                0: '1-50',
+                1: '50+',
+                2: '100+',
+                3: '200+',
+                4: '500+',
+                5: '1000+',
+                6: '1500+',
+                7: '2000+',
+                8: '3000+',
+            },
+            updateMapVaccine(data) {
+                if (!data) {
+                    data = this.data;
+                }
+                for (i = 0; i < data.length; i++) {
+                    var id = slugify(data[i][1]);
+                    var elem = document.getElementById(id);
+                    var total = data[i][4];
+                    this.scale = [
+                        '0-20k',
+                        '20k+',
+                        '50k+',
+                        '100k+',
+                        '150k+',
+                        '200k+',
+                        '250k+',
+                        '300k+',
+                        '350k+',
+                    ];
+
+                    elem.removeAttribute('class')
+                    elem.classList.add('text-gray-200')
+
+                    if (total > 0 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-100')
+                    }
+                    if (total > 20 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-200')
+                    }
+                    if (total > 50 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-300')
+                    }
+                    if (total > 100 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-400')
+                    }
+                    if (total > 150 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-500')
+                    }
+                    if (total > 200 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-600')
+                    }
+                    if (total > 250 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-700')
+                    }
+                    if (total > 300 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-800')
+                    }
+                    if (total > 350 * 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-green-900')
+                    }
+                }
+            },
+            updateMap(data) {
+                for (i = 0; i < data.length; i++) {
+                    var id = slugify(data[i][1]);
+                    var elem = document.getElementById(id);
+                    var total = data[i][2];
+                    this.scale = [
+                        '1-50',
+                        '50+',
+                        '100+',
+                        '200+',
+                        '500+',
+                        '1000+',
+                        '1500+',
+                        '2000+',
+                        '3000+',
+                    ];
+
+                    elem.removeAttribute('class')
+                    elem.classList.add('text-gray-200')
+
+                    if (total > 0) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-100')
+                    }
+                    if (total > 50) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-200')
+                    }
+                    if (total > 100) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-300')
+                    }
+                    if (total > 200) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-400')
+                    }
+                    if (total > 500) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-500')
+                    }
+                    if (total > 1000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-600')
+                    }
+                    if (total > 1500) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-700')
+                    }
+                    if (total > 2000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-800')
+                    }
+                    if (total > 3000) {
+                        elem.removeAttribute('class')
+                        elem.classList.add('text-red-900')
+                    }
+                }
+            },
+            formatNumber(number) {
+                return new Intl.NumberFormat('vi-VN').format(number)
+            },
+            getHover(id) {
+                if (this.listWithKey[id]) {
+                    this.selectedProvince = id;
+                    var div = document.getElementById(id);
+                    var divOffset = offset(div);
+                    var tooltip = document.getElementById('tooltip');
+                    tooltip.style.top = divOffset.top + 50 + 'px';
+                    tooltip.style.left = divOffset.left + 50 + 'px';
+                }
+            },
+            getList() {
+                fetch('https://tuoitre.io/covid-mix')
+                    .then(response => response.json())
+                    .then(data => {
+                        this.total = data[0][2];
+                        this.death = data[0][4];
+                        this.totalDeath = data[0][5];
+                        this.cure = data[0][3];
+                        this.cureToday = data[0][6];
+                        this.totalVaccine = data[1];
+                        data.shift();
+                        data.shift();
+                        this.list = data.sort((a, b) => {
+                            if (a[3] == b[3]) {
+                                if (a[6] == b[6]) {
+                                    if (a[2] == b[2]) {
+                                        if (a[1].split(" ").pop().localeCompare(b[1].split(
+                                                " ").pop(), 'vi') == 0) {
+                                            return a[1].split(" ").shift().localeCompare(b[
+                                                1].split(" ").shift(), 'vi');
+                                        }
+                                        return a[1].split(" ").pop().localeCompare(b[1]
+                                            .split(" ").pop(), 'vi', )
+                                    } else {
+                                        return a[2] < b[2] ? 1 : -1;
+                                    }
+                                } else {
+                                    return a[6] < b[6] ? 1 : -1;
+                                }
+                            } else {
+                                return a[3] < b[3] ? 1 : -1;
+                            }
+
+                            if (a[1].split(" ").pop().localeCompare(b[1].split(" ").pop(),
+                                    'vi') == 0) {
+                                return a[1].split(" ").shift().localeCompare(b[1].split(" ")
+                                    .shift(), 'vi');
+                            }
+                            return a[1].split(" ").pop().localeCompare(b[1].split(" ")
+                                .pop(), 'vi', )
+
+                        });
+                        this.size = Object.keys(data[0]).length - 1;
+                        this.updateMapVaccine(data);
+                        var sum = 0;
+                        for (i = 0; i < data.length; i++) {
+                            if (data[i][3] > 0) {
+                                this.today += data[i][3];
+                            }
+                            if (data[i][6] > 0) {
+                                this.yesterday += data[i][6];
+                            }
+                            if (data[i][2] > 0) {
+                                this.spread += 1;
+                            } else {
+                                sum++;
+                            };
+                            this.listWithKey[slugify(data[i][1])] = data[i];
+                        }
+                    })
+            }
+        }
+    }
+
+    (function() {
+        document.getElementById('list-container').style.height = document.getElementById(
+            'vietnam-map').offsetHeight + 'px';
+        window.addEventListener("resize", function() {
+            document.getElementById('list-container').style.height = document
+                .getElementById('vietnam-map').offsetHeight + 'px';
+        });
+        const data = {
+            labels: [],
+            datasets: [{
+                label: 'Ca nhiễm',
+                backgroundColor: 'rgba(238, 51, 34, 0.5)',
+                borderColor: 'rgba(238, 51, 34, 1)',
+                data: [],
+                pointRadius: 0,
+            }]
+        };
+        const config = {
+            type: 'line',
+            data,
+            options: {
+                responsive: true,
+                fill: true,
+                scales: {
+                    y: {
+                        ticks: {
+                            color: 'rgba(238, 51, 34, 1)',
+                        }
+                    },
+                }
+            }
+        }
+
+        var byTotalChart = new Chart(
+            document.getElementById('chart-by-total'),
+            config
+        );
+
+        const dataByDay = {
+            labels: [],
+            datasets: [{
+                    label: 'Ca nhiễm',
+                    backgroundColor: 'rgba(238, 51, 34, 0.5)',
+                    borderColor: 'rgba(238, 51, 34, 1)',
+                    data: [],
+                    yAxisID: 'y',
+                },
+                {
+                    label: 'Vắc xin',
+                    backgroundColor: 'rgba(5,150,105, 1)',
+                    borderColor: 'rgba(5,150,105, 1)',
+                    data: [],
+                    type: 'line',
+                    yAxisID: 'y2',
+                    pointRadius: 0,
+                },
+            ]
+        };
+        const configByDay = {
+            type: 'bar',
+            data: dataByDay,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        type: 'linear',
+                        position: 'left',
+                        ticks: {
+                            color: 'rgba(238, 51, 34, 1)',
+                        }
+                    },
+                    y2: {
+                        type: 'linear',
+                        position: 'right',
+                        ticks: {
+                            color: 'rgba(5,150,105, 1)'
+                        },
+                        grid: {
+                            drawOnChartArea: false // only want the grid lines for one axis to show up
+                        }
+                    }
+                }
+            }
+        }
+
+        var byDayChart = new Chart(
+            document.getElementById('chart-by-day'),
+            configByDay
+        );
+
+        fetch('https://tuoitre.io/covid/bieu-do')
+            .then(response => response.json())
+            .then(data => {
+                var labels = [];
+                var byDay = [];
+                var byTotal = [];
+                var byDayVaccine = [];
+
+                for (i = 0; i < data.length; i++) {
+                    labels.push(data[i][0]);
+                    byDay.push(data[i][1]);
+                    byTotal.push(data[i][2]);
+                    byDayVaccine.push(data[i][3]);
+                }
+
+                byDayChart.data.labels = labels;
+                byDayChart.data.datasets[0].data = byDay;
+                byDayChart.data.datasets[1].data = byDayVaccine;
+                byDayChart.update();
+
+                byTotalChart.data.labels = labels;
+                byTotalChart.data.datasets[0].data = byTotal;
+                byTotalChart.update();
+            })
+    })();
+    </script>
+    <script
+        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_1"
+        async=""></script>
+    <script
+        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_0"
+        async=""></script>
+    <script async="" type="text/javascript" src="https://apis.google.com/js/client:platform.js" gapi_processed="true">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/axios.min.js"></script>
+    <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/chart.min.js"></script>
+    <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/alpine.min.js" defer>
+    </script>
     <script src="<?= View::assets('vendors/toastify/toastify.js') ?>"></script>
     <script src="<?= View::assets('vendors/perfect-scrollbar/perfect-scrollbar.min.js') ?>"></script>
     <script src="<?= View::assets('js/bootstrap.bundle.min.js') ?>"></script>
