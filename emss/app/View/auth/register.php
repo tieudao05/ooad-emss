@@ -135,7 +135,12 @@ use App\Core\View;
     </div>
     <script src="<?= View::assets('vendors/jquery/jquery.min.js') ?>"></script>
     <script src="<?= View::assets('vendors/jquery/jquery.validate.js') ?>"></script>
+    <script src="<?= View::assets('js\address.js') ?>"></script> 
     <script>
+        $(document).ready(function() {
+            var a = $.xResponse();
+            alert(a);
+        })
     </script>
 </body>
 
