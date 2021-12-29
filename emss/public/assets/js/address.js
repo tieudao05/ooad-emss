@@ -1,3 +1,7 @@
+/**Trả về mảng chứa danh sách tỉnh huyện xã
+ * Ví dụ: var address = $.theResponse;
+ * addres[0]['name'] = Thành phố Hà Nội
+ * */
 $.extend({
     xResponse: function() {
         var theResponse = null;
