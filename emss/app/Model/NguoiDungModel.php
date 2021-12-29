@@ -24,24 +24,43 @@ class NguoiDungModel
     public static function add($username,$password,$vaitro, $holot, $ten, $cmnd, $ngaysinh, $phai, $diachi, $email, $sdt)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
+        $data = [
+            'thanhcong'=>false,
+        ];
+        $sql = "SELECT * FROM nguoi_dung WHERE user_name='".$username."'";
+        $query = $database->prepare($sql);
+        $query->execute();
+        $count = $query->rowCount();
+        if($count==1){
+            $data['thanhcong'] = false;
+            $data['error'] = "Số điện thoại đã được sử dụng";
+            return $data;
+        }
+        $sql = "SELECT * FROM nguoi_dung WHERE cmnd='".$cmnd."'";
+        $query = $database->prepare($sql);
+        $query->execute();
+        $count = $query->rowCount();
+        if($count==1){
+            $data['thanhcong'] = false;
+            $data['error'] = "Bạn đã có tài khoản";
+            return $data;
+        }
 
         // Mã hóa password bằng thuật toán bcrypt
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
-        $sql = "INSERT INTO nguoi_dung (user_name, password, ma_vai_tro, ho_lot, ten, cmnd, ngay_sinh, phai, dia_chi, email, so_dien_thoai, trang_thai)
-                VALUES (:user_name, :hashed_password, :role, :holot, :ten, :cmnd, :ngay_sinh, :phai, :diachi, :email, :so_dien_thoai, 1)";
-        
         $sql_ = "INSERT INTO nguoi_dung (user_name, password, ma_vai_tro, ho_lot, ten, cmnd, ngay_sinh, phai, dia_chi, email, so_dien_thoai, trang_thai)
-                VALUES ('admin','".$hashed_password."',1, 'admin', 'admin', '0000', '2001-01-01', 'Nam', 'TPHCM', 'ef.tieudao@gmail.com', '012345', 1)";
+                VALUES ('".$username."','".$hashed_password."',".$vaitro.", '".$holot."', '".$ten."', '".$cmnd."', '".$ngaysinh."','".$phai."', '".$diachi."', '".$email."', '".$sdt."', 1)";
         $query = $database->prepare($sql_);
-       // $query->execute([':user_name' => $username, ':hashed_password' => $hashed_password, ':role' => $vaitro, ':holot'=> $holot, ':ten'=> $ten, ':cmnd'=> $cmnd, ':ngay_sinh'=> $ngaysinh, ':phai'=> $phai, ':dia_chi'=>$diachi, ':email'=>$email, ':so_dien_thoai'=>$sdt]);
-       $query->execute();
-        $count = $query->rowCount();
+        //$query->execute([':user_name' => $username, ':hashed_password' => $hashed_password, ':role' => $vaitro, ':holot'=> $holot, ':ten'=> $ten, ':cmnd'=> $cmnd, ':ngay_sinh'=> $ngaysinh, ':phai'=> $phai, ':dia_chi'=>$diachi, ':email'=>$email, ':so_dien_thoai'=>$sdt]);
+        $query->execute();
+        $count = $query->rowCount();    
         if ($count == 1) {
-            return true;
+            $data['thanhcong'] = true;
+            $data['summary'] = "Thành công";
         }
 
-        return false;
+        return $data;
     }
     public static function update()
     {

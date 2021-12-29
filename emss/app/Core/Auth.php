@@ -22,16 +22,4 @@ class Auth
             Redirect::home();
         }
     }
-
-    // Cos ther kiem tra quyen ow day
-    public static function ktraquyen($maquyen)
-    {
-        // em dung model 
-        // kiem tra user co quyen do ko
-        if (Cookie::userIsLoggedIn() && !QuyenModel::ktraQuyen($maquyen)) {
-                Redirect::home();
-        }
-        
-        
-    }
 }
