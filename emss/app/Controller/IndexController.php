@@ -10,7 +10,7 @@ class IndexController extends Controller
     public function __construct()
     {
         parent::__construct();
-        Auth::checkAuthentication();
+        //Auth::checkAuthentication();
     }
 
     // Trang mặc định của web
