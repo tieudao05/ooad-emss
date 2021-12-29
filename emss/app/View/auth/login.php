@@ -100,7 +100,7 @@ use App\Core\Redirect;
                         user_name: $('#user_name').val(),
                         password: $('#password').val()
                     })
-                    ajax.done(function(data) {
+                    ajax.done(function(data) {  
                         if (!data['thanhcong']) {
                             Toastify({
                             text: data['summary'],

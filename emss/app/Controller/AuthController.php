@@ -23,6 +23,7 @@ class AuthController extends Controller
         return $this->View->render('auth/login');
     }
 
+
     public function loginPost()
     {
         Auth::checkNotAuthentication();
@@ -68,13 +69,23 @@ class AuthController extends Controller
 
     public function registerPost()
     {
-        Auth::checkNotAuthentication();
+        Auth::checkNotAuthentication(); 
+        $lastname = Request::post('lastname');
+        $firstname = Request::post('firstname');
+        $cmnd = Request::post('cmnd');
+        $birthday = Request::post('birthday');
+        $sex = Request::post('sex');
+        $phone_number = Request::post('phone_number');
+        $province = Request::post('province');
+        $district = Request::post('district');
+        $ward = Request::post('ward');
+        $village = Request::post('village');
+        $home = Request::post('home');
         $email = Request::post('email');
         $password = Request::post('password');
-        $fullname = Request::post('fullname');
-        $maquyen = Request::post('maquyen');
-        UserModel::create($email, $password, $fullname,$maquyen);
-        Redirect::to('auth/login');
+        $address = $province."-".$district."-".$ward."-".$home."-".$village;
+        $result = NguoiDungModel::add($phone_number,$password,6,$lastname,$firstname,$cmnd,$birthday,$sex,$address,$email,$phone_number);
+        return $this->View->renderJSON($result);
     }
 
     public function logout()
