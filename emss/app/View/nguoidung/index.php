@@ -286,7 +286,6 @@ View::$activeItem = 'user';
                             </div>
                             <!-- Modal body -->
                             <div class="modal-body" id="modal-content">
-
                                 <div class="row">
                                     <div class="form-group row col-6">
                                         <label for="lastname" class="col-sm-4 col-form-label">Họ lót:</label>

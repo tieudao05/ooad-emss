@@ -7,7 +7,7 @@ use App\Core\DatabaseFactory;
 use PDO;
 use stdClass;
 
-class TruyVetModel
+class BenhNhanModel
 {
 
     public static function getList($current_page, $row_per_page)
@@ -15,7 +15,7 @@ class TruyVetModel
         $limit = $row_per_page;
         $offset = ($current_page - 1) * $row_per_page;
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "SELECT * FROM thong_tin_truy_vet WHERE trang_thai = 1 ORDER BY thoi_gian_truy_vet DESC LIMIT " . $offset . ", " . $limit;
+        $sql = "SELECT * FROM benh_nhan WHERE trang_thai = 1 LIMIT " . $offset . ", " . $limit;
         $query = $database->prepare($sql);
         $query->execute();
         $result = new stdClass;
@@ -32,27 +32,15 @@ class TruyVetModel
         ];
         return $response;
     }
-    public static function getOneByObject($ma_nguoi_dung, $tgbd, $tgkt)
+    public static function getAll()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "SELECT * FROM lich_trinh WHERE ma_nguoi_dung ='" . $ma_nguoi_dung . "' AND thoi_gian>='" . $tgbd . "' AND thoi_gian<='" . $tgkt."'";
+        $sql = "SELECT ma_benh_nhan, ma_benh_vien, ho_lot, ten FROM benh_nhan, nguoi_dung WHERE nguoi_dung.ma_nguoi_dung = benh_nhan.ma_benh_nhan";
         $query = $database->prepare($sql);
-        $query->execute();
+        $query->execute();  
         if ($data = $query->fetchAll(PDO::FETCH_ASSOC)) {
             return $data;
         }
         return null;
-    }
-    public static function getOneByLocation($ma_dia_diem, $tgbd, $tgkt, $ma_nguoi_dung_1, $ma_nguoi_dung_2)
-    {
-        $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "SELECT * FROM lich_trinh WHERE ma_dia_diem ='" . $ma_dia_diem . "' AND thoi_gian>='" . $tgbd . "' AND thoi_gian<='" . $tgkt."' AND ma_nguoi_dung!='".$ma_nguoi_dung_1."' AND ma_nguoi_dung!='".$ma_nguoi_dung_2."'";
-        $query = $database->prepare($sql);
-        $query->execute();
-        $data = array();
-        if ($data = $query->fetchAll(PDO::FETCH_ASSOC)) {
-            return $data;
-        }
-        return $data;
     }
 }

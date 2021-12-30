@@ -56,7 +56,7 @@ View::$activeItem = 'trace';
                             </div>
                             <div class="col-12 col-md-5 order-md-2 order-first">
                                 <div class=" loat-start float-lg-end mb-3">
-                                    <button id='open-add-user-btn' class="btn btn-primary">
+                                    <button id='do-trace' class="btn btn-primary">
                                         <i class="bi bi-plus"></i> Tiến hành truy vết
                                     </button>
                                 </div>
@@ -84,13 +84,138 @@ View::$activeItem = 'trace';
                                         </tbody>
                                     </table>
                                     <nav class="mt-5">
-                                        <ul id="pagination" class="pagination justify-content-center">
+                                        <ul id="pagination_" class="pagination justify-content-center">
                                         </ul>
                                     </nav>
 
                                 </div>
                             </div>
                     </section>
+                </div>
+                <!-- Model trace -->
+                <div class="modal fade" id="modal-trace">
+                    <div class="modal-dialog modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-warning">
+                                <h2 class="modal-title text-light">Truy vết</h2>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body row" id="modal-content-delete">
+                                <div class="form-group">
+                                    <label for="ma_benh_nhan" class="col-form-label">Chọn đối tượng:</label>
+                                    <select class="form-control " name="ma_benh_nhan" id="ma_benh_nhan">
+                                        <option value='-1'>Chọn</option>
+                                    </select>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label for="ma_benh_nhan" class="col-form-label">Thời gian bắt đầu:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="date" class="form-control" id="tgbd">
+                                    </div>
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-6">
+                                        <label for="ma_benh_nhan" class="col-form-label">Thời gian kết thúc:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <input type="date" class="form-control" id="tgkt">
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <button type="button" class="btn btn-danger" id="btn-confirm" data-bs-dismiss="modal">Xác nhận</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Model result -->
+                <div class="modal fade " id="modal-result">
+                    <div class="modal-dialog modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-warning">
+                                <h2 class="modal-title text-light">Truy vết</h2>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body row">
+                                <div class="col-6 form-group row">
+                                    <div class="col-6">
+                                        <label class="col-form-label">Xem theo:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <select name="view" id="view" class="form-control">
+                                            <option value="1">Mốc dịch tễ</option>
+                                            <option value="2">F1</option>
+                                            <option value="3">F2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <table class="table mb-0 table-danger" id="table1">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã địa điểm</th>
+                                            <th>Tên địa điểm</th>
+                                            <th>Địa chỉ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="content-table">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <!--<button type="button" class="btn btn-danger" id="btn-confirm" data-bs-dismiss="modal">Xác nhận</button>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Model F1 -->
+                <div class="modal fade " id="modal-F1">
+                    <div class="modal-dialog modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-warning">
+                                <h2 class="modal-title text-light">Truy vết</h2>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="modal-body row">
+                                <div class="col-6 form-group row">
+                                    <div class="col-6">
+                                        <label class="col-form-label">Xem theo:</label>
+                                    </div>
+                                    <div class="col-6">
+                                        <select name="view" id="view" class="form-control">
+                                            <option value="1">Mốc dịch tễ</option>
+                                            <option value="2">F1</option>
+                                            <option value="3">F2</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <table class="table mb-0 table-danger" id="table1">
+                                    <thead>
+                                        <tr>
+                                            <th>Mã địa điểm</th>
+                                            <th>Tên địa điểm</th>
+                                            <th>Địa chỉ</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="content-table">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- Modal footer -->
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                                <!--<button type="button" class="btn btn-danger" id="btn-confirm" data-bs-dismiss="modal">Xác nhận</button>-->
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <!-- FOOTER -->
                 <?php View::partial('footer')  ?>
@@ -106,66 +231,101 @@ View::$activeItem = 'trace';
     <script src="<?= View::assets('js/changepass.js') ?>"></script>
     <script src="<?= View::assets('js/menu.js') ?>"></script>
     <script src="<?= View::assets('js/api.js') ?>"></script>
+    <script src="<?= View::assets('js/address.js') ?>"></script>
     <script>
         $(document).ready(function() {
+            getList(1);
+            $('#do-trace').click(function() {
+                $('#modal-trace').modal('show');
+            })
+            $('#modal-F1').modal('show');
+
             function getList(current_page) {
-
-                $('#content').empty();
-                var role = $.ajax({
-                    url: 'http://localhost/ooad-emss/emss/phanquyen/getListRole',
-                    type: 'POST'
-                });
-
                 var list = $.ajax({
-                    url: 'http://localhost/ooad-emss/emss/nguoidung/getList?current_page=' + current_page +
+                    url: 'http://localhost/ooad-emss/emss/truyvet/getList?current_page=' + current_page +
                         '&row_per_page=5',
                     type: 'get',
                 });
-                $.when(role, list).done(function(data_rel, data) {
+                list.done(function(data) {
+                    $('#content').empty();
                     var row = 1;
-                    data[0]['data'].forEach(function(element, index) {
+                    data['data'].forEach(function(element, index) {
                         var code = '<tr class="table-light">\
-                                        <td class="d-none check"><input type="checkbox" value="' + element['ma_nguoi_dung'] + '" class="form-check-input del-check shadow-none ' + element['ma_nguoi_dung'] + '"></td>\
-                                        <td>' + element['ho_lot'] + '</td>\
-                                        <td>' + element['ten'] + '</td>\
-                                        <td>' + data_rel[0][element['ma_vai_tro'] - 1]['ten_vai_tro'] + '</td>\
-                                        <td>' + element['so_dien_thoai'] + '</td>\
-                                        <td>' + element['cmnd'] + '</td>\
-                                        <td><button class="btn btn-info btn-sm btn-view" id=' + element['ma_nguoi_dung'] +
-                            '><i class="bi bi-file-earmark-person view"></i></button><button class="btn btn-danger btn-sm btn-del" id=' + element['ma_nguoi_dung'] + '><i class="bi bi-trash-fill"></i></button></td>\
+                                        <td class="d-none check"><input type="checkbox" value="' + element['ma_truy_vet'] + '" class="form-check-input del-check shadow-none ' + element['ma_truy_vet'] + '"></td>\
+                                        <td>' + element['ma_truy_vet'] + '</td>\
+                                        <td>' + element['ma_benh_nhan'] + '</td>\
+                                        <td>' + element['ma_nhan_vien'] + '</td>\
+                                        <td>' + element['thoi_gian_truy_vet'] + '</td>\
+                                        <td>' + element['tg_bat_dau'] + '</td>\
+                                        <td>' + element['tg_ket_thuc'] + '</td>\
+                                        <td><button class="btn btn-info btn-sm btn-view" id=' + element['ma_truy_vet'] +
+                            '><i class="bi bi-file-earmark-person view"></i>\
                                     </tr>';
                         if (row % 2) code = '<tr class="table-secondary">\
-                                        <td class="d-none check"><input type="checkbox" value="' + element['ma_nguoi_dung'] + '" class="form-check-input del-check shadow-none ' + element['ma_nguoi_dung'] + '"></td>\
-                                        <td>' + element['ho_lot'] + '</td>\
-                                        <td>' + element['ten'] + '</td>\
-                                        <td>' + data_rel[0][element['ma_vai_tro'] - 1]['ten_vai_tro'] + '</td>\
-                                        <td>' + element['so_dien_thoai'] + '</td>\
-                                        <td>' + element['cmnd'] + '</td>\
-                                        <td><button class="btn btn-info btn-sm btn-view" id=' + element['ma_nguoi_dung'] +
-                            '><i class="bi bi-file-earmark-person view"></i></button><button class="btn btn-danger btn-sm btn-del" id=' + element['ma_nguoi_dung'] + '><i class="bi bi-trash-fill"></i></button></td>\
+                                        <td class="d-none check"><input type="checkbox" value="' + element['ma_truy_vet'] + '" class="form-check-input del-check shadow-none ' + element['ma_truy_vet'] + '"></td>\
+                                        <td>' + element['ma_truy_vet'] + '</td>\
+                                        <td>' + element['ma_benh_nhan'] + '</td>\
+                                        <td>' + element['ma_nhan_vien'] + '</td>\
+                                        <td>' + element['thoi_gian_truy_vet'] + '</td>\
+                                        <td>' + element['tg_bat_dau'] + '</td>\
+                                        <td>' + element['tg_ket_thuc'] + '</td>\
+                                        <td><button class="btn btn-info btn-sm btn-view" id=' + element['ma_truy_vet'] +
+                            '><i class="bi bi-file-earmark-person view"></i>\
                                     </tr>';
                         $('#content').append(code);
                         row = row + 1;
                     })
-                    let i = 1;
-                    $('#pagination').empty();
-                    for (i = 1; i <= data[0]['totalPage']; i++)
+                    $('#pagination_').empty();
+                    var i = 1;
+                    for (i = 1; i <= data['totalPage']; i++)
                         if (i == current_page) {
-                            $('#pagination').append('<li class="page-item active">\<button class="page-link" id="' + i +
+                            $('#pagination_').append('<li class="page-item active">\<button class="page-link" id="' + i +
                                 '">' + i + '</button>\</li>');
-                        } else $('#pagination').append('<li class="page-item">\<button class="page-link" id="' + i +
+                        } else $('#pagination_').append('<li class="page-item">\<button class="page-link" id="' + i +
                             '">' + i + '</button>\</li>');
                     $('.page-link').click(function() {
                         let current_page_ = ($(this).attr('id'));
                         getList($(this).attr('id'));
                     });
-                    $('.btn-del').click(function() {
-                        $('.check').removeClass('d-none');
-                        var id = $(this).attr('id');
-                        $('input[type="checkbox"]').filter('.' + id).prop('checked', true);
-                    })
                 })
             }
+            var getBenhNhan = $.ajax({
+                url: 'http://localhost/ooad-emss/emss/benhnhan/getAll',
+            });
+            getBenhNhan.done(function(data) {
+                data.forEach(function(element) {
+                    $('#ma_benh_nhan').append('<option  class="select" value="' + element['ma_benh_nhan'] + '"> ' + element['ma_benh_nhan'] + ' - ' + element['ho_lot'] + ' ' + element['ten'] + ' </option>')
+                });
+                $('#btn-confirm').click(function() {
+                    $('#modal-result').modal('show');
+                    $('#modal-trace').modal('hide');
+                    $.ajax({
+                        url: 'http://localhost/ooad-emss/emss/truyvet/getSchedule',
+                        data: {
+                            ma_doi_tuong: $('.select:selected').val(),
+                            tg_bat_dau: $('#tgbd').val(),
+                            tg_ket_thuc: $('#tgkt').val(),
+                        },
+                        type: 'POST'
+                    }).done(function(data) {
+                        console.log(data);
+                        $.ajax({
+                            url: 'http://localhost/ooad-emss/emss/diadiem/getList',
+                        }).done(function(data_l) {
+                            $('#content-table').empty();
+                            data['location'].forEach(function(element, index) {
+                                var temp = data_l['ma_' + element['ma_dia_diem']];
+                                var code = '<tr class="table-light">\
+                                            <td>' + element['ma_dia_diem'] + '</td>\
+                                            <td>' + temp['ten_dia_diem'] + '</td>\
+                                            <td>' + temp['tp_tinh'] + " - " + temp['quan_huyen'] + " - " + temp['phuong_xa'] + '</td>\
+                                        </tr>';
+                                $('#content-table').append(code);
+                            })
+                        })
+                    })
+                })
+            })
         })
     </script>
 

@@ -80,7 +80,7 @@ class AuthController extends Controller
         $district = Request::post('district');
         $ward = Request::post('ward');
         $village = Request::post('village');
-        $home = Request::post('home');
+        $home = Request::post('home');  
         $email = Request::post('email');
         $password = Request::post('password');
         $address = $province."-".$district."-".$ward."-".$home."-".$village;

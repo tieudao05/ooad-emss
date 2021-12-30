@@ -27,7 +27,7 @@ class PhanQuyenModel
     public static function getListRole()
     {
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "SELECT * FROM vai_tro";
+        $sql = "SELECT * FROM vai_tro WHERE trang_thai=1";
         $query = $database->prepare($sql);
         $query->execute();
          if ($data = $query->fetchAll()) {
