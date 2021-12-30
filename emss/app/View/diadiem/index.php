@@ -186,6 +186,107 @@ View::$activeItem = 'location';
                     </div>
                 </div>
             </div>
+            <!-- MODAL UPDATE -->
+            <div class="modal fade text-left" id="update-address-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Sửa địa điểm</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="update-address-form" action="/" method="POST">
+                                <div class="modal-body">
+                                    <label for="upname">Tên địa điểm:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="upten" name="upten" placeholder="Tên địa điểm"
+                                            class="form-control">
+                                    </div>
+                                    <label for="cars-hang">Tỉnh/TP: </label><br>
+                                    <fieldset class="form-group">
+                                        <select class="form-select" name="uptinh" id="uptinh"
+                                            style="margin-right: 15px;">
+                                            <option value="-1">Chọn Tỉnh/TP</option>
+                                        </select>
+                                    </fieldset>
+                                    <label for="cars-hang">Quận/Huyện: </label><br>
+                                    <fieldset class="form-group">
+                                        <select class="form-select" name="uphuyen" id="uphuyen"
+                                            style="margin-right: 15px;">
+                                            <option value="-1">Chọn Quận/Huyện</option>
+                                        </select>
+                                    </fieldset>
+                                    <label for="cars-hang">Phường/Xã: </label><br>
+                                    <fieldset class="form-group">
+                                        <select class="form-select" name="upxa" id="upxa" style="margin-right: 15px;">
+                                            <option value="-1">Chọn Phường/Xã</option>
+                                        </select>
+                                    </fieldset>
+                                    <label for="ghethuong">Ấp/Thôn:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="upthon" name="upthon" placeholder="Ấp/Thôn"
+                                            class="form-control">
+                                    </div>
+                                    <label for="ghethuong">Số nhà:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="upsonha" name="upsonha" placeholder="Số nhà"
+                                            class="form-control">
+                                    </div>
+                                    <label for="thuonggia">Phân loại:</label>
+                                    <fieldset class="form-group">
+                                        <select class="form-select" name="uploai" id="uploai"
+                                            style="margin-right: 15px;">
+                                            <option value="kiemdich">Điểm kiểm dịch</option>
+                                            <option value="cachly">Điểm cách ly</option>
+                                        </select>
+                                    </fieldset>
+                                    <div id='upcachly'></div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                <i class="bx bx-x d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Đóng</span>
+                            </button>
+                            <button type="submit" class="btn btn-primary ml-1">
+                                <i class="bx bx-check d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Sửa</span>
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal Thong bao -->
+            <div class="modal fade text-left" id="question-address-modal" tabindex="-1" role="dialog"
+                aria-labelledby="myModalLabel110" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 class="modal-title white" id="myModalLabel110">
+                            </h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body" id="question-model">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                <i class="bx bx-x d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Đóng</span>
+                            </button>
+                            <button type="button" class="btn btn-success ml-1" data-bs-dismiss="modal">
+                                <i class="bx bx-check d-block d-sm-none"></i>
+                                <span id="thuchien" class="d-none d-sm-block">Thực hiện</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- FOOTER -->
             <?php View::partial('footer')  ?>
         </div>
@@ -209,6 +310,8 @@ View::$activeItem = 'location';
         address.forEach(function(element, index) {
             $('#addtinh').append('<option value="' + index + '">' + element['name'] +
                 '</option>');
+            $('#uptinh').append('<option value="' + index + '">' + element['name'] +
+                '</option>');
         })
         $('#addtinh').change(function() {
             $('#addhuyen').empty();
@@ -230,6 +333,28 @@ View::$activeItem = 'location';
                 })
             })
         });
+
+        $('#uptinh').change(function() {
+            $('#uphuyen').empty();
+            $('#uphuyen').append('<option value="-1"> Chọn Quận/Huyện</option>')
+            $('#upxa').empty();
+            $('#upxa').append('<option value="-1"> Chọn Phường/Xã </option>')
+            var districs = address[$('#uptinh').val()]['districts'];
+            districs.forEach(function(element, index) {
+                $('#uphuyen').append('<option value="' + index + '">' + element[
+                    'name'] + '</option>')
+            })
+            $('#uphuyen').change(function() {
+                $('#upxa').empty();
+                $('#upxa').append('<option value="-1"> Chọn Phường/Xã </option>')
+                var wards = districs[$('#uphuyen').val()]['wards'];
+                wards.forEach(function(element, index) {
+                    $('#upxa').append('<option value="' + index + '">' +
+                        element['name'] + '</option>')
+                })
+            })
+        });
+
 
         $("form[name='add-address-form']").validate({
             rules: {
@@ -333,6 +458,138 @@ View::$activeItem = 'location';
         } else $("#addcachly").empty();
     });
 
+    function repairRow(params) {
+        let data = {
+            id: Number(params)
+        };
+        $.post(`http://localhost/ooad-emss/emss/diadiem/getOneByID`, data, function(response) {
+            if (response.thanhcong) {
+                $('#upten').val(response.ten_dia_diem);
+                $('#uptinh option').filter(':selected').text(response.tp_tinh);
+                $('#uphuyen option').filter(':selected').text(response.quan_huyen);
+                $('#upxa option').filter(':selected').text(response.phuong_xa);
+                $("#upthon").val(response.ap_thon);
+                $("#upsonha").val(response.so_nha);
+                if (response.phan_loai == "Điểm cách ly") {
+                    $('#uploai option[value=cachly]').attr('selected', 'selected');
+                    $("#upcachly").empty();
+                    $("#upcachly").append(`<label for="thuonggia">Sức chứa:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="upsucchua" name="upsucchua" placeholder="Sức chứa"
+                                            class="form-control">
+                                    </div>
+                                    <label for="thuonggia">Số lượng còn trống:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="uptrong" name="addtrong"
+                                            placeholder="Số lượng còn trống" class="form-control">
+                                    </div>`);
+                    $("#upsucchua").val(response.suc_chua);
+                    $("#uptrong").val(response.so_luong_trong);
+                } else {
+                    $('#uploai option[value=kiemdich]').attr('selected', 'selected');
+                    $("#upcachly").empty();
+                }
+            }
+        });
+        $("#update-address-modal").modal('toggle');
+        //Sua form
+        $("form[name='update-address-form']").validate({
+            rules: {
+                addten: {
+                    required: true,
+                },
+                addsucchua: {
+                    required: true,
+                },
+                addtrong: {
+                    required: true,
+                },
+            },
+            messages: {
+                addten: {
+                    required: "Vui lòng nhập tên địa điểm",
+                },
+                addsucchua: {
+                    required: "Vui lòng nhập sức chứa của khu cách ly",
+                },
+                addtrong: {
+                    required: "Vui lòng nhập chỗ còn trống của khu cách ly",
+                },
+            },
+            submitHandler: function(form, event) {
+                event.preventDefault();
+                $("#myModalLabel110").text("Sửa địa điểm");
+                $("#question-model").text("Bạn có chắc chắn muốn sửa địa điểm này không");
+                $("#question-address-modal").modal('toggle');
+                $('#thuchien').off('click')
+                $("#thuchien").click(function() {
+                    var suc, trong;
+                    if ($('#uploai option').filter(':selected').val() == "cachly") {
+                        suc = Number($("#upsucchua").val());
+                        trong = Number($("#uptrong").val());
+                    } else {
+                        suc = 0;
+                        trong = 0;
+                    }
+                    var ajax = $.post(`http://localhost/ooad-emss/emss/diadiem/update`, {
+                        upma: Number(params),
+                        upten: $('#upten').val(),
+                        uptinh: $('#uptinh option').filter(':selected').text(),
+                        uphuyen: $('#uphuyen option').filter(':selected').text(),
+                        upxa: $('#upxa option').filter(':selected').text(),
+                        upthon: $("#upthon").val(),
+                        upsonha: $("#upsonha").val(),
+                        uploai: $('#uploai option').filter(':selected').text(),
+                        upsucchua: suc,
+                        uptrong: trong
+                    });
+
+                    ajax.done(function(response) {
+                        $("#update-address-modal").modal('toggle')
+                        if (response.thanhcong) {
+                            currentPage = 1;
+                            getAddressAjax();
+                            Toastify({
+                                text: "Sửa Thành Công",
+                                duration: 1000,
+                                close: true,
+                                gravity: "top",
+                                position: "center",
+                                backgroundColor: "#4fbe87",
+                            }).showToast();
+                        } else {
+                            Toastify({
+                                text: "Sửa Thất Bại",
+                                duration: 1000,
+                                close: true,
+                                gravity: "top",
+                                position: "center",
+                                backgroundColor: "#FF6A6A",
+                            }).showToast();
+                        }
+                    });
+                });
+            }
+        });
+    }
+
+    $('#uploai').change(function() {
+        let loai = $('#uploai option').filter(':selected').val();
+        if (loai == "cachly") {
+            $("#upcachly").empty();
+            $("#upcachly").append(`<label for="thuonggia">Sức chứa:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="upsucchua" name="upsucchua" placeholder="Sức chứa"
+                                            class="form-control">
+                                    </div>
+                                    <label for="thuonggia">Số lượng còn trống:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="uptrong" name="addtrong"
+                                            placeholder="Số lượng còn trống" class="form-control">
+                                    </div>`);
+        } else $("#upcachly").empty();
+    });
+
     function changePage(newPage) {
         currentPage = newPage;
         getAddressAjax();
@@ -362,7 +619,7 @@ View::$activeItem = 'location';
                         table1.append(`
                         <tr class="table-light">
                             <td><div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}">
+                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}"/>
                                 </div>
                             </td>
                             <td>${data.ma_dia_diem}</td>
@@ -390,7 +647,7 @@ View::$activeItem = 'location';
                         <tr class="table-info">
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}">
+                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}"/>
                                 </div>
                             </td>
                             <td>${data.ma_dia_diem}</td>
@@ -440,6 +697,82 @@ View::$activeItem = 'location';
 
             });
     }
+
+    function deleteRow(params) {
+        let data = {
+            id: params
+        };
+        $("#myModalLabel110").text("Xóa địa điểm");
+        $("#question-model").text("Bạn có chắc chắn muốn xóa địa điểm này không");
+        $("#question-address-modal").modal('toggle');
+        $('#thuchien').off('click');
+        $("#thuchien").click(function() {
+            $.post(`http://localhost/ooad-emss/emss/diadiem//delete`, data, function(response) {
+                if (response.thanhcong) {
+                    Toastify({
+                        text: "Xóa Thành Công",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#4fbe87",
+                    }).showToast();
+                    currentPage = 1;
+                    getAddressAjax();
+                } else {
+                    Toastify({
+                        text: "Xóa Thất Bại",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#FF6A6A",
+                    }).showToast();
+                }
+            });
+        });
+    }
+
+    $("#btn-delete-address").click(function() {
+        $("#myModalLabel110").text("Xóa địa điểm");
+        $("#question-model").text("Bạn có chắc chắn muốn xóa những địa điểm này không?");
+        $("#question-address-modal").modal('toggle');
+        $('#thuchien').off('click')
+        $("#thuchien").click(function() {
+            let datas = [];
+            checkedRows.forEach(checkedRow => {
+                if ($("#" + checkedRow).attr("checked", true)) {
+                    datas.push(checkedRow);
+                }
+            });
+            let data = {
+                ids: JSON.stringify(datas)
+            };
+            $.post(`http://localhost/ooad-emss/emss/diadiem/deletes`, data, function(response) {
+                if (response.thanhcong) {
+                    Toastify({
+                        text: "Xóa Thành Công",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#4fbe87",
+                    }).showToast();
+                    currentPage = 1;
+                    getAddressAjax();
+                } else {
+                    Toastify({
+                        text: "Xóa Thất Bại",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#FF6A6A",
+                    }).showToast();
+                }
+            });
+        });
+    });
     </script>
 </body>
 

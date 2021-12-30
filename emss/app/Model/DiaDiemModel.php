@@ -6,8 +6,19 @@ use App\Core\Cookie;
 use App\Core\DatabaseFactory;
 use PDO;
 
-class DiaDIemModel
-{
+class DiaDIemModel{
+    public static function getOneByID($id){
+        $database = DatabaseFactory::getFactory()->getConnection();
+
+        $query = $database->prepare("SELECT * FROM dia_diem WHERE ma_dia_diem = :id LIMIT 1");
+        $query->execute([':id' => $id]);
+
+        if ($row = $query->fetch()) {
+            return $row;
+        }
+        return null;
+    }
+    
     public static function create($ten, $tinh, $huyen , $xa, $thon, $sonha, $loai, $succhua, $trong){
         $database = DatabaseFactory::getFactory()->getConnection();
         $sql = "INSERT INTO dia_diem (ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai, suc_chua, so_luong_trong)
@@ -20,6 +31,18 @@ class DiaDIemModel
         }
 
         return false;
+    }
+
+    public static function update($ma,$ten, $tinh, $huyen , $xa, $thon, $sonha, $loai, $succhua, $trong){
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $sql = "UPDATE dia_diem SET ten_dia_diem = :ten, tp_tinh = :tinh, quan_huyen = :huyen, phuong_xa = :xa, ap_thon = :thon, so_nha = :sonha, phan_loai = :loai, suc_chua = :succhua, so_luong_trong = :trong  WHERE ma_dia_diem = :ma";
+        $query = $database->prepare($sql);
+        $query->execute([':ma' => $ma,':ten' => $ten, ':tinh' => $tinh, ':huyen' => $huyen, ':xa' => $xa, ':thon' => $thon, ':sonha' => $sonha, ':loai' => $loai, ':succhua' => $succhua, ':trong' => $trong]);
+        $count = $query->rowCount();
+        if ($count == 1) {
+            return true;
+        }
+        return false;  
     }
 
     public static function getAllPagination($search, $search2, $page , $rowsPerPage){
@@ -109,6 +132,35 @@ class DiaDIemModel
             'data' => $data,
         ];
         return $response;
+    }
+
+    public static function delete($id){
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $sql = "UPDATE dia_diem SET trang_thai = 0  WHERE ma_dia_diem = :id";
+        $query = $database->prepare($sql);
+        $query->execute([':id' => $id]);       
+        $count = $query->rowCount();
+        if ($count == 1) {
+            return true;
+        }
+        return false;        
+    }
+
+    public static function deletes($ids){
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $raw = "(";
+        foreach ($ids as &$id) {
+            $raw .= $id . ",";
+        }
+        $raw = substr($raw, 0, -1);
+        $raw .= ")";
+
+        $sql = "UPDATE dia_diem SET trang_thai = 0  WHERE  ma_dia_diem IN " . $raw;
+        $count  = $database->exec($sql);
+        if (!$count) {
+            return false;
+        }
+        return true;
     }
 
     
