@@ -619,7 +619,7 @@ View::$activeItem = 'location';
                         table1.append(`
                         <tr class="table-light">
                             <td><div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}">
+                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}"/>
                                 </div>
                             </td>
                             <td>${data.ma_dia_diem}</td>
@@ -647,7 +647,7 @@ View::$activeItem = 'location';
                         <tr class="table-info">
                             <td>
                                 <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}">
+                                    <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_dia_diem}"/>
                                 </div>
                             </td>
                             <td>${data.ma_dia_diem}</td>
@@ -697,6 +697,82 @@ View::$activeItem = 'location';
 
             });
     }
+
+    function deleteRow(params) {
+        let data = {
+            id: params
+        };
+        $("#myModalLabel110").text("Xóa địa điểm");
+        $("#question-model").text("Bạn có chắc chắn muốn xóa địa điểm này không");
+        $("#question-address-modal").modal('toggle');
+        $('#thuchien').off('click');
+        $("#thuchien").click(function() {
+            $.post(`http://localhost/ooad-emss/emss/diadiem//delete`, data, function(response) {
+                if (response.thanhcong) {
+                    Toastify({
+                        text: "Xóa Thành Công",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#4fbe87",
+                    }).showToast();
+                    currentPage = 1;
+                    getAddressAjax();
+                } else {
+                    Toastify({
+                        text: "Xóa Thất Bại",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#FF6A6A",
+                    }).showToast();
+                }
+            });
+        });
+    }
+
+    $("#btn-delete-address").click(function() {
+        $("#myModalLabel110").text("Xóa địa điểm");
+        $("#question-model").text("Bạn có chắc chắn muốn xóa những địa điểm này không?");
+        $("#question-address-modal").modal('toggle');
+        $('#thuchien').off('click')
+        $("#thuchien").click(function() {
+            let datas = [];
+            checkedRows.forEach(checkedRow => {
+                if ($("#" + checkedRow).attr("checked", true)) {
+                    datas.push(checkedRow);
+                }
+            });
+            let data = {
+                ids: JSON.stringify(datas)
+            };
+            $.post(`http://localhost/ooad-emss/emss/diadiem/deletes`, data, function(response) {
+                if (response.thanhcong) {
+                    Toastify({
+                        text: "Xóa Thành Công",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#4fbe87",
+                    }).showToast();
+                    currentPage = 1;
+                    getAddressAjax();
+                } else {
+                    Toastify({
+                        text: "Xóa Thất Bại",
+                        duration: 1000,
+                        close: true,
+                        gravity: "top",
+                        position: "center",
+                        backgroundColor: "#FF6A6A",
+                    }).showToast();
+                }
+            });
+        });
+    });
     </script>
 </body>
 

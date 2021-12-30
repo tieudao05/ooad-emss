@@ -134,5 +134,34 @@ class DiaDIemModel{
         return $response;
     }
 
+    public static function delete($id){
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $sql = "UPDATE dia_diem SET trang_thai = 0  WHERE ma_dia_diem = :id";
+        $query = $database->prepare($sql);
+        $query->execute([':id' => $id]);       
+        $count = $query->rowCount();
+        if ($count == 1) {
+            return true;
+        }
+        return false;        
+    }
+
+    public static function deletes($ids){
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $raw = "(";
+        foreach ($ids as &$id) {
+            $raw .= $id . ",";
+        }
+        $raw = substr($raw, 0, -1);
+        $raw .= ")";
+
+        $sql = "UPDATE dia_diem SET trang_thai = 0  WHERE  ma_dia_diem IN " . $raw;
+        $count  = $database->exec($sql);
+        if (!$count) {
+            return false;
+        }
+        return true;
+    }
+
     
 }

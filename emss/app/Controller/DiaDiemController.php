@@ -10,16 +10,15 @@ use App\Model\DiaDiemModel;
 
 class DiaDiemController extends Controller
 {
-    public function __construct()
-    {
+    public function __construct(){
         parent::__construct();
     }
 
-    public function index()
-    {
+    public function index(){
         Auth::checkAuthentication();
         $this->View->render('diadiem/index');
     }
+    
     public function getOneByID(){
         Auth::checkAuthentication();
         $id = Request::post('id');
@@ -42,6 +41,7 @@ class DiaDiemController extends Controller
         }
         $this->View->renderJSON($response);
     }
+    
     public function add(){
         Auth::checkAuthentication();
         //Auth::ktraquyen("CN02");
@@ -60,6 +60,7 @@ class DiaDiemController extends Controller
         ];
         $this->View->renderJSON($response);
     }
+    
     public function getAddress(){
         Auth::checkAuthentication();
         //Auth::ktraquyen("CN02");
@@ -70,6 +71,7 @@ class DiaDiemController extends Controller
         $data = DiaDiemModel::getAllPagination($search, $search2, $page, $rowsPerPage);
         $this->View->renderJSON($data);
     }
+    
     public function update(){
         Auth::checkAuthentication();
         //Auth::ktraquyen("CN02");
@@ -89,7 +91,27 @@ class DiaDiemController extends Controller
         ];
         $this->View->renderJSON($response);
     }
-    public function delete()
-    {
+    
+    public function delete(){
+        Auth::checkAuthentication();
+       // Auth::ktraquyen("CN02");
+        $id = Request::post('id');
+        $kq= DiaDiemModel::delete($id);
+        $response = [
+            'thanhcong' => $kq
+        ];
+        $this->View->renderJSON($response);  
+    }
+
+    public function deletes(){
+        Auth::checkAuthentication();       
+        //Auth::ktraquyen("CN02");
+        $ids = Request::post('ids');
+        $ids = json_decode($ids);
+        $kq = DiaDiemModel::deletes($ids);
+        $response = [
+            'thanhcong' => $kq
+        ];
+        $this->View->renderJSON($response);       
     }
 }
