@@ -35,7 +35,7 @@ View::$activeItem = 'dashboard';
             <?php View::partial('header')  ?>
             <?php View::partial('changepass')  ?>
             <div class="row">
-                <div class="col-md-7 col-sm-12">
+                <div class="col-md-8 col-sm-12">
                     <div class="card">
                         <div class="card-content">
                             <img class="card-img-top img-fluid" src="assets/images/samples/origami.jpg" alt="Card image cap" style="height: 20rem" />
@@ -63,42 +63,35 @@ View::$activeItem = 'dashboard';
                                 </div>
 
                             </div>
-                            <div class="page-title">
-                                <div class="row">
-                                    <div class="col-12 col-md-7 order-md-1 order-last">
-                                        <label>
-                                            <h3>Danh sách địa điểm</h3>
-                                        </label>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <section class="section">
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="table-responsive">
-                                            <table class="table mb-0 table-danger" id="table1">
-                                                <thead>
-                                                    <tr>
-                                                        <th class="w-25">Tên địa điểm</th>
-                                                        <th>Địa chỉ</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                </tbody>
-                                            </table>
-                                            <nav class="mt-5">
-                                                <ul id="pagination" class="pagination justify-content-center">
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                    </div>
-                            </section>
                         </div>
                     </div>
+                    <section class="section">
+                        <div class="page-title" style="padding-left: 5%">
+                                <h3>Danh sách địa điểm</h3>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table mb-0 table-danger" id="table1">
+                                        <thead>
+                                            <tr>
+                                                <th class="w-35">Tên địa điểm</th>
+                                                <th>Địa chỉ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        </tbody>
+                                    </table>
+                                    <nav class="mt-5">
+                                        <ul id="pagination" class="pagination justify-content-center">
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                    </section>
                 </div>
 
-                <div class="col-md-5 col-sm-12">
+                <div class="col-md-4 col-sm-12">
                     <div class="card">
                         <div class="card-content">
 
@@ -124,32 +117,14 @@ View::$activeItem = 'dashboard';
     <script src="<?= View::assets('js/main.js') ?>"></script>
     <script src="<?= View::assets('js/changepass.js') ?>"></script>
     <script src="<?= View::assets('js/menu.js') ?>"></script>
-    <script src="<?= View::assets('js/api.js') ?>"></script>
     <script src="<?= View::assets('js/xml2json.js') ?>"></script>
     <script src="<?= View::assets('js/address.js') ?>"></script>
     <script>
-        $(document).ready(function() {
-            // let fullname = "Trần Thị Thu Thanh";
-            // let birthday = new Date('1999/01/04') // yyyy/mm/dd
-            // birthday.setHours(7)
-            // let birthdayTime = birthday.getTime();
-            // let genderId = 2; // nam laf 1
-            // let personalPhoneNumber = '0703360196'
-            // let identification = ''
-            // let otp = ''
-
-            // const apiGetOtp = `https://thingproxy.freeboard.io/fetch/https://tiemchungcovid19.gov.vn/api/vaccination/public/otp-search?fullname=${fullname}&birthday=${birthdayTime}&genderId=${genderId}&personalPhoneNumber=${personalPhoneNumber}&identification=${identification}&healthInsuranceNumber=`
-            // const apiGetInfo = `https://tiemchungcovid19.gov.vn/api/vaccination/public/patient-vaccinated?fullname=${fullname}&birthday=${birthdayTime}&genderId=${genderId}&personalPhoneNumber=${personalPhoneNumber}&identification=${identification}&healthInsuranceNumber=&otp=${otp}`
-
-            // $.get(apiGetOtp, function(response, textStatus) {
-            //     console.log(textStatus)
-            //     console.log(response)
-
-            //     //  $.get(apiGetInfo,  function(response) {
-
-
-            //     // });
-            // });
+        let currentPage = 1;
+        let search = "";
+        let search2 = "";
+        $(function() {
+            getAddressAjax();
             var address = $.xResponse();
             address.forEach(function(element, index) {
                 $('#tinh').append('<option class="tinh" value="' + index + '">' + element['name'] + '</option>');
@@ -174,7 +149,7 @@ View::$activeItem = 'dashboard';
             });
 
             function getAddressAjax() {
-                $.get(`http://localhost/ooad-emss/emss/diadiem/getAddressHome?rowsPerPage=10&page=${currentPage}&search=${$("#search-address-text").val()}&search2=${search}`,
+                $.get(`http://localhost/ooad-emss/emss/diadiem/getAddressHome?rowsPerPage=10&page=${currentPage}&search=${search}&search2=${search2}`,
                     function(response) {
                         const table1 = $('#table1 > tbody');
                         table1.empty();
@@ -194,8 +169,6 @@ View::$activeItem = 'dashboard';
                             <td> ${data.so_nha} - ${data.ap_thon} - ${data.phuong_xa} - ${data.quan_huyen} - ${data.tp_tinh}</td>
                         </tr>`);
                             }
-                            checkedRows.push(data.ma_dia_diem);
-                            $row += 1;
                         });
 
                         const pagination = $('#pagination');

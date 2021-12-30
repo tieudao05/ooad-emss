@@ -62,7 +62,7 @@ class DiaDiemController extends Controller
     }
     
     public function getAddress(){
-        Auth::checkAuthentication();
+
         //Auth::ktraquyen("CN02");
         $search = Request::get('search');
         $search2 = Request::get('search2');
@@ -74,7 +74,6 @@ class DiaDiemController extends Controller
 
     public function getAddressHome()
     {
-        Auth::checkAuthentication();
         $search = Request::get('search');
         $search2 = Request::get('search2');
         $page = Request::get('page');
