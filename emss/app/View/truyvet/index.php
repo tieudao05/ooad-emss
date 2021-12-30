@@ -238,7 +238,7 @@ View::$activeItem = 'trace';
             $('#do-trace').click(function() {
                 $('#modal-trace').modal('show');
             })
-           // $('#modal-F1').modal('show');
+            $('#modal-F1').modal('show');
 
             function getList(current_page) {
                 var list = $.ajax({
