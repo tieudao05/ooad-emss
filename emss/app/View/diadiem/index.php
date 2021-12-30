@@ -95,8 +95,6 @@ View::$activeItem = 'location';
                                                 <th>Tỉnh/TP</th>
                                                 <th>Quận/Huyện</th>
                                                 <th>Phường/Xã</th>
-                                                <th>Ấp/Thôn</th>
-                                                <th>Số nhà</th>
                                                 <th>Phân loại</th>
                                                 <th>Tác Vụ</th>
                                             </tr>
@@ -715,8 +713,6 @@ View::$activeItem = 'location';
                             <td>${data.tp_tinh}</td>
                             <td>${data.quan_huyen}</td>
                             <td>${data.phuong_xa}</td>
-                            <td>${data.ap_thon}</td>
-                            <td>${data.so_nha}</td>
                             <td>${data.phan_loai}</td>
                             <td>
                                 <button onclick="viewRow('${data.ma_dia_diem}')" type="button" class="btn btn-sm btn-outline-primary" style="padding-top: 3px; padding-bottom: 4px;">
@@ -743,8 +739,6 @@ View::$activeItem = 'location';
                             <td>${data.tp_tinh}</td>
                             <td>${data.quan_huyen}</td>
                             <td>${data.phuong_xa}</td>
-                            <td>${data.ap_thon}</td>
-                            <td>${data.so_nha}</td>
                             <td>${data.phan_loai}</td>
                             <td>
                                 <button onclick="viewRow('${data.ma_dia_diem}')" type="button" class="btn btn-sm btn-outline-primary" style="padding-top: 3px; padding-bottom: 4px;">
