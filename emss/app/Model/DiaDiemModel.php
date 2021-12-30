@@ -141,21 +141,28 @@ class DiaDIemModel{
 
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $search = '%' . $search . '%';
         
         if ($search2 == "") {
             $sql = 'SELECT *
                 FROM dia_diem WHERE ma_dia_diem LIKE :search AND trang_thai=1';
         } else if ($search2 == "1") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-            FROM dia_diem WHERE (ma_dia_diem LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "2") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-            FROM dia_diem WHERE (ten_dia_diem LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "3") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
+            $sql = 'SELECT *
             FROM dia_diem WHERE (tp_tinh LIKE :search) AND trang_thai=1';
+        } else if ($search2 == "2") {
+            $searcharr = explode("::", $search); 
+            $search = $searcharr[0];
+            $searchH = $searcharr[1];
+            $sql = 'SELECT * FROM dia_diem WHERE (tp_tinh LIKE :search AND quan_huyen LIKE :searchH) AND trang_thai=1';
+            
+        } else if ($search2 == "3") {
+            $searcharr = explode("::", $search); 
+            $search = $searcharr[0];
+            $searchH = $searcharr[1];
+            $searchT = $searcharr[2];
+            $sql = 'SELECT * FROM dia_diem WHERE (tp_tinh LIKE :search AND quan_huyen LIKE :searchH AND phuong_xa LIKE :searchT) AND trang_thai=1';
         } 
+
+        $search = '%' . $search . '%';
 
         $sql .= ' ORDER BY ma_dia_diem ASC LIMIT :limit OFFSET :offset'; //DESC giảm ASC tăng
 
@@ -165,6 +172,17 @@ class DiaDIemModel{
         $query->bindValue(':offset', $offset, PDO::PARAM_INT);
         $query->bindValue(':search', $search, PDO::PARAM_STR);
 
+        if($search2 == "2"){
+            $searchH = '%' . $searchH . '%';
+            $query->bindValue(':searchH', $searchH, PDO::PARAM_STR);
+        }
+        if($search2 == "3"){
+            $searchH = '%' . $searchH . '%';
+            $searchT = '%' . $searchT . '%';
+            $query->bindValue(':searchH', $searchH, PDO::PARAM_STR);
+            $query->bindValue(':searchT', $searchT, PDO::PARAM_STR);
+        }
+
         $query->execute();
         $data = $query->fetchAll();
 
@@ -172,17 +190,16 @@ class DiaDIemModel{
         $count = "";
         if ($search2 == "") {
             $count = 'SELECT COUNT(*) FROM dia_diem 
-            WHERE ma_dia_diem LIKE :search AND trang_thai=1';
+            WHERE trang_thai=1';
         } else if ($search2 == "1") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (ma_dia_diem LIKE :search) AND trang_thai=1';
+            $count = 'SELECT COUNT(*) FROM dia_diem WHERE trang_thai=1';
         } else if ($search2 == "2") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (ten_dia_diem LIKE :search) AND trang_thai=1';
+            $count = 'SELECT COUNT(*) FROM dia_diem WHERE trang_thai=1';
         } else if ($search2 == "3") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (tp_tinh LIKE :search) AND trang_thai=1';
+            $count = 'SELECT COUNT(*) FROM dia_diem WHERE trang_thai=1';
         } 
 
         $countQuery = $database->prepare($count);
-        $countQuery->bindValue(':search', $search, PDO::PARAM_STR);
 
         $countQuery->execute();
         $totalRows = $countQuery->fetch(PDO::FETCH_COLUMN);
