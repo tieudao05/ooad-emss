@@ -8,9 +8,21 @@ use PDO;
 
 class DiaDIemModel
 {
+    public static function create($ten, $tinh, $huyen , $xa, $thon, $sonha, $loai, $succhua, $trong){
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $sql = "INSERT INTO dia_diem (ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai, suc_chua, so_luong_trong)
+                VALUES (:ten,:tinh, :huyen, :xa, :thon, :sonha, :loai, :succhua, :trong)";
+        $query = $database->prepare($sql);
+        $query->execute([':ten' => $ten, ':tinh' => $tinh, ':huyen' => $huyen, ':xa' => $xa, ':thon' => $thon, ':sonha' => $sonha, ':loai' => $loai, ':succhua' => $succhua, ':trong' => $trong]);
+        $count = $query->rowCount();
+        if ($count == 1) {
+            return true;
+        }
 
-    public static function getAllPagination($search, $search2, $page , $rowsPerPage)
-    {
+        return false;
+    }
+
+    public static function getAllPagination($search, $search2, $page , $rowsPerPage){
         // tính limit và offset dựa trên số trang và số lương dòng trên mỗi trang
         $limit = $rowsPerPage;
         $offset = $rowsPerPage * ($page - 1);
