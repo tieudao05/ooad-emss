@@ -71,6 +71,17 @@ class DiaDiemController extends Controller
         $data = DiaDiemModel::getAllPagination($search, $search2, $page, $rowsPerPage);
         $this->View->renderJSON($data);
     }
+
+    public function getAddressHome()
+    {
+        Auth::checkAuthentication();
+        $search = Request::get('search');
+        $search2 = Request::get('search2');
+        $page = Request::get('page');
+        $rowsPerPage = Request::get('rowsPerPage');
+        $data = DiaDiemModel::getAllPaginationHome($search, $search2, $page, $rowsPerPage);
+        $this->View->renderJSON($data);
+    }
     
     public function update(){
         Auth::checkAuthentication();
