@@ -5,6 +5,7 @@ namespace App\Model;
 use App\Core\Cookie;
 use App\Core\DatabaseFactory;
 use PDO;
+use stdClass;
 
 class NguoiDungModel
 {
@@ -21,28 +22,28 @@ class NguoiDungModel
         }
         return null;
     }
-    public static function add($username,$password,$vaitro, $holot, $ten, $cmnd, $ngaysinh, $phai, $diachi, $email, $sdt)
+    public static function add($username, $password, $vaitro, $holot, $ten, $cmnd, $ngaysinh, $phai, $diachi, $email, $sdt)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
         $data = [
-            'thanhcong'=>false,
+            'thanhcong' => false,
         ];
-        $sql = "SELECT * FROM nguoi_dung WHERE user_name='".$username."'";
+        $sql = "SELECT * FROM nguoi_dung WHERE user_name='" . $username . "'";
         $query = $database->prepare($sql);
         $query->execute();
         $count = $query->rowCount();
-        if($count==1){
+        if ($count == 1) {
             $data['thanhcong'] = false;
             $data['error'] = "Số điện thoại đã được sử dụng";
             return $data;
         }
-        $sql = "SELECT * FROM nguoi_dung WHERE cmnd='".$cmnd."'";
+        $sql = "SELECT * FROM nguoi_dung WHERE cmnd='" . $cmnd . "'";
         $query = $database->prepare($sql);
         $query->execute();
         $count = $query->rowCount();
-        if($count==1){
+        if ($count == 1) {
             $data['thanhcong'] = false;
-            $data['error'] = "Bạn đã có tài khoản";
+            $data['error'] = "CMND đã tồn tại";
             return $data;
         }
 
@@ -50,11 +51,11 @@ class NguoiDungModel
         $hashed_password = password_hash($password, PASSWORD_BCRYPT);
 
         $sql_ = "INSERT INTO nguoi_dung (user_name, password, ma_vai_tro, ho_lot, ten, cmnd, ngay_sinh, phai, dia_chi, email, so_dien_thoai, trang_thai)
-                VALUES ('".$username."','".$hashed_password."',".$vaitro.", '".$holot."', '".$ten."', '".$cmnd."', '".$ngaysinh."','".$phai."', '".$diachi."', '".$email."', '".$sdt."', 1)";
+                VALUES ('" . $username . "','" . $hashed_password . "'," . $vaitro . ", '" . $holot . "', '" . $ten . "', '" . $cmnd . "', '" . $ngaysinh . "','" . $phai . "', '" . $diachi . "', '" . $email . "', '" . $sdt . "', 1)";
         $query = $database->prepare($sql_);
         //$query->execute([':user_name' => $username, ':hashed_password' => $hashed_password, ':role' => $vaitro, ':holot'=> $holot, ':ten'=> $ten, ':cmnd'=> $cmnd, ':ngay_sinh'=> $ngaysinh, ':phai'=> $phai, ':dia_chi'=>$diachi, ':email'=>$email, ':so_dien_thoai'=>$sdt]);
         $query->execute();
-        $count = $query->rowCount();    
+        $count = $query->rowCount();
         if ($count == 1) {
             $data['thanhcong'] = true;
             $data['summary'] = "Thành công";
@@ -68,7 +69,27 @@ class NguoiDungModel
     public static function delete()
     {
     }
-    public static function getList()
+    public static function getList($current_page, $row_per_page)
     {
+        $limit = $row_per_page;
+        $offset = ($current_page - 1) * $row_per_page;
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $sql = "SELECT * FROM nguoi_dung ORDER BY ten LIMIT " . $offset . ", " . $limit;
+        $query = $database->prepare($sql);
+        $query->execute();
+        $result = new stdClass;
+        if ($data = $query->fetchAll(PDO::FETCH_ASSOC)) {
+            $result = $data;
+            
+        }
+        $sql_ = "SELECT COUNT(*) AS SL FROM nguoi_dung";
+        $query = $database->prepare($sql_);
+        $query->execute();
+        $totalRow = $query->fetch(PDO::FETCH_COLUMN);
+        $response = [
+             'totalPage' => ceil(intval($totalRow) / $row_per_page),
+             'data' => $result 
+        ];
+        return $response;
     }
 }
