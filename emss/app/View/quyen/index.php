@@ -12,7 +12,7 @@ View::$activeItem = 'quyen';
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web Học Tập</title>
+    <title>ESSM</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
@@ -262,7 +262,6 @@ View::$activeItem = 'quyen';
     <script src="<?= View::assets('js/main.js') ?>"></script>
     <script src="<?= View::assets('js/changepass.js') ?>"></script>
     <script src="<?= View::assets('js/menu.js') ?>"></script>
-    <script src="<?= View::assets('js/api.js') ?>"></script>
     <script>
         let currentPage = 1
         let checkedRows = [];

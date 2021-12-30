@@ -18,7 +18,7 @@ $("document").ready(function () {
             if (response.thanhcong) {
                 let id = "#dangnhap";
                 $(id).addClass("d-none");
-                $('#thongtincanhan').removeClass('d-none');
+                //$('#thongtincanhan').removeClass('d-none');
             }
         }
     );
