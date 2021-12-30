@@ -29,7 +29,7 @@ $(function() {
         submitHandler: function(form, event) {
             event.preventDefault();
             const data = Object.fromEntries(new FormData(form).entries());
-            $.post(`http://localhost/webhoctapmvc/user/changePassword`, data, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/user/changePassword`, data, function(response) {
                 if (!response.thanhcong) {
                     Toastify({
                         text: "Mật khẩu không đúng",

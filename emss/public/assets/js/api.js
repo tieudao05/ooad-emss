@@ -21,14 +21,14 @@ $("document").ready(function() {
         localStorage.removeItem("danhSachMaMon");
         localStorage.removeItem("danhSachDiem");
     });
-    $.post(`http://localhost/webhoctapmvc/user/getID`, function(response) {
-        if (response.quyen == "Q01") {
-            if (localStorage.getItem("danhSachMaMon") == null || localStorage.getItem("danhSachDiem") == null) {
-                let chuathi = [];
-                let url =
-                    "https://sah-api-chw3b6ptpq-as.a.run.app/v1/users/" +
-                    response.id +
-                    "/scores2";
+  $.post(`http://localhost/ooad-emss/emss/user/getID`, function (response) {
+    if (response.quyen == "Q01") {
+        if (localStorage.getItem("danhSachMaMon") == null || localStorage.getItem("danhSachDiem") == null ) {
+            let chuathi = [];
+            let url =
+            "https://sah-api-chw3b6ptpq-as.a.run.app/v1/users/" +
+            response.id +
+            "/scores2";
 
                 let cottong;
                 $.get(url, (data) => {
