@@ -5,8 +5,7 @@ use App\Core\View;
 View::$activeItem = 'statis';
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
+<html lang="vi" xmlns="http://www.w3.org/1999/xhtml" class="windows desktop landscape" data-lt-installed="true">
 
 <head>
     <meta charset="UTF-8" />
@@ -22,10 +21,187 @@ View::$activeItem = 'statis';
     <link rel="stylesheet" href="<?= View::assets('css/app.css') ?>" />
     <link rel="shortcut icon" href="<?= View::assets('images/logo/logo_.png') ?>" type="image/x-icon" />
     <link rel="stylesheet" href="<?= View::assets('css/quan.css') ?>" />
-    <link rel="stylesheet" href="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/styles.css">
+    <script type="text/javascript" async="" src="https://static.criteo.net/js/ld/publishertag.prebid.js"></script>
+    <script type="text/javascript" async="" src="http://media1.admicro.vn/core/adm_tracking.js?id=1"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-kdnwl63c.min.js"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/core/admcorearf.js"></script>
+    <script
+        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_1"
+        async=""></script>
+    <script
+        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_0"
+        async=""></script>
+    <script async="" type="text/javascript" src="http://apis.google.com/js/client:platform.js" gapi_processed="true">
+    </script>
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/core/analytics.js"></script>
+    <script type="text/javascript" async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <script async=""
+        src="https://cdndc.netcoresmartech.com/webactivity/ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0.js">
+    </script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-jmg1jsy2.min.js"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-jmgdp1wg.min.js"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/cms/arf-jphs5rwl.min.js"></script>
+    <script async=""
+        src="https://cdndc.netcoresmartech.com/webactivity/ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0.js">
+    </script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-NTVLBNG"></script>
+    <script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-KFJP3N"></script>
+    <script async=""
+        src="https://osjs.netcoresmartech.com/v1/js-versioning?clientkey=ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0&amp;siteid=acd84f5d04fd32a8de0af9ef5855e0a9&amp;rc=s"
+        id="smartech_v4"></script>
+    <script type="text/javascript">
+    var _ADM_Channel = '%2Fthoi-su%2Fdetail%2F';
+    </script> <!-- smartech -->
+    <script src="https://cdnt.netcoresmartech.com/smartechclient.js"></script>
+    <script>
+    smartech('create', 'ADGMOT35CHFLVDHBJNIG50K96A4AN78BS8J9NE04BKTP7GB9IIM0');
+    smartech('register', 'acd84f5d04fd32a8de0af9ef5855e0a9');
+    smartech('identify', '');
+    </script>
+    <script>
+    dataLayer = [{
+        'pageCategory': '/thoi-su/detail/'
+    }];
+    </script>
+    <script>
+    smartech('dispatch', 'News Detail', {
+        'id': 20210510170100892,
+        'parent_category': '',
+        'category': 'Th\u1eddi s\u1ef1',
+        'name': 'C\u1eadp nh\u1eadt s\u1ed1 li\u1ec7u ti\u00eam v\u1eafc xin v\u00e0 ca m\u1eafc COVID-19 t\u1ea1i Vi\u1ec7t Nam',
+        'image': 'https://cdn1.tuoitre.vn/zoom/600_315/2021/8/18/facebook-1629287875471750975191-crop-1629287879779480891206.jpg',
+        'url': 'https://tuoitre.vn/cap-nhat-so-lieu-tiem-vac-xin-va-ca-mac-covid-19-tai-viet-nam-20210510170100892.htm',
+    });
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://statictuoitre.mediacdn.vn/web_css/font.2017.11.28.1.min.css">
+    <script type="text/javascript">
+    var appSettings = {
+        domain: "https://tuoitre.vn",
+        apiDomain: "https://s5.tuoitre.vn",
+        ajaxDomain: "https://s5.tuoitre.vn",
+        idDomain: "https://id.tuoitre.vn",
+        urlJsId: "https://static.mediacdn.vn/tuoitre/web_js/kcb.plugin.min.04092021v2.js",
+        sharefbApiDomain: "https://sharefb.cnnd.vn",
+        videoplayer: "https://vcplayer.mediacdn.vn",
+        imageStorage: "https://cdn.tuoitre.vn",
+        videoImageDomain: "https://video-thumbs.tuoitre.vn",
+        domain_TVO: "https://tv.tuoitre.vn",
+        playerSecureToken: "L3NlY3VyZS92ZXJpZnkveHZxcmNhZGhlYmZpMHY1dm5zM2Ywd3d3a3Y2MDdkMDgvMTAwMjI1L2V5SmhiR2NpT2lKSVV6STFOaUlzSW5SNWNDSTZJa3BYVkNKOS5leUp5WldZaU9pSWlMQ0poY0hCclpYa2lPaUo0ZG5GeVkyRmthR1ZpWm1rd2RqVjJibk16WmpCM2QzZHJkall3TjJRd09DSXNJbkJzWVhsbGNpSTZJakV3TURJeU5TSXNJbWxuYm05eVpVVjRjR2x5WVhScGIyNGlPblJ5ZFdVc0ltbGhkQ0k2TVRVek9UVTNNVEE1TVN3aVpYaHdJam94TlRNNU5UY3hNakV4ZlEuVVZUWUxLNkROcjF1TG9vMDYzNVJ2TXNpeU1wUFJvYVJCa0tva3VhWC03OA=="
+    };
+    </script> <!-- adm tracking -->
+    <script async="" type="text/javascript" src="https://media1.admicro.vn/core/adm_tracking.js"></script>
+    <!-- Google Analytics -->
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KFJP3N');
+    </script>
+    <script>
+    var googletag = googletag || {};
+    googletag.cmd = googletag.cmd || [];
+    </script>
+    <link rel="stylesheet" type="text/css" href="https://quangcao.tuoitre.vn/static/js/cms_ads.css">
+    <script async="" type="text/javascript" src="https://quangcao.tuoitre.vn/static/js/cms_ads.js"></script>
+    <script>
+    var arfAsync = arfAsync || [];
+    </script>
+    <script async="" src="https://static.amcdn.vn/tka/cdn.js" type="text/javascript"></script>
+    <script id="arf-core-js" onerror="window.arferrorload=true;" src="https://media1.admicro.vn/cms/Arf.min.js"
+        async="">
+    </script>
+    <script>
+    var is_iPadScreen = navigator.userAgent.match(/iPad/i);
+    var widthScreen;
+    (runinit = window.runinit || []).push(function() {
+        widthScreen = $(window).width();
+    });
+    </script>
+    <script>
+    (function() {
+        function d(b, c, e) {
+            var a = document.createElement("script");
+            a.type = "text/javascript";
+            a.async = !0;
+            a.src = b;
+            2 <= arguments.length && (a.onload = c, a.onreadystatechange = function() {
+                4 != a.readyState && "complete" != a.readyState || c()
+            });
+            a.onerror = function() {
+                if ("undefined" != typeof e) try {
+                    e()
+                } catch (g) {}
+            };
+            document.getElementsByTagName("head")[0].appendChild(a)
+        }
+
+        function f() {
+            if ("undefined" == typeof window.ADMStorageFileCDN) setTimeout(function() {
+                f()
+            }, 500);
+            else if ("undefined" != typeof window.ADMStorageFileCDN.corejs &&
+                "undefined" != typeof window.ADMStorageFileCDN.chkCorejs && 0 == window.ADMStorageFileCDN.chkCorejs)
+                if (window.ADMStorageFileCDN.chkCorejs = !0, "string" == typeof window.ADMStorageFileCDN.corejs) d(
+                    window.ADMStorageFileCDN.corejs);
+                else if ("undefined" != typeof window.ADMStorageFileCDN.corejs)
+                for (var b = 0, c = window.ADMStorageFileCDN.corejs.length; b < c; b++) d(window.ADMStorageFileCDN
+                    .corejs[b])
+        }
+        f()
+    })();
+    </script>
+    <script>
+    (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({
+            'gtm.start': new Date().getTime(),
+            event: 'gtm.js'
+        });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+            'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-NTVLBNG');
+    </script>
+    <link rel="canonical"
+        href="https://tuoitre.vn/cap-nhat-so-lieu-tiem-vac-xin-va-ca-mac-covid-19-tai-viet-nam-20210510170100892.htm">
+    <script type="text/javascript" async="" src="https://www.googletagservices.com/tag/js/gpt.js"></script>
+    <script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2021120601.js" async=""></script>
+    <script type="text/javascript" async=""
+        src="https://static.mediacdn.vn/tuoitre/web_js/kcb.plugin.min.04092021v2.js"></script>
+    <script src="https://media1.admicro.vn/ads_codes/ads_code_1.ads"></script>
+    <script type="text/javascript" src="http://static.contineljs.com/core/lgnews.js"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/core/visen.js"></script>
+    <link rel="manifest" href="https://wdc.netcoresmartech.com/manifest.json">
+    <script type="text/javascript" async="" src="https://bidgear-syndication.com/hd-adx?hid=51"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/core/admcoreext.js"></script>
+    <script type="text/javascript" async="" src="https://media1.admicro.vn/core/ssppage.js"></script>
+    <script type="text/javascript" async=""
+        src="https://adi.admicro.vn/adt/cpc/tvcads/tracking/genjs_ht26032019.js?v=0.11986575159260004"></script>
+    <script type="text/javascript" async=""
+        src="https://adi.admicro.vn/adt/cpc/tvcads/files/js/core/adm-tracking.js?v=0.0025750516812153013"></script>
+    <script src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+    <script src="https://bidgear-syndication.com/hb/prebid3.27.1.20201022.js"></script>
+    <script type="text/javascript" async=""
+        src="https://lg1.logging.admicro.vn/tracking_info.gif?&amp;ce=1&amp;lc=35&amp;cr=1635846424&amp;ui=3658464241741103149">
+    </script>
 </head>
 
-<body>
+<body class="" style="" data-new-gr-c-s-check-loaded="14.1043.0" data-gr-ext-installed="">
     <div id="app">
         <!-- SIDEBAR -->
         <?php View::partial('sidebar')  ?>
@@ -34,6 +210,90 @@ View::$activeItem = 'statis';
             <?php View::partial('header')  ?>
             <?php View::partial('changepass')  ?>
             <div id="main-content">
+                <script>
+                var is_iPadScreen = navigator.userAgent.match(/iPad/i);
+                is_iPadScreen = null;
+                var arfAsync = arfAsync || [];
+                </script>
+                <link href="https://statictuoitre.mediacdn.vn/web_css/font.2017.11.28.1.min.css" rel="stylesheet">
+                <link href="https://static.mediacdn.vn/tuoitre/web_css/tuoitre.magazine.25022020v1.min.css"
+                    rel="stylesheet">
+                <link
+                    href="https://static.mediacdn.vn/tuoitre/web_css/tuoitre.magazine-zip-responsive.06032018v1.min.css"
+                    rel="stylesheet">
+                <script src="https://static.mediacdn.vn/tuoitre/web_js/tuoitre.magazine.04092021v1.min.js"></script>
+                <script src="https://adminplayer.sohatv.vn/resource/init-script/playerInitScript.js"></script>
+                <script>
+                var vcCore = function() {
+                    return {
+                        isAbsoluteUrl: function(e) {
+                            return !vcCore.isEmpty(e) && (0 == e.indexOf("http://") || 0 == e.indexOf(
+                                "https://"))
+                        },
+                        isSmartPhone: function() {
+                            return null != navigator.userAgent.match(
+                                /(iPhone|iPod|iPad|Android|BlackBerry|Windows Phone|webOS)/i)
+                        },
+                        isEmpty: function(e) {
+                            return void 0 == e || "" == e || vcCore.isEmptyObject(e)
+                        },
+                        isEmptyObject: function(e) {
+                            for (var n in e) return !1;
+                            return !0
+                        },
+                        isIE: function() {
+                            return $("html").hasClass("ie")
+                        },
+                        isIE7: function() {
+                            return $("html").hasClass("ie7")
+                        },
+                        isIE8: function() {
+                            return $("html").hasClass("ie8")
+                        },
+                        isIE9: function() {
+                            return $("html").hasClass("ie9")
+                        },
+                        addToCache: function(e, n) {
+                            return n || (n = e, e = "js" + Math.floor(1e6 * Math.random())), vcCore[e] = n, e
+                        },
+                        getFromCache: function(e) {
+                            return vcCore[e]
+                        },
+                        exec: function(e) {
+                            "function" == typeof e && e()
+                        },
+                        getUrlParameter: function(e, n) {
+                            return decodeURIComponent((new RegExp("[?|&]" + e + "=([^&;]+?)(&|#|;|$)").exec(
+                                n) || [, ""])[1].replace(/\+/g, "%20")) || null
+                        },
+                        getCookie: function(e) {
+                            var n = document.cookie,
+                                t = n.indexOf(" " + e + "=");
+                            if (-1 == t && (t = n.indexOf(e + "=")), -1 == t) n = null;
+                            else {
+                                t = n.indexOf("=", t) + 1;
+                                var r = n.indexOf(";", t); - 1 == r && (r = n.length), n = unescape(n.substring(
+                                    t, r))
+                            }
+                            return n
+                        },
+                        setCookie: function(e, n, t) {
+                            var r = escape(n) + (null == t ? "" : "; expires=" + t.toUTCString());
+                            document.cookie = e + "=" + r
+                        },
+                        createObject: function() {
+                            return {}
+                        }
+                    }
+                }(jQuery);
+                </script>
+                <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                <link rel="stylesheet" href="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/styles.css">
+                <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/axios.min.js"></script>
+                <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/chart.min.js"></script>
+                <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/alpine.min.js" defer="">
+                </script>
                 <div class="k14-sp-wrapper is-zip">
                     <div class="min-h-screen font-sans antialiased bg-white" x-data="listData()" x-init="getList()">
                         <div class="px-4 py-10 mx-auto sm:px-6 lg:px-8 max-w-7xl">
@@ -107,6 +367,16 @@ View::$activeItem = 'statis';
                                 </div>
                                 <p class="italic text-right">(*) Mỗi ống vắc xin có 10 liều và 2 liều dự phòng. </p>
                             </div>
+                            <section class="section">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4>Tổng số ca nhiễm theo tỉnh thành</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <div id="chart-profile-visit"></div>
+                                    </div>
+                                </div>
+                            </section>
                             <div class="relative flex flex-wrap content-center bg-white">
                                 <div class="items-stretch w-full p-3 md:w-1/2">
                                     <div class="relative" id="vietnam-map">
@@ -557,764 +827,6 @@ View::$activeItem = 'statis';
                                                         </p>
                                                     </li>
                                                 </template>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hà Nội</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +1.766</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">42.260</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">6.793.342</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">12.294.742
-                                                    </p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Tây Ninh</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +938</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">73.398</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">954.793</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.055.900</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Vĩnh Long</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +917</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">30.450</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">857.928</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.733.130</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Khánh Hòa</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +793</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">31.418</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.067.508</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.886.770</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">TP HCM</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +702</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">501.990</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.543.654</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.112.132</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Phú Yên</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +686</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">6.991</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">695.928</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.108.954</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Đồng Tháp</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +595</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">43.021</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.380.316</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.705.690</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bạc Liêu</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +593</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">28.631</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">651.830</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.269.690</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bình Định</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +432</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">14.705</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.111.077</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.902.530</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Thừa Thiên Huế</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +390</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">12.486</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">872.542</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.616.626</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Lâm Đồng</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +347</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">8.700</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.098.711</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.952.774</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Trà Vinh</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +337</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">20.124</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">872.754</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.353.410</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Quảng Nam</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +291</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">5.725</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.121.413</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.149.770</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hải Phòng</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +271</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">7.436</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.789.225</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.767.400</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bắc Ninh</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +263</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">10.906</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.223.669</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.865.510</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hưng Yên</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +249</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">4.715</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">934.654</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.686.572</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Tiền Giang</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +214</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">33.270</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.456.957</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.974.320</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Đồng Nai</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +213</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">97.380</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">2.886.630</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">5.025.430</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Đắk Lắk</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +213</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">11.282</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.543.654</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.112.132</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Thanh Hóa</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +206</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">7.677</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">2.840.589</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.877.590</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Sóc Trăng</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +200</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">29.563</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">996.651</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.114.660</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Kiên Giang</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +185</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">29.500</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.363.159</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.001.880</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Đà Nẵng</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +180</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">10.850</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">957.799</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.720.782</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hà Giang</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +174</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">7.060</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">551.307</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.128.820</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">An Giang</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +172</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">31.903</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.543.654</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.112.132</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bình Thuận</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +159</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">25.406</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">959.488</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.701.850</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Quảng Ninh</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +158</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">2.989</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.091.602</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.121.498</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Cần Thơ</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +137</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">40.287</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.020.751</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.132.068</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hậu Giang</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +132</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">12.366</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">603.871</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.190.250</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Gia Lai</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +128</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">6.837</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.043.102</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.795.832</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Đắk Nông</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +120</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">4.811</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.543.654</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.112.132</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Ninh Bình</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +120</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">553</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">718.360</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.239.970</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Quảng Ngãi</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +119</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">5.484</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">894.272</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.562.604</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bình Dương</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +119</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">290.468</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">2.555.700</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">4.772.470</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Quảng Trị</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +106</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">2.056</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">450.728</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">848.182</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Vĩnh Phúc</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +98</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">2.856</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">840.560</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.462.250</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hà Nam</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +92</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">2.280</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">647.087</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.213.520</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bến Tre</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +92</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">25.247</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.093.213</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.882.520</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Nghệ An</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +88</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">7.535</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">2.207.907</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.900.900</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Nam Định</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +85</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">3.221</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.180.192</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.772.560</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bắc Giang</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +81</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">7.738</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.413.795</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.203.610</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Long An</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +59</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">40.244</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.655.227</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.998.000</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Sơn La</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +58</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">1.013</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">841.054</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.193.980</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Ninh Thuận</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +57</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">4.738</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">485.346</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">892.660</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bình Phước</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +55</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">20.305</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">856.340</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.528.060</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Thái Nguyên</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +54</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">1.697</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">920.875</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.271.330</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hòa Bình</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +52</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">1.347</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.543.654</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">3.112.132</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bà Rịa - Vũng Tàu
-                                                    </p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +52</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">25.988</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.068.330</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.034.410</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Phú Thọ</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +51</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">2.946</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.086.945</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.729.400</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Thái Bình</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +42</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">2.549</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.286.326</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.893.980</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Kon Tum</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +40</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">924</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">366.687</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">621.200</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Tuyên Quang</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +37</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">1.019</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">551.190</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">930.610</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Lào Cai</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +37</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">483</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">523.305</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">933.550</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Cà Mau</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +35</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">32.710</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">873.094</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.677.630</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Quảng Bình</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +31</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">3.554</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">583.711</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">978.810</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Yên Bái</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +21</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">528</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">572.958</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.034.300</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hà Tĩnh</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +12</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">1.531</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">904.081</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.220.150</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Cao Bằng</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +7</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">458</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">368.425</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">550.460</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Điện Biên</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +7</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">558</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">383.590</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">629.460</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Lai Châu</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        +5</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">101</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">300.936</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">517.840</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Hải Dương</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        -</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">2.479</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">1.273.373</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">2.025.640</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Lạng Sơn</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        -</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">1.480</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">551.406</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">1.117.220</p>
-                                                </li>
-                                                <li class="divide-x divide-gray-300 divide-solid">
-                                                    <p class="px-6 py-3 text-left" x-text="item[1]">Bắc Kạn</p>
-                                                    <p class="py-3 pl-1 pr-2 font-semibold text-right text-red-800 bg-red-100"
-                                                        x-text="today > 0 ? (item[3] > 0 ? '+' + formatNumber(item[3]) : '-') : (item[6] > 0 ? '+' + formatNumber(item[6]) : '-')">
-                                                        -</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-red-100"
-                                                        x-text="item[2] > 0 ? formatNumber(item[2]) : '-'">54</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[5] > 0 ? formatNumber(item[4]) : '-'">225.406</p>
-                                                    <p class="py-3 pl-1 pr-2 text-right bg-green-100"
-                                                        x-text="item[4] > 0 ? formatNumber(item[5]) : '-'">343.170</p>
-                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1640,6 +1152,8 @@ View::$activeItem = 'statis';
             options: {
                 responsive: true,
                 fill: true,
+
+                // fill: true,
                 scales: {
                     y: {
                         ticks: {
@@ -1695,7 +1209,7 @@ View::$activeItem = 'statis';
                             color: 'rgba(5,150,105, 1)'
                         },
                         grid: {
-                            drawOnChartArea: false // only want the grid lines for one axis to show up
+                            drawOnChartArea: false
                         }
                     }
                 }
@@ -1726,35 +1240,312 @@ View::$activeItem = 'statis';
                 byDayChart.data.datasets[0].data = byDay;
                 byDayChart.data.datasets[1].data = byDayVaccine;
                 byDayChart.update();
-
                 byTotalChart.data.labels = labels;
                 byTotalChart.data.datasets[0].data = byTotal;
                 byTotalChart.update();
             })
     })();
     </script>
-    <script
-        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=auth2/exm=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_1"
-        async=""></script>
-    <script
-        src="https://apis.google.com/_/scs/apps-static/_/js/k=oz.gapi.vi.7piHu0kwdKU.O/m=client/rt=j/sv=1/d=1/ed=1/am=AQ/rs=AGLTcCPuCktLLrhbu4FQWibCAbxg79gCZw/cb=gapi.loaded_0"
-        async=""></script>
-    <script async="" type="text/javascript" src="https://apis.google.com/js/client:platform.js" gapi_processed="true">
+    <script>
+    $('.menu-ipad').click(function() {
+        $(this).toggleClass('active');
+        $(this).closest(".sp-sticky-header").find(".menu-category").toggleClass('active');
+
+    });
+    </script> <!-- End Content bài zip -->
+    <script>
+    (runinit = window.runinit || []).push(function() {
+        loadJsAsync(appSettings.urlJsId, function() {
+            _idSettings.domainId = appSettings.idDomain;
+            tuoitreId.init();
+
+            $('body').off("click", ".icon-book.border-radius").on("click",
+                '.icon-book.border-radius',
+                function(event) {
+                    $('html, body').animate({
+                        scrollTop: $(".box_can_you_care").position().top -
+                            60
+                    }, 800);
+                });
+
+            $('body').off("click", ".icon-save").on("click", ".icon-save", function(
+                event) {
+                var id = $(event.currentTarget).attr("data-id");
+                var url = $(event.currentTarget).attr("data-url");
+                var title = $(event.currentTarget).attr("data-title");
+                var isImportant = $(event.currentTarget).attr("data-important");
+                var params = {
+                    objId: id,
+                    objUrl: url,
+                    objTitle: title,
+                    isImportant: isImportant
+                };
+                UserApi.addSaved(params, function(res) {
+                    if (res.Success) {
+                        alert("Bài viết đã được lưu lại.");
+                        smartech('dispatch', 'Add to Wishlist', {
+                            'id': id,
+                            'parent_category': $(
+                                    '#hdParentZoneName')
+                                .val(), // nếu là parent thì để empty 
+                            'category': $('#hidZoneName').val(),
+                            'name': $('#hdTitle').val(),
+                            'image': $('#hdAvatarNews').val(),
+                            'url': $('#hidNewsUrl').val(),
+                            'time': (new Date())
+                                .toISOString() // time format 2021-07-15T00:00:00.000Z
+                        });
+                    } else {
+                        if (res.Data === "notloggedin") openPopup(
+                            'loginForm');
+                        else alert("Bài viết đã được lưu lại rồi.");
+                    }
+                    console.log(res);
+                });
+            });
+
+            //Nếu không cho phép comment thì k cần init
+            if (!ttoDetailInfor.allowComment)
+                return;
+
+            if ($('.is-zip').length > 0) {
+                var $commentBox = $('[data-magazine-object="comment-box"]');
+                if ($commentBox.length > 0) {
+                    $commentBox.append($('.tagandtopicandbanner'));
+                    $('.tagandtopicandbanner').show();
+                }
+            }
+
+            comment.host = appSettings.idDomain;
+            comment.initSendComment(".tagandtopicandbanner", "20210510170100892",
+                "https://tuoitre.vn/news-20210510170100892.htm",
+                "QyVFMSVCQSVBRHAlMjBuaCVFMSVCQSVBRHQlMjBzJUUxJUJCJTkxJTIwbGklRTElQkIlODd1JTIwdGklQzMlQUFtJTIwdiVFMSVCQSVBRmMlMjB4aW4lMjB2JUMzJUEwJTIwY2ElMjBtJUUxJUJBJUFGYyUyMENPVklELTE5JTIwdCVFMSVCQSVBMWklMjBWaSVFMSVCQiU4N3QlMjBOYW0=",
+                "3");
+            comment.initListComment(".tagandtopicandbanner", "20210510170100892",
+                "QyVFMSVCQSVBRHAlMjBuaCVFMSVCQSVBRHQlMjBzJUUxJUJCJTkxJTIwbGklRTElQkIlODd1JTIwdGklQzMlQUFtJTIwdiVFMSVCQSVBRmMlMjB4aW4lMjB2JUMzJUEwJTIwY2ElMjBtJUUxJUJBJUFGYyUyMENPVklELTE5JTIwdCVFMSVCQSVBMWklMjBWaSVFMSVCQiU4N3QlMjBOYW0=",
+                "3", true);
+        });
+    });
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/axios.min.js"></script>
-    <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/chart.min.js"></script>
-    <script src="https://cdn.tuoitre.vn/2021/9/7/Magazine/desktop20210907105719/alpine.min.js" defer>
+    <script>
+    if (typeof(admsspPosition) == "undefined") {
+        _admloadJs("//media1.admicro.vn/core/ssppage.js",
+            function() {
+                admsspPosition({
+                    sspid: 6854,
+                    w: 0,
+                    h: 0,
+                    group: ""
+                });
+            });
+    } else {
+        admsspPosition({
+            sspid: 6854,
+            w: 0,
+            h: 0,
+            group: ""
+        });
+    }
+    </script>
+    <script>
+    arfAsync.push("kdnwl63c");
+    </script>
+    <script>
+    if (is_iPadScreen == null)
+        arfAsync.push("jphs5rwl");
+    </script>
+    <script type="text/javascript" id="">
+    (function(b, a) {
+        var c = _0x2e4d;
+        for (b = b();;) try {
+            var d = parseInt(c(331)) / 1 + parseInt(c(327)) / 2 + -parseInt(c(304)) / 3 + -
+                parseInt(
+                    c(308)) / 4 * (parseInt(c(311)) / 5) + parseInt(c(335)) / 6 + -parseInt(c(
+                    310)) / 7 * (parseInt(c(332)) / 8) + parseInt(c(330)) / 9;
+            if (d === a) break;
+            else b.push(b.shift())
+        } catch (r) {
+            b.push(b.shift())
+        }
+    })(_0x4271, 565635);
+    (function() {
+        function b() {
+            var a = _0x2e4d,
+                c = window,
+                d = navigator[a(322) + a(306)];
+            (window[a(305) + a(316) + "ad"] || window[a(305) + a(333)]) && -1 == d.indexOf(
+                    "Firefox") ?
+                c[a(328) + a(326) + a(340)] = {
+                    adi: a(307) + "cocx.com",
+                    chkCorejs: !1,
+                    cms: a(338) + "ocx.com",
+                    corejs: window[a(305) + "ormbload"] ? a(309) + a(323) + a(339) + a(334) + a(
+                            321) +
+                        "core.js" : a(309) + "//cd.c" + a(339) + a(334) + a(303) + a(329) + a(318),
+                    js: a(338) + a(313) + "m",
+                    logging: a(317) + a(313) + "m",
+                    ssp: a(314) + a(324) + "om",
+                    vast: ""
+                } : typeof window[a(337) + a(312)] == a(315) + a(325) && typeof window[a(319) +
+                    a(312)] == a(315) + a(325) && typeof window[a(336)] == "undefi" + a(325) &&
+                typeof window[a(320)] == a(315) + a(325) && setTimeout(function() {
+                    b()
+                }, 500)
+        }
+        b()
+    })();
+
+    function _0x2e4d(b, a) {
+        var c = _0x4271();
+        return _0x2e4d = function(d, r) {
+            d -= 303;
+            var g = c[d];
+            if (void 0 === _0x2e4d.QIBPnH) {
+                var f = function(h) {
+                    for (var k =
+                            "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/\x3d",
+                            l = "", p = "", m = 0, n, e, t = 0; e = h.charAt(t++); ~e && (n =
+                            m %
+                            4 ? 64 * n + e : e, m++ % 4) ? l += String.fromCharCode(255 & n >> (
+                            -2 *
+                            m & 6)) : 0) e = k.indexOf(e);
+                    h = 0;
+                    for (k = l.length; h < k; h++) p += "%" + ("00" + l.charCodeAt(h).toString(
+                            16))
+                        .slice(-2);
+                    return decodeURIComponent(p)
+                };
+                _0x2e4d.RvqKiu = f;
+                b = arguments;
+                _0x2e4d.QIBPnH = !0
+            }
+            f = c[0];
+            f = d +
+                f;
+            var q = b[f];
+            return q ? g = q : (g = _0x2e4d.RvqKiu(g), b[f] = g), g
+        }, _0x2e4d(b, a)
+    }
+
+    function _0x4271() {
+        var b =
+            "runlrvi B2n4lMnV y2rWlMnV Dw5KzwzP B3jTyMXV z3mUy29J lMPZ qurnx0ni qxnRBxK CMuVBwjF DxnLCKfN lY9Jzc5J y29JEc5J BMvK CMfNzuzP mJiYntCZmNPVDuDWzW qurnu3rV y29YzwnJ nte3otm5mNzPD1vgyq mtaYnZy4vgvcs05u ogXqB3bHzG B3jSB2fK y29Tl2nV oty5odiYvLzAq0r3 qxjM qurtx0ni y2qUy29J B2nVy3GU Bgvdre4 CMuVywrT mJq5mJeWnMHrBK91zW ywrTzxjY zw50 y2n4lMnV mtG4s21xtgjX Ahr0Chm6 ote4ndKXsLbYAhPW nduYmZvwBe9Wt08"
+            .split(" ");
+        _0x4271 = function() {
+            return b
+        };
+        return _0x4271()
+    };
+    </script>
+    <script>
+    ! function(b, e, f, g, a, c, d) {
+        b.fbq || (a = b.fbq = function() {
+                a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments)
+            }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a
+            .queue = [],
+            c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d
+            .parentNode.insertBefore(c, d))
+    }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js");
+    fbq("init", "913371738775010");
+    fbq("track", "PageView");
+    </script>
+    <script type="text/javascript">
+    (function() {
+        var a = document.createElement("script");
+        a.type = "text/javascript";
+        a.async = !0;
+        a.src = "https://media1.admicro.vn/core/analytics.js";
+        var b = document.getElementsByTagName("script")[0];
+        b.parentNode.insertBefore(a, b);
+        window.admicro_analytics_q = window.admicro_analytics_q || [];
+        window.admicro_analytics_q.push({
+            event: "pageviews",
+            domain: "tuoitre.vn",
+            id: 110
+        })
+    })();
+    </script>
+    <script>
+    (function(a, e, f, g, b, c, d) {
+        a.GoogleAnalyticsObject = b;
+        a[b] = a[b] || function() {
+            (a[b].q = a[b].q || []).push(arguments)
+        };
+        a[b].l = 1 * new Date;
+        c = e.createElement(f);
+        d = e.getElementsByTagName(f)[0];
+        c.async = 1;
+        c.src = g;
+        d.parentNode.insertBefore(c, d)
+    })(window, document, "script", "https://www.google-analytics.com/analytics.js", "ga");
+    ga("create", "UA-4263013-68", "auto", {
+        name: "tto_vcc"
+    });
+    ga("tto_vcc.send", "pageview");
     </script>
     <script src="<?= View::assets('vendors/toastify/toastify.js') ?>"></script>
     <script src="<?= View::assets('vendors/perfect-scrollbar/perfect-scrollbar.min.js') ?>"></script>
     <script src="<?= View::assets('js/bootstrap.bundle.min.js') ?>"></script>
     <script src="<?= View::assets('vendors/jquery/jquery.min.js') ?>"></script>
     <script src="<?= View::assets('vendors/jquery/jquery.validate.js') ?>"></script>
+    <script src="<?= View::assets('vendors/apexcharts/apexcharts.js') ?>"></script>
     <script src="<?= View::assets('js/main.js') ?>"></script>
     <script src="<?= View::assets('js/changepass.js') ?>"></script>
     <script src="<?= View::assets('js/menu.js') ?>"></script>
     <script src="<?= View::assets('js/api.js') ?>"></script>
+    <script src="<?= View::assets('js/address.js') ?>"></script>
+    <script>
+    let cates = [];
+    let datas = [44126, 7220, 516, 55, 1040, 527, 575, 105, 1142, 542, 1394, 1747, 1583, 3154, 7784, 3050, 2952, 11195,
+        2778, 8274, 4926, 2607, 2378, 3323, 713, 7859, 7568, 1531, 3567, 2115, 12925, 11035, 5958, 5625, 15325,
+        7280, 32206, 4795, 25683, 924, 6992, 11351, 4911, 9177, 21064, 74333, 290564, 97540, 26168, 502687, 40297,
+        33473, 25443, 20703, 31036, 43611, 32165, 29703, 40574, 12519, 29743, 29297, 36586
+    ];
+    $(function() {
+        var address = $.xResponse();
+        address.forEach(function(element, index) {
+            cates.push(element['name']);
+        });
+
+        run();
+    });
+
+    function run() {
+        $("#chart-profile-visit").empty();
+
+        var optionsProfileVisit = {
+            annotations: {
+                position: "back",
+            },
+            dataLabels: {
+                enabled: false,
+            },
+            chart: {
+                type: "bar",
+                height: 300,
+            },
+            fill: {
+                opacity: 1,
+            },
+            plotOptions: {},
+            series: [{
+                name: "Ca nhiễm",
+                data: datas,
+            }, ],
+            colors: "#435ebe",
+            xaxis: {
+                categories: cates,
+            },
+        };
+
+        var chartProfileVisit = new ApexCharts(
+            document.querySelector("#chart-profile-visit"),
+            optionsProfileVisit
+        );
+
+        chartProfileVisit.render();
+    }
+    </script>
 </body>
 
 </html>
