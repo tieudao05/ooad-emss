@@ -68,8 +68,8 @@ class QuyenController extends Controller{
         if($kq == null || $kq2 == null){
             $response['thanhcong'] = false;
         } else{   
-            $response['MaQuyen'] = $kq->MaQuyen;
-            $response['TenQuyen'] = $kq->TenQuyen;
+            $response['ma_vai_tro'] = $kq->ma_vai_tro;
+            $response['ten_vai_tro'] = $kq->ten_vai_tro;
             $response['chitiet'] = $kq2;
             $response['thanhcong'] = true;
         }

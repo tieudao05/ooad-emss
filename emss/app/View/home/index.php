@@ -38,7 +38,7 @@ View::$activeItem = 'dashboard';
                 <div class="col-md-8 col-sm-12">
                     <div class="card">
                         <div class="card-content">
-                            <img class="card-img-top img-fluid" src="assets/images/samples/4-640x360.png" alt="Card image cap" style="height: 20rem" />
+                            <img  class="card-img-top img-fluid" src="assets/images/samples/4-640x360.png" alt="Card image cap" style="height: 20rem" />
                             <div class="card-body">
                                 <h4 class="card-title">Tra cứu địa điểm cách ly</h4>
                                 <div class=" from-group row" style="padding-right: 1.5em; padding-left:0em" ;>

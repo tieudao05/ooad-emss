@@ -20,12 +20,12 @@ class QuyenModel{
         $raw = 'SELECT * FROM vai_tro';
         if ($search) {
             $search = '%' . $search . '%';
-            $raw .= ' WHERE (TenQuyen LIKE :search OR MaQuyen LIKE :search ) AND TrangThai = 1';
+            $raw .= ' WHERE (ten_vai_tro LIKE :search OR ma_vai_tro LIKE :search ) AND trang_thai = 1';
         } else {
-            $raw .= ' WHERE TrangThai = 1';
+            $raw .= ' WHERE trang_thai = 1';
         }
 
-        $raw .= ' ORDER BY MaQuyen ASC LIMIT :limit OFFSET :offset';
+        $raw .= ' ORDER BY ma_vai_tro ASC LIMIT :limit OFFSET :offset';
         $query = $database->prepare($raw);
 
         $query->bindValue(':limit', $limit, PDO::PARAM_INT);
@@ -39,12 +39,12 @@ class QuyenModel{
         $data = $query->fetchAll();
 
         // đếm số lượng tất cả quyen để tính số trang
-        $count ='SELECT COUNT(MaQuyen) FROM quyen';
+        $count ='SELECT COUNT(ma_vai_tro) FROM vai_tro';
         if ($search) {
             $search = '%' . $search . '%';
-            $count .= ' WHERE (TenQuyen LIKE :search OR MaQuyen LIKE :search) AND TrangThai = 1';
+            $count .= ' WHERE (ten_vai_tro LIKE :search OR ma_vai_tro LIKE :search) AND trang_thai = 1';
         } else {
-            $count .= ' WHERE TrangThai = 1';
+            $count .= ' WHERE trang_thai = 1';
         }
 
         $countQuery = $database->prepare($count);  
@@ -121,7 +121,7 @@ class QuyenModel{
 
     public static function getChucNang(){
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = 'SELECT * FROM `chucnang` WHERE TrangThai = 1';
+        $sql = 'SELECT * FROM `chuc_nang` WHERE trang_thai = 1';
         $query = $database->query($sql);
         $row = $query->fetchAll();
         $check = true;
@@ -138,7 +138,7 @@ class QuyenModel{
     public static function findOneByMaQuyen($maquyen){
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $query = $database->prepare("SELECT * FROM quyen WHERE MaQuyen = :mamon LIMIT 1");
+        $query = $database->prepare("SELECT * FROM vai_tro WHERE ma_vai_tro = :mamon LIMIT 1");
         $query->execute([':mamon' => $maquyen]);
 
 
@@ -153,13 +153,13 @@ class QuyenModel{
     {
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $sql = "UPDATE quyen SET TenQuyen =:tenquyen WHERE MaQuyen = :maquyen";
+        $sql = "UPDATE vai_tro SET ten_vai_tro =:tenquyen WHERE ma_vai_tro = :maquyen";
         $query = $database->prepare($sql);
         $query->execute([':maquyen' => $maquyen,':tenquyen' => $tenquyen]);
 
         $count2 = 0;
         foreach ($chitiets as &$chitiet) {
-            $sql2 = "UPDATE chitietquyen SET TrangThai =:trangthai WHERE MaQuyen = :maquyen AND MaChucNang = :machucnang";
+            $sql2 = "UPDATE chi_tiet_quyen SET trang_thai =:trangthai WHERE ma_vai_tro = :maquyen AND ma_chuc_nang = :machucnang";
             $query2 = $database->prepare($sql2);
             $query2->execute([':maquyen' => $chitiet->MaQuyen,':machucnang' => $chitiet->MaChucNang,':trangthai' => $chitiet->TrangThai]);
             $count2 += $query2->rowCount();
@@ -175,13 +175,13 @@ class QuyenModel{
     public static function create($maquyen, $tenquyen,$chitiets)
     {
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "INSERT INTO quyen (MaQuyen, TenQuyen) VALUES (:maquyen,:tenquyen) ";
+        $sql = "INSERT INTO vai_tro (ma_vai_tro, ten_vai_tro) VALUES (:maquyen,:tenquyen) ";
         $query = $database->prepare($sql);
         $query->execute([':maquyen' => $maquyen,':tenquyen' => $tenquyen]);
 
         $count2 = 0;
         foreach ($chitiets as &$chitiet) {
-            $sql2 = "INSERT INTO chitietquyen (MaQuyen, MaChucNang, TrangThai) VALUES (:maquyen,:machucnang,:trangthai)";
+            $sql2 = "INSERT INTO chi_tiet_quyen (ma_vai_tro, ma_chuc_nang, trang_thai) VALUES (:maquyen,:machucnang,:trangthai)";
             $query2 = $database->prepare($sql2);
             $query2->execute([':maquyen' => $chitiet->MaQuyen,':machucnang' => $chitiet->MaChucNang,':trangthai' => $chitiet->TrangThai]);
             $count2 += $query2->rowCount();
@@ -197,7 +197,7 @@ class QuyenModel{
     public static function findChiTietQuyen($maquyen){
         $database = DatabaseFactory::getFactory()->getConnection();
 
-        $query = $database->prepare("SELECT * FROM chitietquyen WHERE MaQuyen = :mamon ORDER BY MaChucNang ASC");
+        $query = $database->prepare("SELECT * FROM chi_tiet_quyen WHERE ma_vai_tro = :mamon ORDER BY ma_chuc_nang ASC");
         $query->execute([':mamon' => $maquyen]);
 
         if ($row = $query->fetchAll()) {
@@ -208,7 +208,7 @@ class QuyenModel{
 
     public static function delete($maquyen){
         $database = DatabaseFactory::getFactory()->getConnection();
-        $sql = "UPDATE `quyen` SET TrangThai = 0  WHERE MaQuyen = :mamon";
+        $sql = "UPDATE `vai_tro` SET trang_thai = 0  WHERE ma_vai_tro = :mamon";
         $query = $database->prepare($sql);
         $query->execute([':mamon' => $maquyen]);       
         $count = $query->rowCount();
@@ -227,7 +227,8 @@ class QuyenModel{
         $raw = substr($raw, 0, -1);
         $raw .= ")";
 
-        $sql = "UPDATE `quyen` SET TrangThai = 0  WHERE  MaQuyen IN " . $raw;
+        $sql = "UPDATE `vai_tro` SET trang_thai = 0  WHERE ma_vai_tro IN " . $raw;
+        echo($sql);
         $count  = $database->exec($sql);
         if (!$count) {
             return false;
