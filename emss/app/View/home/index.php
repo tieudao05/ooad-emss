@@ -38,7 +38,7 @@ View::$activeItem = 'dashboard';
                 <div class="col-md-8 col-sm-12">
                     <div class="card">
                         <div class="card-content">
-                            <img class="card-img-top img-fluid" src="assets/images/samples/origami.jpg" alt="Card image cap" style="height: 20rem" />
+                            <img class="card-img-top img-fluid" src="assets/images/samples/4-640x360.png" alt="Card image cap" style="height: 20rem" />
                             <div class="card-body">
                                 <h4 class="card-title">Tra cứu địa điểm cách ly</h4>
                                 <div class=" from-group row" style="padding-right: 1.5em; padding-left:0em" ;>
@@ -67,7 +67,7 @@ View::$activeItem = 'dashboard';
                     </div>
                     <section class="section">
                         <div class="page-title" style="padding-left: 5%">
-                                <h3>Danh sách địa điểm</h3>
+                            <h3>Danh sách địa điểm</h3>
                         </div>
                         <div class="card">
                             <div class="card-body">
@@ -148,6 +148,30 @@ View::$activeItem = 'dashboard';
                 })
             });
 
+            function changePage(newPage) {
+                console.log(newPage);
+                currentPage = newPage;
+                getAddressAjax();
+            }
+
+            $('#tinh').change(function(){
+                search2 = '1';
+                search = $('#tinh option').filter(':selected').text();
+                getAddressAjax();
+            })
+
+            $('#huyen').change(function(){
+                search2 = '2';
+                search = $('#tinh option').filter(':selected').text() + '::' + $('#huyen option').filter(':selected').text();;
+                getAddressAjax();
+            })
+
+            $('#xa').change(function(){
+                search2 = '3';
+                search = $('#tinh option').filter(':selected').text() + '::' + $('#huyen option').filter(':selected').text()+ '::' + $('#xa option').filter(':selected').text();
+                getAddressAjax();
+            })
+
             function getAddressAjax() {
                 $.get(`http://localhost/ooad-emss/emss/diadiem/getAddressHome?rowsPerPage=10&page=${currentPage}&search=${search}&search2=${search2}`,
                     function(response) {
@@ -178,25 +202,20 @@ View::$activeItem = 'dashboard';
                             for (let i = 1; i <= response.totalPage; i++) {
                                 if (i == currentPage) {
                                     pagination.append(`
-                        <li class="page-item active">
-                            <button class="page-link" onClick='changePage(${i})'>${i}</button>
-                        </li>`)
+                                <li class="page-item active">
+                                    <button class="page-link" onClick='changePage(${i})'>${i}</button>
+                                </li>`)
                                 } else {
                                     pagination.append(`
-                        <li class="page-item">
-                            <button class="page-link" onClick='changePage(${i})'>${i}</button>
-                        </li>`)
+                                <li class="page-item">
+                                    <button class="page-link" onClick='changePage(${i})'>${i}</button>
+                                </li>`)
                                 }
 
                             }
                         }
 
                     });
-            }
-
-            function changePage(newPage) {
-                currentPage = newPage;
-                getAddressAjax();
             }
         });
     </script>
