@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Core\Auth;
 use App\Core\Controller;
+use App\Core\Request;
 
 class TruyVetController extends Controller
 {
@@ -25,6 +26,10 @@ class TruyVetController extends Controller
     }
     public function getList()
     {
+        Auth::checkAuthentication();
+        $current_page = Request::get('current_page');
+        $row_per_page = Request::get('row_per_page');
+        
     }
     public function update()
     {
