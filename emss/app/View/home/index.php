@@ -15,8 +15,7 @@ View::$activeItem = 'dashboard';
     <title>EMSS</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="<?= View::assets('css/bootstrap.css') ?>" />
 
     <link rel="stylesheet" href="<?= View::assets('vendors/toastify/toastify.css') ?>" />
@@ -41,19 +40,27 @@ View::$activeItem = 'dashboard';
                         <div class="card-content">
                             <img class="card-img-top img-fluid" src="assets/images/samples/origami.jpg" alt="Card image cap" style="height: 20rem" />
                             <div class="card-body">
-                                <h4 class="card-title">Top Image Cap</h4>
-                                <p class="card-text">
-                                    Jelly-o sesame snaps cheesecake topping. Cupcake fruitcake macaroon donut
-                                    pastry gummies tiramisu chocolate bar muffin. Dessert bonbon caramels
-                                    brownie chocolate
-                                    bar
-                                    chocolate tart dragée.
-                                </p>
-                                <p class="card-text">
-                                    Cupcake fruitcake macaroon donut pastry gummies tiramisu chocolate bar
-                                    muffin.
-                                </p>
-                                <button class="btn btn-primary block">Update now</button>
+                                <h4 class="card-title">Tra cứu địa điểm cách ly</h4>
+                                <label>
+                                    <h5 style="margin-left: 50px; margin-right: 10px;"> Theo:</h5>
+                                </label>
+                                <select class="btn btn btn-primary" name="search-cbb" id="cars-search">
+                                    <option value="">Tất Cả</option>
+                                    <option value="ma">Tỉnh/Thành phố</option>
+                                    <option value="ten">Huyện/Quận</option>
+                                    <option value="tinh">Thôn/Phường</option>
+                                </select>
+                                <button class="btn btn-primary block">Tra cứu</button>
+                            </div>
+                            <div class="page-title">
+                                <div class="row">
+                                    <div class="col-12 col-md-7 order-md-1 order-last">
+                                        <label>
+                                            <h3>Danh sách địa điểm</h3>
+                                        </label>
+
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -62,11 +69,11 @@ View::$activeItem = 'dashboard';
                 <div class="col-md-6 col-sm-12">
                     <div class="card">
                         <div class="card-content">
-                            
+
                             <img class="card-img-top img-fluid" src="assets/images/samples/tiem-chung.png">
                             <div class="card-body">
-                            <a href="https://tiemchungcovid19.gov.vn/portal/search" target="blank"> Tra cứu >></a>  
-                                
+                                <a href="https://tiemchungcovid19.gov.vn/portal/search" target="blank"> Tra cứu >></a>
+
                             </div>
                         </div>
                     </div>

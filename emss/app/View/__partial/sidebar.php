@@ -77,7 +77,7 @@ use App\Core\View;
                         <span>Thống kê</span>
                     </a>
                 </li>
-                <li id="9" class="d-none sidebar-item  <?= View::$activeItem == 'person' ? 'active' : '' ?>">
+                <li id="thongtincanhan" class="d-none sidebar-item  <?= View::$activeItem == 'person' ? 'active' : '' ?>">
                     <a href="<?= View::url('thongtincanhan/index') ?>" class="sidebar-link">
                         <i class="bi bi-person-circle"></i>
                         <span>Thông tin cá nhân</span>
