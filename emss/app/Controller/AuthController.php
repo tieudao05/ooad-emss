@@ -23,6 +23,12 @@ class AuthController extends Controller
         return $this->View->render('auth/login');
     }
 
+    public function checkLogin(){
+        $reponse = [
+            'thanhcong' => Auth::checkLogin()
+        ];
+        return $this->View->renderJSON($reponse);
+    }
 
     public function loginPost()
     {

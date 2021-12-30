@@ -271,7 +271,7 @@ View::$activeItem = 'quyen';
         $(function() {
 
             //kietm tra quyen
-            $.post(`http://localhost/webhoctapmvc/quyen/getChucNang`, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/quyen/getChucNang`, function(response) {
                 chucnangs = response.data;
                 chucnangs.forEach(data => {
                     let viewopt = '<li class="d-inline-block me-0 mb-1 w-50">\
@@ -313,7 +313,7 @@ View::$activeItem = 'quyen';
                     maquyen: {
                         required: true,
                         remote: {
-                            url: "http://localhost/webhoctapmvc/quyen/checkValidMaQuyen",
+                            url: "http://localhost/ooad-emss/emss/quyen/checkValidMaQuyen",
                             type: "POST",
                         }
                     },
@@ -360,7 +360,7 @@ View::$activeItem = 'quyen';
                             tenquyen :tam['tenquyen'],
                             chitiets : JSON.stringify(chitiet)
                         }
-                    $.post(`http://localhost/webhoctapmvc/quyen/addQuyen`, data, function(response) {
+                    $.post(`http://localhost/ooad-emss/emss/quyen/addQuyen`, data, function(response) {
                         if (response.thanhcong) {
                             currentPage = 1;
                             layDSQuyenAjax();
@@ -426,7 +426,7 @@ View::$activeItem = 'quyen';
 
 
         function layDSQuyenAjax() {
-            $.get(`http://localhost/webhoctapmvc/quyen/getQuyen?rowsPerPage=10&page=${currentPage}`, function(response) {
+            $.get(`http://localhost/ooad-emss/emss/quyen/getQuyen?rowsPerPage=10&page=${currentPage}`, function(response) {
                 const table1 = $('#table1 > tbody');
                 table1.empty();
                 checkedRows = [];
@@ -506,7 +506,7 @@ View::$activeItem = 'quyen';
         }
 
         function layDSQuyenSearch() {
-            $.get(`http://localhost/webhoctapmvc/quyen/getQuyen?rowsPerPage=10&page=${currentPage}&search=${$('#serch-user-text').val()}`, function(response) {
+            $.get(`http://localhost/ooad-emss/emss/quyen/getQuyen?rowsPerPage=10&page=${currentPage}&search=${$('#serch-user-text').val()}`, function(response) {
                 const table1 = $('#table1 > tbody');
                 table1.empty();
                 checkedRows = [];
@@ -596,7 +596,7 @@ View::$activeItem = 'quyen';
             let data = {
                 maquyen: params
             };
-            $.post(`http://localhost/webhoctapmvc/quyen/viewQuyen`, data, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/quyen/viewQuyen`, data, function(response) {
                 if (response.thanhcong) {
                     $("#view-maquyen").val(response.MaQuyen);
                     $("#view-tenquyen").val(response.TenQuyen);
@@ -615,7 +615,7 @@ View::$activeItem = 'quyen';
                 maquyen: params
             };
 
-            $.post(`http://localhost/webhoctapmvc/quyen/viewQuyen`, data, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/quyen/viewQuyen`, data, function(response) {
                 if (response.thanhcong) {
                     $("#re-maquyen").val(response.MaQuyen);
                     $("#re-tenquyen").val(response.TenQuyen);
@@ -680,7 +680,7 @@ View::$activeItem = 'quyen';
                             tenquyen :tam['tenquyen'],
                             chitiets : JSON.stringify(chitiet)
                         }
-                        $.post(`http://localhost/webhoctapmvc/quyen/repairQuyen`, data, function(response) {
+                        $.post(`http://localhost/ooad-emss/emss/quyen/repairQuyen`, data, function(response) {
                             if (response.thanhcong) {
                                 currentPage = 1;
                                 layDSQuyenAjax();
@@ -720,7 +720,7 @@ View::$activeItem = 'quyen';
             $("#question-user-modal").modal('toggle');
             $('#thuchien').off('click');
             $("#thuchien").click(function() {
-                $.post(`http://localhost/webhoctapmvc/quyen/deleteQuyen`, data, function(response) {
+                $.post(`http://localhost/ooad-emss/emss/quyen/deleteQuyen`, data, function(response) {
                     if (response.thanhcong) {
                         Toastify({
                             text: "Xóa Thành Công",
@@ -761,7 +761,7 @@ View::$activeItem = 'quyen';
                 let data = {
                     maquyens: JSON.stringify(datas)
                 };
-                $.post(`http://localhost/webhoctapmvc/quyen/deleteQuyens`, data, function(response) {
+                $.post(`http://localhost/ooad-emss/emss/quyen/deleteQuyens`, data, function(response) {
                     if (response.thanhcong) {
                         Toastify({
                             text: "Xóa Thành Công",

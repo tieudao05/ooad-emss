@@ -15,6 +15,13 @@ class Auth
         }
     }
 
+    public static function checkLogin(){
+        if (Cookie::userIsLoggedIn()) {
+            return true;
+        }
+        return false;
+    }
+
     // Kiểm tra xem user có đang đang nhập hay không, nếu có thì chuyển hướng sang trang chủ
     public static function checkNotAuthentication()
     {
