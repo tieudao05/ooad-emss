@@ -286,7 +286,62 @@ View::$activeItem = 'location';
                     </div>
                 </div>
             </div>
-
+            <!-- Modal View -->
+            <div class="modal fade text-left" id="view-address-modal" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title">Thông tin chi tiết địa điểm</h4>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <i data-feather="x"></i>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form name="view-address-form" action="/" method="POST">
+                                <div class="modal-body">
+                                    <label for="viewname">Tên địa điểm:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="viewten" name="viewten" class="form-control" disabled>
+                                    </div>
+                                    <label for="cars-hang">Tỉnh/TP: </label><br>
+                                    <div class="form-group">
+                                        <input type="text" id="viewtinh" name="viewtinh" class="form-control" disabled>
+                                    </div>
+                                    <label for="cars-hang">Quận/Huyện: </label><br>
+                                    <div class="form-group">
+                                        <input type="text" id="viewhuyen" name="viewhuyen" class="form-control"
+                                            disabled>
+                                    </div>
+                                    <label for="cars-hang">Phường/Xã: </label><br>
+                                    <div class="form-group">
+                                        <input type="text" id="viewxa" name="viewxa" class="form-control" disabled>
+                                    </div>
+                                    <label for="ghethuong">Ấp/Thôn:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="viewthon" name="viewthon" class="form-control" disabled>
+                                    </div>
+                                    <label for="ghethuong">Số nhà:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="viewsonha" name="viewsonha" class="form-control"
+                                            disabled>
+                                    </div>
+                                    <label for="thuonggia">Phân loại:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="viewloai" name="viewloai" class="form-control" disabled>
+                                    </div>
+                                    <div id='viewcachly'></div>
+                                </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-light-secondary" data-bs-dismiss="modal">
+                                <i class="bx bx-x d-block d-sm-none"></i>
+                                <span class="d-none d-sm-block">Đóng</span>
+                            </button>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
             <!-- FOOTER -->
             <?php View::partial('footer')  ?>
         </div>
@@ -571,6 +626,39 @@ View::$activeItem = 'location';
                 });
             }
         });
+    }
+
+    function viewRow(params) {
+        let data = {
+            id: Number(params)
+        };
+        $.post(`http://localhost/ooad-emss/emss/diadiem/getOneByID`, data, function(response) {
+            if (response.thanhcong) {
+                $('#viewten').val(response.ten_dia_diem);
+                $('#viewtinh').val(response.tp_tinh);
+                $('#viewhuyen').val(response.quan_huyen);
+                $('#viewxa').val(response.phuong_xa);
+                $("#viewthon").val(response.ap_thon);
+                $("#viewsonha").val(response.so_nha);
+                $("#viewloai").val(response.phan_loai);
+                if (response.phan_loai == "Điểm cách ly") {
+                    $("#viewcachly").empty();
+                    $("#viewcachly").append(`<label for="thuonggia">Sức chứa:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="viewsucchua" name="upsucchua"
+                                            class="form-control" disabled>
+                                    </div>
+                                    <label for="thuonggia">Số lượng còn trống:</label>
+                                    <div class="form-group">
+                                        <input type="text" id="viewtrong" name="addtrong"
+                                            class="form-control" disabled>
+                                    </div>`);
+                    $("#viewsucchua").val(response.suc_chua);
+                    $("#viewtrong").val(response.so_luong_trong);
+                } else $("#upcachly").empty();
+            }
+        });
+        $("#view-address-modal").modal('toggle');
     }
 
     $('#uploai').change(function() {
