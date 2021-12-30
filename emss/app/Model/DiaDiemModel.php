@@ -144,34 +144,18 @@ class DiaDIemModel{
         $search = '%' . $search . '%';
         
         if ($search2 == "") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-                FROM dia_diem WHERE (ma_dia_diem LIKE :search OR ten_dia_diem LIKE :search OR tp_tinh LIKE :search OR quan_huyen LIKE :search OR phuong_xa LIKE :search OR ap_thon LIKE :search OR so_nha LIKE :search OR phan_loai LIKE :search) 
-                AND trang_thai=1';
-        } else if ($search2 == "ma") {
+            $sql = 'SELECT *
+                FROM dia_diem WHERE ma_dia_diem LIKE :search AND trang_thai=1';
+        } else if ($search2 == "1") {
             $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
             FROM dia_diem WHERE (ma_dia_diem LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "ten") {
+        } else if ($search2 == "2") {
             $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
             FROM dia_diem WHERE (ten_dia_diem LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "tinh") {
+        } else if ($search2 == "3") {
             $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
             FROM dia_diem WHERE (tp_tinh LIKE :search) AND trang_thai=1';
-        } else  if ($search2 == "huyen") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-            FROM dia_diem WHERE (quan_huyen LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "xa") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-            FROM dia_diem WHERE (phuong_xa LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "thon") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-            FROM dia_diem WHERE (ap_thon LIKE :search) AND trang_thai=1';
-        }else if ($search2 == "sonha") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-            FROM dia_diem WHERE (so_nha LIKE :search) AND trang_thai=1';
-        }else if ($search2 == "loai") {
-            $sql = 'SELECT ma_dia_diem, ten_dia_diem, tp_tinh, quan_huyen, phuong_xa, ap_thon, so_nha, phan_loai
-            FROM dia_diem WHERE (phan_loai LIKE :search) AND trang_thai=1';
-        }
+        } 
 
         $sql .= ' ORDER BY ma_dia_diem ASC LIMIT :limit OFFSET :offset'; //DESC giảm ASC tăng
 
@@ -188,25 +172,14 @@ class DiaDIemModel{
         $count = "";
         if ($search2 == "") {
             $count = 'SELECT COUNT(*) FROM dia_diem 
-            WHERE (ma_dia_diem LIKE :search OR ten_dia_diem LIKE :search OR tp_tinh LIKE :search OR quan_huyen LIKE :search OR phuong_xa LIKE :search OR ap_thon LIKE :search OR so_nha LIKE :search OR phan_loai LIKE :search) 
-                AND trang_thai=1';
-        } else if ($search2 == "ma") {
+            WHERE ma_dia_diem LIKE :search AND trang_thai=1';
+        } else if ($search2 == "1") {
             $count = 'SELECT COUNT(*) FROM dia_diem WHERE (ma_dia_diem LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "ten") {
+        } else if ($search2 == "2") {
             $count = 'SELECT COUNT(*) FROM dia_diem WHERE (ten_dia_diem LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "tinh") {
+        } else if ($search2 == "3") {
             $count = 'SELECT COUNT(*) FROM dia_diem WHERE (tp_tinh LIKE :search) AND trang_thai=1';
-        } else  if ($search2 == "huyen") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (quan_huyen LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "xa") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (phuong_xa LIKE :search) AND trang_thai=1';
-        } else if ($search2 == "thon") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (ap_thon LIKE :search) AND trang_thai=1';
-        }else if ($search2 == "sonha") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (so_nha LIKE :search) AND trang_thai=1';
-        }else if ($search2 == "loai") {
-            $count = 'SELECT COUNT(*) FROM dia_diem WHERE (phan_loai LIKE :search) AND trang_thai=1';
-        }
+        } 
 
         $countQuery = $database->prepare($count);
         $countQuery->bindValue(':search', $search, PDO::PARAM_STR);
