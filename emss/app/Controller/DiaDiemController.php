@@ -23,8 +23,23 @@ class DiaDiemController extends Controller
     public function getOneByID()
     {
     }
-    public function add()
-    {
+    public function add(){
+        Auth::checkAuthentication();
+        //Auth::ktraquyen("CN02");
+        $ten = Request::post('addten');
+        $tinh = Request::post('addtinh');
+        $huyen = Request::post('addhuyen');
+        $xa = Request::post('addxa');
+        $thon = Request::post('addthon');
+        $sonha = Request::post('addsonha');
+        $loai = Request::post('addloai');
+        $succhua = Request::post('addsucchua');
+        $trong = Request::post('addtrong');
+        $kq = DiaDiemModel::create($ten, $tinh, $huyen , $xa, $thon, $sonha, $loai, $succhua, $trong);
+        $response = [
+            'thanhcong' => $kq
+        ];
+        $this->View->renderJSON($response);
     }
     public function getAddress(){
         Auth::checkAuthentication();
