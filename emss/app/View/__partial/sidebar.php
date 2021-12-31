@@ -29,10 +29,16 @@ use App\Core\View;
                         <span>Đăng nhập</span>
                     </a>
                 </li>
-                <li id="1" class="d-none sidebar-item  <?= View::$activeItem == 'user' ? 'active' : '' ?>">
-                    <a href="<?= View::url('nguoidung/index') ?>" class="sidebar-link">
-                        <i class="bi bi-people"></i>
-                        <span>Quản lí người dùng</span>
+                <li id="7" class="d-none sidebar-item  <?= View::$activeItem == 'statis' ? 'active' : '' ?>">
+                    <a href="<?= View::url('thongke/index') ?>" class="sidebar-link">
+                        <i class="bi bi-graph-up"></i>
+                        <span>Thống kê</span>
+                    </a>
+                </li>
+                <li id="9" class="d-none sidebar-item  <?= View::$activeItem == 'location' ? 'active' : '' ?>">
+                    <a href="<?= View::url('diadiem/index') ?>" class="sidebar-link">
+                        <i class="bi bi-map"></i>
+                        <span>Quản lí địa điểm</span>
                     </a>
                 </li>
                 <li id="2" class="d-none sidebar-item  <?= View::$activeItem == 'patient' ? 'active' : '' ?>">
@@ -41,6 +47,7 @@ use App\Core\View;
                         <span>Quản lí bệnh nhân</span>
                     </a>
                 </li>
+
                 <li id="3" class="d-none sidebar-item  <?= View::$activeItem == 'object' ? 'active' : '' ?>">
                     <a href="<?= View::url('doituongcachly/index') ?>" class="sidebar-link">
                         <i class="bi bi-person-square"></i>
@@ -59,10 +66,10 @@ use App\Core\View;
                         <span>Quản lí xét nghiệm</span>
                     </a>
                 </li>
-                <li id="9" class="d-none sidebar-item  <?= View::$activeItem == 'location' ? 'active' : '' ?>">
-                    <a href="<?= View::url('diadiem/index') ?>" class="sidebar-link">
-                        <i class="bi bi-map"></i>
-                        <span>Quản lí địa điểm</span>
+                <li id="1" class="d-none sidebar-item  <?= View::$activeItem == 'user' ? 'active' : '' ?>">
+                    <a href="<?= View::url('nguoidung/index') ?>" class="sidebar-link">
+                        <i class="bi bi-people"></i>
+                        <span>Quản lí người dùng</span>
                     </a>
                 </li>
                 <li id="6" class="d-none sidebar-item  <?= View::$activeItem == 'role' ? 'active' : '' ?>">
@@ -71,12 +78,7 @@ use App\Core\View;
                         <span>Quản lí phân quyền</span>
                     </a>
                 </li>
-                <li id="7" class="d-none sidebar-item  <?= View::$activeItem == 'statis' ? 'active' : '' ?>">
-                    <a href="<?= View::url('thongke/index') ?>" class="sidebar-link">
-                        <i class="bi bi-graph-up"></i>
-                        <span>Thống kê</span>
-                    </a>
-                </li>
+
             </ul>
         </div>
         <button class="sidebar-toggler btn x">

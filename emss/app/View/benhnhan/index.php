@@ -14,8 +14,7 @@ View::$activeItem = 'patient';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EMSS</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="<?= View::assets('css/bootstrap.css') ?>" />
     <link rel="stylesheet" href="<?= View::assets('vendors/toastify/toastify.css') ?>" />
     <link rel="stylesheet" href="<?= View::assets('vendors/perfect-scrollbar/perfect-scrollbar.css') ?>" />
@@ -39,8 +38,7 @@ View::$activeItem = 'patient';
                         <h6>Tìm Kiếm</h6>
                         <div id="search-benhnhan-form" name="search-benhnhan-form">
                             <div class="form-group position-relative has-icon-right">
-                                <input id="search-benhnhan-text" type="text" class="form-control" placeholder="Tìm kiếm"
-                                    value="">
+                                <input id="search-benhnhan-text" type="text" class="form-control" placeholder="Tìm kiếm" value="">
                                 <div class="form-control-icon">
                                     <i class="bi bi-search"></i>
                                 </div>
@@ -92,6 +90,29 @@ View::$activeItem = 'patient';
                                                 <th>Số điện thoại</th>
                                                 <th>Tác Vụ</th>
                                             </tr>
+                                            <tr class="table-light">
+                                                <td>
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_nguoi_dung}" />
+                                                    </div>
+                                                </td>
+                                                <td>Trần Thị Thu</td>
+                                                <td>Thanh</td>
+                                                <td>Nữ</td>
+                                                <td>241748442</td>
+                                                <td>0703360196</td>
+                                                <td>
+                                                    <button onclick="viewRow()" type="button" class="btn btn-sm btn-outline-primary" style="padding-top: 3px; padding-bottom: 4px;">
+                                                        <i class="bi bi-eye"></i>
+                                                    </button>
+                                                    <button onclick="repairRow()" type="button" class="btn btn-sm btn-outline-success" style="padding-top: 7px; padding-bottom: 0px;">
+                                                        <i class="bi bi-tools"></i>
+                                                    </button>
+                                                    <button onclick="deleteRow()" type="button" class="btn btn-sm btn-outline-danger" style="padding-top: 7px; padding-bottom: 0px;">
+                                                        <i class="bi bi-trash-fill"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
                                         </thead>
                                         <tbody>
                                         </tbody>
@@ -103,6 +124,56 @@ View::$activeItem = 'patient';
                                 </div>
                             </div>
                     </section>
+                    <div class="modal fade" id="view-mon-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable" role="document">
+                            <div class="modal-content">
+
+                                <div class="modal-body">
+                                    <ul class="list-group">
+                                        <li class="list-group-item active">Thông Tin Chi Tiết</li>
+                                        <li class="list-group-item">
+                                            <div class="form-group">
+                                                <label>Tên Bênh nhân: </label>
+                                                <input type="text" class="form-control" id="view-maquyen" disabled value="Trần Thị Thu Thanh">
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="form-group">
+                                                <label>Bệnh án</label>
+                                                <p>
+                                                    Ngày sinh: 04/01/1999 – 70 tuổi
+                                                </p>
+                                                <p>Giới tính: Nữ</p>
+                                                <p> Dân tộc: Kinh</p>
+                                                <p> Nghề nghiệp: sinh viên
+                                                </p>
+                                                <p>Địa chỉ: TDP 12, thị trấn Eak nốp, huyện Eakar, Tỉnh Đắk lắk
+                                                </p>
+                                                <p>Địa chỉ khi cần báo tin: (mẹ) ABCcùng địa chỉ SĐT: 0357106862</p>
+                                                <p>Ngày giờ vào viện: 9 giờ 52 phút ngày 01/08/2021</p>
+                                                <p> Ngày giờ làm bệnh án: 18h giờ 00 phút, ngày 01/08/2021.</p>
+                                                <label>Bệnh sử</label>
+                                                <p>Test nhanh dương tính lúc 13:32 ngày 24/07/2021 - Test bằng phương pháp PCR dương tính 21:00 ngày 24/07/2021</p>
+                                                <label>Thăm khám</label>
+                                                <p>Test bằng phương pháp PCR dương tính 21:00 ngày 03/08/2021 - Chỉ số CT = 34</p>
+                                                <p>Test bằng phương pháp PCR dương tính 21:00 ngày 06/08/2021 - Chỉ số CT = 32</p>
+                                                <p>Test bằng phương pháp PCR âm tính 21:00 ngày 09/08/2021</p>
+                                                <p>Xuất viện ngày 09/08/2021</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary ml-1" data-bs-dismiss="modal">
+                                        <i class="bx bx-x d-block d-sm-none"></i>
+                                        <span class="d-none d-sm-block">Đóng</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
             <!-- FOOTER -->
@@ -120,28 +191,32 @@ View::$activeItem = 'patient';
     <script src="<?= View::assets('js/menu.js') ?>"></script>
     <script src="<?= View::assets('js/api.js') ?>"></script>
     <script>
-    let currentPage = 1;
-    $(function() {
-        getBenhNhanAjax();
+        let currentPage = 1;
+        $(function() {
+            getBenhNhanAjax();
 
-    });
+        });
 
-    function changePage(newPage) {
-        currentPage = newPage;
-        getBenhNhanAjax();
-    }
+        function changePage(newPage) {
+            currentPage = newPage;
+            getBenhNhanAjax();
+        }
 
-    function getBenhNhanAjax() {
-        $.get(`http://localhost/ooad-emss/emss/nguoidung/getList?row_per_page=10&current_page=${currentPage}`,
-            function(response) {
-                const table1 = $('#table1 > tbody');
-                table1.empty();
-                checkedRows = [];
-                $row = 0;
-                response.data.forEach(data => {
-                    if (data.ma_vai_tro == 4) {
-                        if ($row % 2 == 0) {
-                            table1.append(`
+        function viewRow() {
+            $("#view-mon-modal").modal('toggle');
+        }
+
+        function getBenhNhanAjax() {
+            $.get(`http://localhost/ooad-emss/emss/nguoidung/getList?row_per_page=10&current_page=${currentPage}`,
+                function(response) {
+                    const table1 = $('#table1 > tbody');
+                    table1.empty();
+                    checkedRows = [];
+                    $row = 0;
+                    response.data.forEach(data => {
+                        if (data.ma_vai_tro == 4) {
+                            if ($row % 2 == 0) {
+                                table1.append(`
                         <tr class="table-light">
                             <td><div class="custom-control custom-checkbox">
                                     <input type="checkbox" class="form-check-input form-check-success form-check-glow" id="${data.ma_nguoi_dung}"/>
@@ -164,8 +239,8 @@ View::$activeItem = 'patient';
                                 </button>
                             </td>
                         </tr>`);
-                        } else {
-                            table1.append(`
+                            } else {
+                                table1.append(`
                         <tr class="table-info">
                             <td>
                                 <div class="custom-control custom-checkbox">
@@ -189,32 +264,32 @@ View::$activeItem = 'patient';
                                 </button>
                             </td>
                         </tr>`);
+                            }
+                            $row += 1;
                         }
-                        $row += 1;
-                    }
-                });
+                    });
 
-                const pagination = $('#pagination');
-                pagination.empty();
-                if (response.totalPage > 1) {
-                    for (let i = 1; i <= response.totalPage; i++) {
-                        if (i == currentPage) {
-                            pagination.append(`
+                    const pagination = $('#pagination');
+                    pagination.empty();
+                    if (response.totalPage > 1) {
+                        for (let i = 1; i <= response.totalPage; i++) {
+                            if (i == currentPage) {
+                                pagination.append(`
                         <li class="page-item active">
                             <button class="page-link" onClick='changePage(${i})'>${i}</button>
                         </li>`)
-                        } else {
-                            pagination.append(`
+                            } else {
+                                pagination.append(`
                         <li class="page-item">
                             <button class="page-link" onClick='changePage(${i})'>${i}</button>
                         </li>`)
+                            }
+
                         }
-
                     }
-                }
 
-            });
-    }
+                });
+        }
     </script>
 </body>
 
