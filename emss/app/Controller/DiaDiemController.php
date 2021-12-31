@@ -10,16 +10,19 @@ use App\Model\DiaDiemModel;
 
 class DiaDiemController extends Controller
 {
-    public function __construct(){
+    public function __construct()
+    {
         parent::__construct();
     }
 
-    public function index(){
+    public function index()
+    {
         Auth::checkAuthentication();
         $this->View->render('diadiem/index');
     }
-    
-    public function getOneByID(){
+
+    public function getOneByID()
+    {
         Auth::checkAuthentication();
         $id = Request::post('id');
         $kq = DiaDiemModel::getOneByID($id);
@@ -41,8 +44,9 @@ class DiaDiemController extends Controller
         }
         $this->View->renderJSON($response);
     }
-    
-    public function add(){
+
+    public function add()
+    {
         Auth::checkAuthentication();
         //Auth::ktraquyen("CN02");
         $ten = Request::post('addten');
@@ -54,14 +58,15 @@ class DiaDiemController extends Controller
         $loai = Request::post('addloai');
         $succhua = Request::post('addsucchua');
         $trong = Request::post('addtrong');
-        $kq = DiaDiemModel::create($ten, $tinh, $huyen , $xa, $thon, $sonha, $loai, $succhua, $trong);
+        $kq = DiaDiemModel::create($ten, $tinh, $huyen, $xa, $thon, $sonha, $loai, $succhua, $trong);
         $response = [
             'thanhcong' => $kq
         ];
         $this->View->renderJSON($response);
     }
-    
-    public function getAddress(){
+
+    public function getAddress()
+    {
         Auth::checkAuthentication();
         //Auth::ktraquyen("CN02");
         $search = Request::get('search');
@@ -71,8 +76,9 @@ class DiaDiemController extends Controller
         $data = DiaDiemModel::getAllPagination($search, $search2, $page, $rowsPerPage);
         $this->View->renderJSON($data);
     }
-    
-    public function update(){
+
+    public function update()
+    {
         Auth::checkAuthentication();
         //Auth::ktraquyen("CN02");
         $ma = Request::post('upma');
@@ -85,26 +91,28 @@ class DiaDiemController extends Controller
         $loai = Request::post('uploai');
         $succhua = Request::post('upsucchua');
         $trong = Request::post('uptrong');
-        $kq = DiaDiemModel::update($ma,$ten, $tinh, $huyen , $xa, $thon, $sonha, $loai, $succhua, $trong);
+        $kq = DiaDiemModel::update($ma, $ten, $tinh, $huyen, $xa, $thon, $sonha, $loai, $succhua, $trong);
         $response = [
             'thanhcong' => $kq
         ];
         $this->View->renderJSON($response);
     }
-    
-    public function delete(){
+
+    public function delete()
+    {
         Auth::checkAuthentication();
-       // Auth::ktraquyen("CN02");
+        // Auth::ktraquyen("CN02");
         $id = Request::post('id');
-        $kq= DiaDiemModel::delete($id);
+        $kq = DiaDiemModel::delete($id);
         $response = [
             'thanhcong' => $kq
         ];
-        $this->View->renderJSON($response);  
+        $this->View->renderJSON($response);
     }
 
-    public function deletes(){
-        Auth::checkAuthentication();       
+    public function deletes()
+    {
+        Auth::checkAuthentication();
         //Auth::ktraquyen("CN02");
         $ids = Request::post('ids');
         $ids = json_decode($ids);
@@ -112,13 +120,15 @@ class DiaDiemController extends Controller
         $response = [
             'thanhcong' => $kq
         ];
-        $this->View->renderJSON($response);       
+        $this->View->renderJSON($response);
     }
-    public function getList(){
+
+    public function getList()
+    {
         Auth::checkAuthentication();
         $data = DiaDiemModel::getAll();
-        foreach($data as $value){
-            $data["ma_".$value['ma_dia_diem']] = $value;
+        foreach ($data as $value) {
+            $data["ma_" . $value['ma_dia_diem']] = $value;
         }
         return $this->View->renderJSON($data);
     }
