@@ -124,4 +124,13 @@ class DiaDiemController extends Controller
         ];
         $this->View->renderJSON($response);       
     }
+    public function getList()
+    {
+        Auth::checkAuthentication();
+        $data = DiaDiemModel::getAll();
+        foreach ($data as $value) {
+            $data["ma_" . $value['ma_dia_diem']] = $value;
+        }
+        return $this->View->renderJSON($data);
+    }
 }

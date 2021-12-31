@@ -109,4 +109,16 @@ class NguoiDungModel
         ];
         return $response;
     }
+    public static function getAll()
+    {
+        $database = DatabaseFactory::getFactory()->getConnection();
+        $sql = "SELECT * FROM nguoi_dung WHERE trang_thai = 1";
+        $query = $database->prepare($sql);
+        $query->execute();
+        $data = array();
+        if ($data = $query->fetchAll(PDO::FETCH_ASSOC)) {
+            return $data;
+        }
+        return $data;
+    }
 }
