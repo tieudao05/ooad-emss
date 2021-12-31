@@ -67,7 +67,7 @@ View::$activeItem = 'trace';
                         <div class="card">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table class="table mb-0 table-danger" id="table1">
+                                    <table class="table mb-0 table-danger" id="table">
                                         <thead>
                                             <tr>
                                                 <th class="d-none check">Chọn</th>
@@ -166,46 +166,30 @@ View::$activeItem = 'trace';
                                     <tbody id="content-table">
                                     </tbody>
                                 </table>
-                            </div>
-                            <!-- Modal footer -->
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
-                                <!--<button type="button" class="btn btn-danger" id="btn-confirm" data-bs-dismiss="modal">Xác nhận</button>-->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Model F1 -->
-                <div class="modal fade " id="modal-F1">
-                    <div class="modal-dialog modal-lg modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                        <div class="modal-content">
-                            <!-- Modal Header -->
-                            <div class="modal-header bg-warning">
-                                <h2 class="modal-title text-light">Truy vết</h2>
-                            </div>
-                            <!-- Modal body -->
-                            <div class="modal-body row">
-                                <div class="col-6 form-group row">
-                                    <div class="col-6">
-                                        <label class="col-form-label">Xem theo:</label>
-                                    </div>
-                                    <div class="col-6">
-                                        <select name="view" id="view" class="form-control">
-                                            <option value="1">Mốc dịch tễ</option>
-                                            <option value="2">F1</option>
-                                            <option value="3">F2</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <table class="table mb-0 table-danger" id="table1">
+                                <table class="table mb-0 table-danger" id="table2">
                                     <thead>
                                         <tr>
-                                            <th>Mã địa điểm</th>
-                                            <th>Tên địa điểm</th>
+                                            <th>Họ và tên</th>
+                                            <th>CMND</th>
                                             <th>Địa chỉ</th>
+                                            <th>Ngày sinh</th>
+                                            <th>Giới tính</th>
                                         </tr>
                                     </thead>
-                                    <tbody id="content-table">
+                                    <tbody id="content-table-2">
+                                    </tbody>
+                                </table>
+                                <table class="table mb-0 table-danger" id="table3">
+                                    <thead>
+                                        <tr>
+                                            <th>Họ và tên</th>
+                                            <th>CMND</th>
+                                            <th>Địa chỉ</th>
+                                            <th>Ngày sinh</th>
+                                            <th>Giới tính</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="content-table-3">
                                     </tbody>
                                 </table>
                             </div>
@@ -217,6 +201,8 @@ View::$activeItem = 'trace';
                         </div>
                     </div>
                 </div>
+                <!-- Model F1 -->
+
                 <!-- FOOTER -->
                 <?php View::partial('footer')  ?>
             </div>
@@ -238,7 +224,8 @@ View::$activeItem = 'trace';
             $('#do-trace').click(function() {
                 $('#modal-trace').modal('show');
             })
-            $('#modal-F1').modal('show');
+            $('#table2').hide();
+            $('#table3').hide();
 
             function getList(current_page) {
                 var list = $.ajax({
@@ -275,57 +262,146 @@ View::$activeItem = 'trace';
                         $('#content').append(code);
                         row = row + 1;
                     })
-                    $('#pagination_').empty();
-                    var i = 1;
-                    for (i = 1; i <= data['totalPage']; i++)
-                        if (i == current_page) {
-                            $('#pagination_').append('<li class="page-item active">\<button class="page-link" id="' + i +
-                                '">' + i + '</button>\</li>');
-                        } else $('#pagination_').append('<li class="page-item">\<button class="page-link" id="' + i +
-                            '">' + i + '</button>\</li>');
-                    $('.page-link').click(function() {
-                        let current_page_ = ($(this).attr('id'));
-                        getList($(this).attr('id'));
+                    var getBenhNhan = $.ajax({
+                        url: 'http://localhost/ooad-emss/emss/benhnhan/getAll',
                     });
-                })
-            }
-            var getBenhNhan = $.ajax({
-                url: 'http://localhost/ooad-emss/emss/benhnhan/getAll',
-            });
-            getBenhNhan.done(function(data) {
-                data.forEach(function(element) {
-                    $('#ma_benh_nhan').append('<option  class="select" value="' + element['ma_benh_nhan'] + '"> ' + element['ma_benh_nhan'] + ' - ' + element['ho_lot'] + ' ' + element['ten'] + ' </option>')
-                });
-                $('#btn-confirm').click(function() {
-                    $('#modal-result').modal('show');
-                    $('#modal-trace').modal('hide');
-                    $.ajax({
-                        url: 'http://localhost/ooad-emss/emss/truyvet/getSchedule',
-                        data: {
-                            ma_doi_tuong: $('.select:selected').val(),
-                            tg_bat_dau: $('#tgbd').val(),
-                            tg_ket_thuc: $('#tgkt').val(),
-                        },
-                        type: 'POST'
-                    }).done(function(data) {
-                        console.log(data);
-                        $.ajax({
-                            url: 'http://localhost/ooad-emss/emss/diadiem/getList',
-                        }).done(function(data_l) {
-                            $('#content-table').empty();
-                            data['location'].forEach(function(element, index) {
-                                var temp = data_l['ma_' + element['ma_dia_diem']];
-                                var code = '<tr class="table-light">\
+                    getBenhNhan.done(function(data) {
+                        data.forEach(function(element) {
+                            $('#ma_benh_nhan').append('<option  class="select" value="' + element['ma_benh_nhan'] + '"> ' + element['ma_benh_nhan'] + ' - ' + element['ho_lot'] + ' ' + element['ten'] + ' </option>')
+                        });
+                        $('#btn-confirm').click(function() {
+                            $('#modal-result').modal('show');
+                            $('#modal-trace').modal('hide');
+                            $.ajax({
+                                url: 'http://localhost/ooad-emss/emss/truyvet/add',
+                                data: {
+                                    ma_benh_nhan: 30,
+                                    tg_bat_dau: '2021-12-20',
+                                    tg_ket_thuc: '2021-12-23',
+                                },
+                                type: 'POST'
+                            }).done(function(data) {
+                                alert("OK");
+                                getList(1);
+                            })
+                            $.ajax({
+                                url: 'http://localhost/ooad-emss/emss/truyvet/getSchedule',
+                                data: {
+                                    ma_doi_tuong: $('.select:selected').val(),
+                                    tg_bat_dau: $('#tgbd').val(),
+                                    tg_ket_thuc: $('#tgkt').val(),
+                                },
+                                type: 'POST'
+                            }).done(function(data) {
+                                $.ajax({
+                                    url: 'http://localhost/ooad-emss/emss/diadiem/getList',
+                                }).done(function(data_l) {
+                                    $('#content-table').empty();
+                                    data['location'].forEach(function(element, index) {
+                                        var temp = data_l['ma_' + element['ma_dia_diem']];
+                                        var code = '<tr class="table-light">\
                                             <td>' + element['ma_dia_diem'] + '</td>\
                                             <td>' + temp['ten_dia_diem'] + '</td>\
                                             <td>' + temp['tp_tinh'] + " - " + temp['quan_huyen'] + " - " + temp['phuong_xa'] + '</td>\
                                         </tr>';
-                                $('#content-table').append(code);
+                                        $('#content-table').append(code);
+                                    });
+                                })
+                                $('#view').change(function() {
+                                    if ($('#view').val() == 1) {
+                                        $('#table1').show();
+                                        $('#table2').hide();
+                                        $('#table3').show();
+                                        $.ajax({
+                                            url: 'http://localhost/ooad-emss/emss/diadiem/getList',
+                                        }).done(function(data_l) {
+                                            $('#content-table').empty();
+                                            var row = 1;
+                                            data['location'].forEach(function(element, index) {
+                                                var temp = data_l['ma_' + element['ma_dia_diem']];
+                                                var code = '<tr class="table-light">\
+                                            <td>' + element['ma_dia_diem'] + '</td>\
+                                            <td>' + temp['ten_dia_diem'] + '</td>\
+                                            <td>' + temp['tp_tinh'] + " - " + temp['quan_huyen'] + " - " + temp['phuong_xa'] + '</td>\
+                                        </tr>';
+                                                if (row % 2) {
+                                                    code = '<tr class="table-secondary">\
+                                            <td>' + element['ma_dia_diem'] + '</td>\
+                                            <td>' + temp['ten_dia_diem'] + '</td>\
+                                            <td>' + temp['tp_tinh'] + " - " + temp['quan_huyen'] + " - " + temp['phuong_xa'] + '</td>\
+                                        </tr>';
+                                                }
+                                                $('#content-table').append(code);
+                                            });
+                                        })
+                                    } else
+                                    if ($('#view').val() == 2) {
+                                        $('#table2').show();
+                                        $('#table1').hide();
+                                        $('#table3').hide();
+                                        $.ajax({
+                                            url: 'http://localhost/ooad-emss/emss/nguoidung/getAll'
+                                        }).done(function(data_f1) {
+                                            $('#content-table-2').empty();
+                                            var row = 1;
+                                            data['F1'].forEach(function(element) {
+                                                var temp = data_f1['ma_' + element['ma_nguoi_dung']];
+                                                var code = '<tr class="table-light">\
+                                            <td>' + temp['ho_lot'] + " " + temp['ten'] + '</td>\
+                                            <td>' + temp['cmnd'] + '</td>\
+                                            <td>' + temp['dia_chi'] + '</td>\
+                                            <td>' + temp['ngay_sinh'] + '</td>\
+                                            <td>' + temp['phai'] + '</td>\
+                                        </tr>';
+                                                if (row % 2) {
+                                                    code = '<tr class="table-secondary">\
+                                            <td>' + temp['ho_lot'] + " " + temp['ten'] + '</td>\
+                                            <td>' + temp['cmnd'] + '</td>\
+                                            <td>' + temp['dia_chi'] + '</td>\
+                                            <td>' + temp['ngay_sinh'] + '</td>\
+                                            <td>' + temp['phai'] + '</td>\
+                                        </tr>';
+                                                }
+                                                $('#content-table-2').append(code);
+                                            })
+                                        })
+                                    } else if ($('#view').val() == 3) {
+                                        $('#table3').show();
+                                        $('#table1').hide();
+                                        $('#table2').hide();
+                                        $.ajax({
+                                            url: 'http://localhost/ooad-emss/emss/nguoidung/getAll'
+                                        }).done(function(data_f2) {
+                                            $('#content-table-3').empty();
+                                            var row = 1;
+                                            data['F2'].forEach(function(element) {
+                                                var temp_ = data_f2['ma_' + element['ma_nguoi_dung']];
+                                                var code = '<tr class="table-light">\
+                                            <td>' + temp_['ho_lot'] + " " + temp_['ten'] + '</td>\
+                                            <td>' + temp_['cmnd'] + '</td>\
+                                            <td>' + temp_['dia_chi'] + '</td>\
+                                            <td>' + temp_['ngay_sinh'] + '</td>\
+                                            <td>' + temp_['phai'] + '</td>\
+                                        </tr>';
+                                                if (row % 2) {
+                                                    code = '<tr class="table-secondary">\
+                                            <td>' + temp_['ho_lot'] + " " + temp_['ten'] + '</td>\
+                                            <td>' + temp_['cmnd'] + '</td>\
+                                            <td>' + temp_['dia_chi'] + '</td>\
+                                            <td>' + temp_['ngay_sinh'] + '</td>\
+                                            <td>' + temp_['phai'] + '</td>\
+                                        </tr>';
+                                                }
+                                                $('#content-table-3').append(code);
+                                            })
+                                        })
+                                    }
+                                })
                             })
                         })
                     })
                 })
-            })
+            }
         })
     </script>
 

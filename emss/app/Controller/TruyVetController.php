@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Core\Auth;
 use App\Core\Controller;
 use App\Core\Request;
+use App\Core\Cookie;
 use App\Model\TruyVetModel;
 
 class TruyVetController extends Controller
@@ -24,6 +25,15 @@ class TruyVetController extends Controller
     }
     public function add()
     {
+        Auth::checkAuthentication();
+        $ma_benh_nhan = Request::post('ma_benh_nhan');
+        $ma_nhan_vien =  Cookie::get('user_fullname');
+        $timestamp = time();
+        $thoi_gian_truy_vet = date('Y-m-d H:i:s', $timestamp);
+        $tg_bat_dau = Request::post('tg_bat_dau');
+        $tg_ket_thuc = Request::post('tg_ket_thuc');
+        $data = TruyVetModel::add($ma_benh_nhan, $ma_nhan_vien, $thoi_gian_truy_vet, $tg_bat_dau, $tg_ket_thuc);
+        return $this->View->renderJSON($data);
     }
     public function getList()
     {

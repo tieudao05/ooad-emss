@@ -86,4 +86,13 @@ class NguoiDungController extends Controller
         }
         $this->View->renderJSON($data);
     }
+    public function getAll()
+    {
+        Auth::checkAuthentication();
+        $data = NguoiDungModel::getAll();
+        foreach ($data as $value) {
+            $data["ma_" . $value['ma_nguoi_dung']] = $value;
+        }
+        return $this->View->renderJSON($data);
+    }
 }
