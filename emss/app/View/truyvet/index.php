@@ -77,7 +77,6 @@ View::$activeItem = 'trace';
                                                 <th>Thời gian truy vết</th>
                                                 <th>Thời gian bắt đầu</th>
                                                 <th>Thời gian kết thúc</th>
-                                                <th>Tác Vụ</th>
                                             </tr>
                                         </thead>
                                         <tbody id="content">
@@ -245,8 +244,6 @@ View::$activeItem = 'trace';
                                         <td>' + element['thoi_gian_truy_vet'] + '</td>\
                                         <td>' + element['tg_bat_dau'] + '</td>\
                                         <td>' + element['tg_ket_thuc'] + '</td>\
-                                        <td><button class="btn btn-info btn-sm btn-view" id=' + element['ma_truy_vet'] +
-                            '><i class="bi bi-file-earmark-person view"></i>\
                                     </tr>';
                         if (row % 2) code = '<tr class="table-secondary">\
                                         <td class="d-none check"><input type="checkbox" value="' + element['ma_truy_vet'] + '" class="form-check-input del-check shadow-none ' + element['ma_truy_vet'] + '"></td>\
@@ -256,8 +253,6 @@ View::$activeItem = 'trace';
                                         <td>' + element['thoi_gian_truy_vet'] + '</td>\
                                         <td>' + element['tg_bat_dau'] + '</td>\
                                         <td>' + element['tg_ket_thuc'] + '</td>\
-                                        <td><button class="btn btn-info btn-sm btn-view" id=' + element['ma_truy_vet'] +
-                            '><i class="bi bi-file-earmark-person view"></i>\
                                     </tr>';
                         $('#content').append(code);
                         row = row + 1;
@@ -281,7 +276,6 @@ View::$activeItem = 'trace';
                                 },
                                 type: 'POST'
                             }).done(function(data) {
-                                alert("OK");
                                 getList(1);
                             })
                             $.ajax({
@@ -311,7 +305,7 @@ View::$activeItem = 'trace';
                                     if ($('#view').val() == 1) {
                                         $('#table1').show();
                                         $('#table2').hide();
-                                        $('#table3').show();
+                                        $('#table3').hide();
                                         $.ajax({
                                             url: 'http://localhost/ooad-emss/emss/diadiem/getList',
                                         }).done(function(data_l) {
