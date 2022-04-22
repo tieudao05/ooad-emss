@@ -4,7 +4,7 @@ namespace App\Controller;
 
 use App\Core\Auth;
 use App\Core\Controller;
-
+use App\Model\PhanQuyenModel;
 class PhanQuyenController extends Controller
 {
     public function __construct()
@@ -31,6 +31,11 @@ class PhanQuyenController extends Controller
     }
     public function delete()
     {
+    }
+    public function getListRole(){
+        Auth::checkAuthentication();
+        $data = PhanQuyenModel::getListRole();
+        $this->View->renderJSON($data);
     }
 }
 

@@ -7,8 +7,8 @@
 - Nếu sửa tên thư mục dự án, cần cập nhật lại ở public/.htaccess
 
 ## Cách hoạt động:
-Các request lên server thông thường có url như sau: localhost/webhoctapmvc/auth/login
-sẽ được apache viết lại (do cấu hình htaccess) thành localhost/webhoctapmvc/public/index.php?url=auth/login
+Các request lên server thông thường có url như sau: localhost/ooad-emss/emss/auth/login
+sẽ được apache viết lại (do cấu hình htaccess) thành localhost/ooad-emss/emss/public/index.php?url=auth/login
 như vậy mọi request đều được xử lý bởi file public/index.php, và có tham số url
 file index.php sẽ tạo Application
 Application sẽ cắt chuỗi từ tham số url để  new controller và gọi action (là hàm của controller) tương ứng.

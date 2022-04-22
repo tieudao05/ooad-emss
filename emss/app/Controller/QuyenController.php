@@ -16,14 +16,14 @@ class QuyenController extends Controller{
     public function index()
     {
         Auth::checkAuthentication();
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $this->View->render('quyen/index');
     }
 
     public function getQuyen()
     {
         Auth::checkAuthentication();
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $search = Request::get('search');
         $page = Request::get('page', 1);
         $rowsPerPage = Request::get('rowsPerPage', 20);
@@ -33,7 +33,7 @@ class QuyenController extends Controller{
 
     public function getChucNang(){
         Auth::checkAuthentication();
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $data = QuyenModel::getChucNang();
         $this->View->renderJSON($data);
 
@@ -60,7 +60,7 @@ class QuyenController extends Controller{
 
     public function viewQuyen(){
         Auth::checkAuthentication();
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $mamon = Request::post('maquyen');
         $kq = QuyenModel::findOneByMaQuyen($mamon);
         $kq2 = QuyenModel::findChiTietQuyen($mamon);
@@ -68,8 +68,8 @@ class QuyenController extends Controller{
         if($kq == null || $kq2 == null){
             $response['thanhcong'] = false;
         } else{   
-            $response['MaQuyen'] = $kq->MaQuyen;
-            $response['TenQuyen'] = $kq->TenQuyen;
+            $response['ma_vai_tro'] = $kq->ma_vai_tro;
+            $response['ten_vai_tro'] = $kq->ten_vai_tro;
             $response['chitiet'] = $kq2;
             $response['thanhcong'] = true;
         }
@@ -78,7 +78,7 @@ class QuyenController extends Controller{
 
     public function deleteQuyen(){
         Auth::checkAuthentication();
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $mamon = Request::post('maquyen');
         $kq= QuyenModel::delete($mamon);
         $response = [
@@ -89,7 +89,7 @@ class QuyenController extends Controller{
 
     public function deleteQuyens(){
         Auth::checkAuthentication();       
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $mamons = Request::post('maquyens');
         $mamons = json_decode($mamons);
         $kq = QuyenModel::deletes($mamons);
@@ -116,7 +116,7 @@ class QuyenController extends Controller{
     public function repairQuyen(){
         
         Auth::checkAuthentication();
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $maquyen= Request::post('maquyen');
         $tenquyen = Request::post('tenquyen');
         $chitiets = Request::post('chitiets');
@@ -130,7 +130,7 @@ class QuyenController extends Controller{
 
     public function addQuyen(){
         Auth::checkAuthentication();
-        Auth::ktraquyen("CN07");
+        //Auth::ktraquyen("CN07");
         $maquyen= Request::post('maquyen');
         $tenquyen = Request::post('tenquyen');
         $chitiets = Request::post('chitiets');

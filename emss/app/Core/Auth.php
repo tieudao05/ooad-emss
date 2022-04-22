@@ -15,23 +15,18 @@ class Auth
         }
     }
 
+    public static function checkLogin(){
+        if (Cookie::userIsLoggedIn()) {
+            return true;
+        }
+        return false;
+    }
+
     // Kiểm tra xem user có đang đang nhập hay không, nếu có thì chuyển hướng sang trang chủ
     public static function checkNotAuthentication()
     {
         if (Cookie::userIsLoggedIn()) {
             Redirect::home();
         }
-    }
-
-    // Cos ther kiem tra quyen ow day
-    public static function ktraquyen($maquyen)
-    {
-        // em dung model 
-        // kiem tra user co quyen do ko
-        if (Cookie::userIsLoggedIn() && !QuyenModel::ktraQuyen($maquyen)) {
-                Redirect::home();
-        }
-        
-        
     }
 }

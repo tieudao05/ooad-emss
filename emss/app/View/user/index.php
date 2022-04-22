@@ -267,7 +267,7 @@ View::$activeItem = 'user';
         let quyens
         // on ready
         $(function() {
-            $.post(`http://localhost/webhoctapmvc/quyen/getQuyens`, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/quyen/getQuyens`, function(response) {
                 if (response.thanhcong) {
                     quyens = response.data;
                     quyens.forEach(data => {
@@ -288,7 +288,7 @@ View::$activeItem = 'user';
                     email: {
                         required: true,
                         remote: {
-                            url: "http://localhost/webhoctapmvc/user/checkValidEmail",
+                            url: "http://localhost/ooad-emss/emss/user/checkValidEmail",
                             type: "POST",
                         }
                     },
@@ -318,7 +318,7 @@ View::$activeItem = 'user';
                     // lấy dữ liệu từ form
                     const data = Object.fromEntries(new FormData(form).entries());
 
-                    $.post(`http://localhost/webhoctapmvc/user/addUser`, data, function(response) {
+                    $.post(`http://localhost/ooad-emss/emss/user/addUser`, data, function(response) {
                         if (response.thanhcong) {
                             currentPage = 1;
                             layDSUserAjax();
@@ -385,7 +385,7 @@ View::$activeItem = 'user';
         },200));
 
         function layDSUserAjax() {
-            $.get(`http://localhost/webhoctapmvc/user/getUser?rowsPerPage=10&page=${currentPage}`, function(response) {
+            $.get(`http://localhost/ooad-emss/emss/user/getUser?rowsPerPage=10&page=${currentPage}`, function(response) {
                 // Không được gán biến response này ra ngoài function,
                 // vì function này bất đồng bộ, khi nào gọi api xong thì response mới có dữ liệu
                 // gán ra ngoài thì code ở ngoài chạy trc khi gọi api xong.
@@ -487,7 +487,7 @@ View::$activeItem = 'user';
         }
 
         function layDSUserSearchNangCao(search, search2) {
-            $.get(`http://localhost/webhoctapmvc/user/advancedSearch?rowsPerPage=10&page=${currentPage}&search=${search}&search2=${search2}`, function(response) {
+            $.get(`http://localhost/ooad-emss/emss/user/advancedSearch?rowsPerPage=10&page=${currentPage}&search=${search}&search2=${search2}`, function(response) {
                 // Không được gán biến response này ra ngoài function,
                 // vì function này bất đồng bộ, khi nào gọi api xong thì response mới có dữ liệu
                 // gán ra ngoài thì code ở ngoài chạy trc khi gọi api xong.
@@ -592,7 +592,7 @@ View::$activeItem = 'user';
             let data = {
                 email: params
             };
-            $.post(`http://localhost/webhoctapmvc/user/viewUser`, data, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/user/viewUser`, data, function(response) {
                 if (response.thanhcong) {
                     $("#view-hoten").val(response.FullName);
                     $("#view-ms").val(response.TenDangNhap);
@@ -613,7 +613,7 @@ View::$activeItem = 'user';
             let data = {
                 email: params
             };
-            $.post(`http://localhost/webhoctapmvc/user/resetPassword`, data, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/user/resetPassword`, data, function(response) {
                 if (response.thanhcong) {
 
                     Toastify({
@@ -644,7 +644,7 @@ View::$activeItem = 'user';
                 email: params
             };
 
-            $.post(`http://localhost/webhoctapmvc/user/viewUser`, data, function(response) {
+            $.post(`http://localhost/ooad-emss/emss/user/viewUser`, data, function(response) {
                 if (response.thanhcong) {
                     $('#re-email').val(response.TenDangNhap);
                     $('#cars-quyen-sua').val(response.MaQuyen).prop('selected', true);
@@ -676,7 +676,7 @@ View::$activeItem = 'user';
 
                         const data = Object.fromEntries(new FormData(form).entries());
                         data['email'] = $('#re-email').val();
-                        $.post(`http://localhost/webhoctapmvc/user/repairUser`, data, function(response) {
+                        $.post(`http://localhost/ooad-emss/emss/user/repairUser`, data, function(response) {
                             if (response.thanhcong) {
                                 currentPage = 1;
                                 layDSUserAjax();
@@ -716,7 +716,7 @@ View::$activeItem = 'user';
             $("#question-user-modal").modal('toggle');
             $('#thuchien').off('click');
             $("#thuchien").click(function() {
-                $.post(`http://localhost/webhoctapmvc/user/deleteUser`, data, function(response) {
+                $.post(`http://localhost/ooad-emss/emss/user/deleteUser`, data, function(response) {
                     if (response.thanhcong) {
                         Toastify({
                             text: "Xóa Thành Công",
@@ -757,7 +757,7 @@ View::$activeItem = 'user';
                 let data = {
                     emails: JSON.stringify(datas)
                 };
-                $.post(`http://localhost/webhoctapmvc/user/deleteUsers`, data, function(response) {
+                $.post(`http://localhost/ooad-emss/emss/user/deleteUsers`, data, function(response) {
                     if (response.thanhcong) {
                         Toastify({
                             text: "Xóa Thành Công",

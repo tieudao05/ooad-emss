@@ -18,7 +18,7 @@ function setSelectTag(tag, val, html) {
 //Lấy toàn bộ danh sách bài thi:
 var ajaxBaiThi = $.ajax({
   type: 'GET',
-  url: 'http://localhost/webhoctapmvc/baithi/getAdvanBaiThi',
+  url: 'http://localhost/ooad-emss/emss/baithi/getAdvanBaiThi',
 }).done(function(data) {
   for (var i = 1; i <= data['SoLuong']; i++) {
       if (i % 2) $('#row').append('<tr class="table-light"><td>' + data[i]['MaSV'] + '</td><td>' + data[i]['FullName'] + '</td><td>' + data[i]['MaDe'] + '</td><td>' + data[i]['MaMon'] + '</td><td>' + data[i]['MaKyThi'] + '</td><td>' + data[i]['Diem'] + '</td></tr>');
@@ -29,7 +29,7 @@ var ajaxBaiThi = $.ajax({
 //Lấy danh sách kỳ thi
 var ajaxKyThi = $.ajax({
   type: 'GET',
-  url: "http://localhost/webhoctapmvc/kythi/getAllKyThi"
+  url: "http://localhost/ooad-emss/emss/kythi/getAllKyThi"
 }).done(function(data) {
   for (var i = 0; i < data['SoLuong']; i++) {
       setSelectTag($("#select-exam"), data[i]['MaKyThi'], data[i]['TenKyThi']);
@@ -39,7 +39,7 @@ var ajaxKyThi = $.ajax({
 //Lấy danh sách môn thi
 var ajaxMon = $.ajax({
   type: 'GET',
-  url: "http://localhost/webhoctapmvc/monhoc/getAllMH"
+  url: "http://localhost/ooad-emss/emss/monhoc/getAllMH"
 }).done(function(data) {
   for (var i = 0; i < data['SoLuong']; i++) {
       setSelectTag($("#select-mon"), data['data'][i]['MaMon'], data['data'][i]['TenMon']);
@@ -63,7 +63,7 @@ function calResult() {
   var ajaxThongKe = ajaxKyThi.then(function(dt) {
       return $.ajax({
           type: 'GET',
-          url: 'http://localhost/webhoctapmvc/baithi/thongkeKetQua',
+          url: 'http://localhost/ooad-emss/emss/baithi/thongkeKetQua',
           data: {
               makythi: $("#select-exam").find(":selected").val(),
           }
@@ -176,7 +176,7 @@ function calResult() {
 */
 $.ajax({
   type: 'GET',
-  url: 'http://localhost/webhoctapmvc/baithi/thongkeKyThi',
+  url: 'http://localhost/ooad-emss/emss/baithi/thongkeKyThi',
 }).done(function(data) {
   function drawLineChart(e) {
       var arrStr = new Array();
@@ -275,7 +275,7 @@ $.ajax({
 function calSubject() {
   $.ajax({
       type: 'GET',
-      url: 'http://localhost/webhoctapmvc/baithi/getBaiThiByMaMon',
+      url: 'http://localhost/ooad-emss/emss/baithi/getBaiThiByMaMon',
       data: {
           mamon: $("#select-mon").find(":selected").val(),
           makythi: $("#select-exam").find(":selected").val(),
